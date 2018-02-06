@@ -1,0 +1,14 @@
+---
+Edit: no
+Files: no
+RecentChanges: no
+Refactor: no
+Search: no
+Suite
+Versions: no
+WhereUsed: no
+---
+!1 Test Suite
+
+
+[[Player start position tests][.FitNesse.HuntTheWumpus.PlayerStartPositionTests]]

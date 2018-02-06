@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<suiteResults>
+  <FitNesseVersion>v20180127</FitNesseVersion>
+  <rootPath>FitNesse.HuntTheWumpus</rootPath>
+  <executionLog>
+    <testSystem>fit:fit.FitServer</testSystem>
+    <command>java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000 -cp /Users/damienoleary/BobMartin-Wumpus-World/fitnesse-standalone.jar:lib/*.jar fit.FitServer Damiens-MacBook-Pro.local 52286 3863</command>
+    <exitCode>143</exitCode>
+    <stdOut>Listening for transport dt_socket at address: 8000
+</stdOut>
+    <stdErr></stdErr>
+    <exception>FitClient external process terminated before a connection could be established</exception>
+    <exception>FitClient external process terminated before a connection could be established</exception>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>2468</totalRunTimeInMillis>
+</suiteResults>
+

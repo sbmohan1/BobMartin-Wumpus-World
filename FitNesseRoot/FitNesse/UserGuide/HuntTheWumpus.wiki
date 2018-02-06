@@ -1,0 +1,9 @@
+!1 Test Suite
+
+[[Player Random Spawn test][.FitNesse.HuntTheWumpus.TestPlayerStartsInRandomCavern]]
+
+[[Player Random Spawn test][.FitNesse.HuntTheWumpus.TestPlayerCantStartPit]]
+
+[[Player Random Spawn test][.FitNesse.HuntTheWumpus.TestPlayerCantStartBats]]
+
+[[Player Random Spawn test][.FitNesse.HuntTheWumpus.TestPlayerCantStartWumpus]]
