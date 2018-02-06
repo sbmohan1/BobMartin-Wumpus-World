@@ -1,0 +1,10 @@
+!define TEST_SYSTEM {slim}
+
+!path /Users/damienoleary/BobMartin-Wumpus-World/bin
+
+|import|
+|wumpusworld.test.fitnesse|
+
+|POCTest                   |
+|numerator?|
+|10       |
