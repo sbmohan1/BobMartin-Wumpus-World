@@ -8,7 +8,7 @@ public class Map {
 	
 	private enum CELL_TYPE {
 		EMPTY,
-		CAVERN
+		CAVERN, PIT
 	}
 	
 	private int width;
@@ -38,6 +38,14 @@ public class Map {
 
 	public boolean isCavern(int x, int y) {
 		return grid[x][y] == CELL_TYPE.CAVERN;
+	}
+	
+	public void addPit(int x, int y) {
+		grid[x][y] = CELL_TYPE.PIT;
+	}
+	
+	public boolean isPit(int x, int y) {
+		return grid[x][y] == CELL_TYPE.PIT;
 	}
 
 }

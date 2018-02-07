@@ -11,7 +11,6 @@ public class Game {
 	}
 
 	public Point getPlayerPosition() {
-		// TODO Auto-generated method stub
 		int x = (int)(Math.random() * worldMap.getWidth());
 		int y = (int)(Math.random()* worldMap.getHeight());
 		return new Point(x, y);
