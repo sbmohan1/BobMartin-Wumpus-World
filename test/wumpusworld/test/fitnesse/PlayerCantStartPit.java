@@ -12,9 +12,11 @@ public class PlayerCantStartPit {
 	private static Map worldMap;
 	private static java.util.Map<Point, Integer> startingPositions;
 
-	
-	public void PlayerCantStartPit() {
-		
+	public void cavern(int x, int y) {
+		if (worldMap == null) {
+			worldMap = new Map(width, height);
+		}
+		worldMap.addCavern(x, y);
 	}
 	
 	public void setWidth(int width) {
@@ -30,15 +32,10 @@ public class PlayerCantStartPit {
 		if (worldMap == null) {
 			worldMap = new Map(width, height);
 		}
-		worldMap.addPit(1, 0);
-		worldMap.addPit(1, 1);
 		for (int i=0; i< times; i++) {
 			Game game = new Game(worldMap);
 			Point pos = game.getPlayerPosition();
-			if(worldMap.isPit(pos.x, pos.y)) {
-				continue;
-			}
-			else if (startingPositions.containsKey(pos)) {
+			if (startingPositions.containsKey(pos)) {
 				startingPositions.put(pos, startingPositions.get(pos) + 1);
 			}
 			else {
@@ -47,13 +44,9 @@ public class PlayerCantStartPit {
 		}
 	}
 	
-	public boolean occurrences(int x, int y, int minAmount) {
-		Point p = new Point(x,y);
-		return startingPositions.getOrDefault(p, 0) >= minAmount;
+	public boolean occurrences(int x, int y, int minAmount, int maxAmount) {
+		Point p = new Point(x, y);
+		int amount = startingPositions.getOrDefault(p, 0);
+		return amount >= minAmount && amount <= maxAmount;
 	}
-	
-
-	
-	
-
 }
