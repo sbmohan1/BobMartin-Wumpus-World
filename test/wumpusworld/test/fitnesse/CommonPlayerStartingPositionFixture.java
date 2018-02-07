@@ -6,12 +6,19 @@ import java.util.HashMap;
 import wumpusworld.Game;
 import wumpusworld.Map;
 
-public class PlayerCantStartPit {
+public class CommonPlayerStartingPositionFixture {
+	protected static int width, height;
+	protected static Map worldMap;
+	protected static java.util.Map<Point, Integer> startingPositions;
 	
-	private static int width, height;
-	private static Map worldMap;
-	private static java.util.Map<Point, Integer> startingPositions;
-
+	public void setWidth(int width) {
+		CommonPlayerStartingPositionFixture.width = width;
+	}
+	
+	public void setHeight(int height) {
+		CommonPlayerStartingPositionFixture.height = height;
+	}
+	
 	public void cavern(int x, int y) {
 		if (worldMap == null) {
 			worldMap = new Map(width, height);
@@ -19,18 +26,17 @@ public class PlayerCantStartPit {
 		worldMap.addCavern(x, y);
 	}
 	
-	public void setWidth(int width) {
-		PlayerCantStartPit.width = width;
-	}
-	
-	public void setHeight(int height) {
-		PlayerCantStartPit.height = height;
+	public void bats(int x, int y) {
+		if (worldMap == null) {
+			worldMap = new Map(width, height);
+		}
+		worldMap.addBats(x, y);
 	}
 	
 	public void run(int times) {
 		startingPositions = new HashMap<>();
 		if (worldMap == null) {
-			worldMap = new Map(width, height);
+			worldMap = new Map(CommonPlayerStartingPositionFixture.width, CommonPlayerStartingPositionFixture.height);
 		}
 		for (int i=0; i< times; i++) {
 			Game game = new Game(worldMap);
