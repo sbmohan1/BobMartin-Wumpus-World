@@ -1,0 +1,33 @@
+!define TEST_SYSTEM {slim}
+
+!path bin
+
+|import|
+|wumpusworld.test.fitnesse|
+
+!|script|PlayerCantStartInNonCavern|
+
+Make sure the player cannot start in a non cavern
+
+Create 2x2 grid
+!|PlayerCantStartInNonCavern|
+|width|height|
+|2|2|
+
+Use 4 caverns
+!|script|PlayerCantStartInNonCavern|
+|cavern|0||0|
+|cavern|1||0|
+|NonCavern|0||1|
+|NonCavern|1||1|
+
+Run 100 times
+!|script|PlayerCantStartInNonCavern|
+|run|100|
+
+Check occurences with lower bound
+!|script|PlayerCantStartInNonCavern|
+|occurrences|0||0||>30|
+|occurrences|1||0||>30|
+|occurrences|0||1||=0|
+|occurrences|1||1||=0|

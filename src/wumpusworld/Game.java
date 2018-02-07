@@ -11,8 +11,11 @@ public class Game {
 	}
 
 	public Point getPlayerPosition() {
-		int x = (int)(Math.random() * worldMap.getWidth());
-		int y = (int)(Math.random()* worldMap.getHeight());
+		int x, y;
+		do {
+			x = (int)(Math.random() * worldMap.getWidth());
+			y = (int)(Math.random() * worldMap.getHeight());
+		} while(worldMap.isBats(x, y));
 		return new Point(x, y);
 	}
 

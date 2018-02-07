@@ -8,3 +8,5 @@ Suite
 [[Player can't start in Pits Test][.FitNesse.HuntTheWumpus.StartPositionTests.PlayerStartPositionTests.TestPlayerCantStartPit]]
 
 [[Player can't start with Wumpus Test][.FitNesse.HuntTheWumpus.StartPositionTests.PlayerStartPositionTests.TestPlayerCantStartWumpus]]
+
+[[Player can't start in a non-Cavern][.FitNesse.HuntTheWumpus.StartPositionTests.PlayerStartPositionTests.TestPlayerCantStartInNonCavern]]

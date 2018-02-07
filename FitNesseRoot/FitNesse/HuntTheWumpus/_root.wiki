@@ -11,3 +11,6 @@ WhereUsed: no
 [[Start Position Tests][.FitNesse.HuntTheWumpus.StartPositionTests]]
 
 [[Movement Tests][.FitNesse.HuntTheWumpus.MovementTests]]
+
+[[Fire Arrow Tests][.FitNesse.HuntTheWumpus.FireArrowTests]]
+

@@ -1,2 +1,37 @@
-test here
-cz
+!define TEST_SYSTEM {slim}
+
+!path bin
+
+|import|
+|wumpusworld.test.fitnesse|
+
+!|script|WumpusStartsInRandomCavern|
+
+Make sure the wumpus starts in a random cavern
+
+Create 2x1 grid
+!|WumpusStartsInRandomCavern|
+|width|height|
+|2|1|
+
+Use 2 caverns
+!|script|WumpusStartsInRandomCavern|
+|cavern|0||0|
+|cavern|1||0|
+
+Run 100 times
+!|script|WumpusStartsInRandomCavern|
+|run|100|
+
+Check occurences with lower bound
+!|script|WumpusStartsInRandomCavern|
+|occurrences|0||0||30|
+|occurrences|1||0||30|
+
+
+
+
+
+{{{
+[0,0][0,1]
+}}}
