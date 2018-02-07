@@ -1,4 +1,7 @@
-|Player Start Location X|Player Start Location Y|Frequency from 100|
-|0|0|>30|
-|0|1|>30|
-|?|?|=0|
+Make sure that player start position is not the same as wumbus start position
+
+If the player position and wumbus position are equal the frequency of occurence should be 0
+
+|Player Start Location X|Player Start Location Y|Wumbus Start Location X|Wumbus Start Location Y|Frequency from 100|
+|0|0|0|0|=0|
+|0|1|0|1|=0|
