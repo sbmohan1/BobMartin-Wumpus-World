@@ -1,2 +1,8 @@
 *.zip
 /bin/
+FitNesseRoot/properties
+FitNesseRoot/ErrorLogs/*
+FitNesseRoot/files/testResults/*
+FitNesseRoot/RecentChanges*
+FitNesseRoot/updateDoNotCopyOverList
+FitNesseRoot/updateList
