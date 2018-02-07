@@ -1,0 +1,29 @@
+!define TEST_SYSTEM {slim}
+
+!path bin
+
+|import|
+|wumpusworld.test.fitnesse|
+
+
+Make sure the player can't start in a Non-Cavern
+
+Use 4 caverns
+
+{{{
+[0,0][0,1][1,0][1,1]
+}}}
+
+!|PlayerCantStartInNonCavern|
+|width|height|
+|2|2|
+
+!|script|PlayerCantStartInNonCavern|
+|run|100|
+
+
+!|script|PlayerCantStartInNonCavern|
+|occurrences|0||0||>30|
+|occurrences|0||1||>30|
+|occurrences|1||0||=0|
+|occurrences|1||1||=0|
