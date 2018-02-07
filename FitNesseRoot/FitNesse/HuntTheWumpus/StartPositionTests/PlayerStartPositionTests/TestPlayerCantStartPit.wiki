@@ -5,24 +5,43 @@
 |import|
 |wumpusworld.test.fitnesse|
 
+!|script|PlayerCantStartPit|
 
-Make sure the player can't start in a Pit Cavern
+Make sure the player can't start in a pit cavern
 
-Use 4 caverns
-
-{{{
-[0,0][0,1][1,0][1,1]
-}}}
-
+Create 2x1 grid
 !|PlayerCantStartPit|
 |width|height|
-|2|2|
+|1|3|
 
+Use 2 caverns
+!|script|PlayerCantStartPit|
+|cavern|0||0|
+|cavern|0||1|
+|cavern|0||2|
+
+Add pit cavern
+!|script|PlayerCantStartPit|
+|bats|0||2|
+
+<<<<<<< HEAD
+Run 100 times
 !|script|PlayerCantStartPit|
 |run|100|
 
+Check occurences with lower bound and upper bound
+!|script|PlayerCantStartPit|
+|occurrences|0||0||30||70|
+|occurrences|0||1||30||70|
+|occurrences|0||2||0||0|
+
+
+
+
+=======
 Player Cannot start in a cavern with a pit.
 !|script|PlayerCantStartPit|
 |occurrences|0||0||20||70|
 |occurrences|0||1||20||70|
 |occurrences|0||2||0||0|
+>>>>>>> 256985cac1efcac65883c992c8f6e90484cce1fa
