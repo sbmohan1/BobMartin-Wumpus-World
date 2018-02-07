@@ -5,19 +5,17 @@
 |import|
 |wumpusworld.test.fitnesse|
 
+!|script|PlayerCantStartPit|
 
-Make sure the player can't start in a Pit Cavern
+Make sure the player can't start in a pit cavern
 
-Use 4 caverns
-
-{{{
-[0,0][0,1][1,0][1,1]
-}}}
-
+Create 2x2 grid
 !|PlayerCantStartPit|
 |width|height|
 |2|2|
 
+
+Run 100 times
 !|script|PlayerCantStartPit|
 |cavern|0||0|
 |cavern|0||1|
@@ -30,6 +28,7 @@ Use 4 caverns
 
 !|script|PlayerCantStartPit|
 |run|100|
+
 
 Player Cannot start in a cavern with a pit.
 !|script|PlayerCantStartPit|

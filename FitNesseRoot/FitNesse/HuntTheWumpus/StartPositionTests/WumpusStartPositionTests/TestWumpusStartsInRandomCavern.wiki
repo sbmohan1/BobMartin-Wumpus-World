@@ -27,11 +27,3 @@ Check occurences with lower bound
 !|script|WumpusStartsInRandomCavern|
 |occurrences|0||0||30|
 |occurrences|1||0||30|
-
-
-
-
-
-{{{
-[0,0][0,1]
-}}}
