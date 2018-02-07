@@ -1,0 +1,4 @@
+---
+Suite
+---
+[[Wumpus starts in Random Cavern Test][.FitNesse.HuntTheWumpus.WumpusStartPositionTests.TestWumpusStartsInRandomCavern]]

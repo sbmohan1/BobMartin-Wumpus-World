@@ -1,4 +1,0 @@
-|Player Start Location X|Player Start Location Y|Frequency from 100|
-|0|0|>30|
-|0|1|>30|
-|0|3|=0|

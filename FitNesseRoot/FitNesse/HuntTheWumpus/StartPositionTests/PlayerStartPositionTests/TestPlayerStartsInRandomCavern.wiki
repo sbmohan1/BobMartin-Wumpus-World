@@ -1,0 +1,15 @@
+!4 Make sure the player starts in a random cavern
+
+Use the following horizontal map
+
+{{{
+[0,0][0,1]
+}}}
+
+Randomly place the player into one of the caverns and repeat the following 100 times
+
+|Check random start location|
+|cavern||count?|
+|0|0|>30|
+|0|1|>30|
+
