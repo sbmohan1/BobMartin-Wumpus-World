@@ -1,15 +1,31 @@
-!4 Make sure the player starts in a random cavern
+!define TEST_SYSTEM {slim}
 
-Use the following horizontal map
+!path bin
+
+|import|
+|wumpusworld.test.fitnesse|
+
+!|script|PlayerStartsInRandomCavern|
+
+Make sure the player starts in a random cavern
+
+Use 2 caverns
+!|PlayerStartsInRandomCavern|
+|width|height|
+|2|1|
+
+!|script|PlayerStartsInRandomCavern|
+|run|100|
+
+!|script|PlayerStartsInRandomCavern|
+|occurrences|0||0||30|
+|occurrences|1||0||30|
+
+
+
+
 
 {{{
 [0,0][0,1]
 }}}
-
-Randomly place the player into one of the caverns and repeat the following 100 times
-
-|Check random start location|
-|cavern||count?|
-|0|0|>30|
-|0|1|>30|
 

@@ -1,5 +1,4 @@
 *.zip
-/bin/
 FitNesseRoot/properties
 FitNesseRoot/ErrorLogs/*
 FitNesseRoot/files/testResults/*
