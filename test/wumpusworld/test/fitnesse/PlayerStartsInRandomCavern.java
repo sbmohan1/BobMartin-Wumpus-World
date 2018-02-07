@@ -17,6 +17,7 @@ public class PlayerStartsInRandomCavern {
 		if (worldMap == null) {
 			worldMap = new Map(width, height);
 		}
+		worldMap.addCavern(x, y);
 	}
 	
 	public void setWidth(int width) {

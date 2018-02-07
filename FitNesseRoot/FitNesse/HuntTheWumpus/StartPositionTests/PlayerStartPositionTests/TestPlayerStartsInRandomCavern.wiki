@@ -9,14 +9,21 @@
 
 Make sure the player starts in a random cavern
 
-Use 2 caverns
+Create 2x1 grid
 !|PlayerStartsInRandomCavern|
 |width|height|
 |2|1|
 
+Use 2 caverns
+!|script|PlayerStartsInRandomCavern|
+|cavern|0||0|
+|cavern|1||0|
+
+Run 100 times
 !|script|PlayerStartsInRandomCavern|
 |run|100|
 
+Check occurences with lower bound
 !|script|PlayerStartsInRandomCavern|
 |occurrences|0||0||30|
 |occurrences|1||0||30|

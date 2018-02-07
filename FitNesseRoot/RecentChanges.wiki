@@ -1,3 +1,4 @@
+|FitNesse.HuntTheWumpus.StartPositionTests.PlayerStartPositionTests.TestPlayerCantStartWumpus||13:48:53 Wed, Feb 07, 2018|
 <<<<<<< HEAD
 |FitNesse.HuntTheWumpus.PlayerStartPositionTests.TestPlayerCantStartWumpus||11:29:09 Wed, Feb 07, 2018|
 =======

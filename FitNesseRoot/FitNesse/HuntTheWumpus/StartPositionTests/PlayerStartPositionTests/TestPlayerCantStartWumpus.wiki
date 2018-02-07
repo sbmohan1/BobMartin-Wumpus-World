@@ -1,7 +1,18 @@
 Make sure that player start position is not the same as wumbus start position
 
-If the player position and wumbus position are equal the frequency of occurence should be 0
+Make sure the player does not start in a cavern with Wumpus.
 
-|Player Start Location X|Player Start Location Y|Wumbus Start Location X|Wumbus Start Location Y|Frequency from 100|
-|0|0|0|0|=0|
-|0|1|0|1|=0|
+Use the horizontal map
+
+[0,0][0,1][0,2]
+
+
+Put the wumbus in cavern (0,1). Then repeat the following 100 times
+
+|Check random start location|
+|cavern	 |	|count?|
+|0 |	0|    >30 |
+|0	|1	|      = 0|
+|0	|2	|      >30|
+
+
