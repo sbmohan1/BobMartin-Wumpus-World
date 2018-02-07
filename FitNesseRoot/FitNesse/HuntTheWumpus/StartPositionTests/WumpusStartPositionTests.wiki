@@ -2,3 +2,5 @@
 Suite
 ---
 [[Wumpus starts in Random Cavern Test][.FitNesse.HuntTheWumpus.StartPositionTests.WumpusStartPositionTests.TestWumpusStartsInRandomCavern]]
+
+[[Wumpus can't start in Player Cavern Test][.FitNesse.HuntTheWumpus.StartPositionTests.WumpusStartPositionTests.TestWumpusCantStartInPlayerCavern]]

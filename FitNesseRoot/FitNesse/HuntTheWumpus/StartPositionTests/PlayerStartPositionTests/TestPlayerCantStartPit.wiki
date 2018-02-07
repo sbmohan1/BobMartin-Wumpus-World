@@ -22,7 +22,7 @@ Use 2 caverns
 
 Add pit cavern
 !|script|PlayerCantStartPit|
-|bats|0||2|
+|pit|0||2|
 
 <<<<<<< HEAD
 Run 100 times
