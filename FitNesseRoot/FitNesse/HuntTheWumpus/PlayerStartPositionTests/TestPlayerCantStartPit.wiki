@@ -1,4 +1,16 @@
-|Player Start Location X|Player Start Location Y|Frequency from 100|
+Make sure the player can't start in a Pit Cavern
+
+Use 4 caverns
+
+{{{
+[0,0][0,1][1,0][1,1]
+}}}
+
+
+
+|Check start location is not a Pit Cavern|
+|cavern||count?|
 |0|0|>30|
 |0|1|>30|
-|2|3|=0|
+|1|0|=0|
+|1|1|=0|
