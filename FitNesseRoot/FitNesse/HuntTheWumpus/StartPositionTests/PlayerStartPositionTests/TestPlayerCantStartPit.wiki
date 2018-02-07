@@ -7,7 +7,7 @@
 
 !|script|PlayerCantStartPit|
 
-Make sure the player starts in a random cavern
+Make sure the player can't start in a pit cavern
 
 Create 2x1 grid
 !|PlayerCantStartPit|
@@ -20,10 +20,11 @@ Use 2 caverns
 |cavern|0||1|
 |cavern|0||2|
 
-Add pit cave
+Add pit cavern
 !|script|PlayerCantStartPit|
 |bats|0||2|
 
+<<<<<<< HEAD
 Run 100 times
 !|script|PlayerCantStartPit|
 |run|100|
@@ -37,3 +38,10 @@ Check occurences with lower bound and upper bound
 
 
 
+=======
+Player Cannot start in a cavern with a pit.
+!|script|PlayerCantStartPit|
+|occurrences|0||0||20||70|
+|occurrences|0||1||20||70|
+|occurrences|0||2||0||0|
+>>>>>>> 256985cac1efcac65883c992c8f6e90484cce1fa

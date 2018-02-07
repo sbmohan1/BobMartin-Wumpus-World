@@ -81,6 +81,28 @@ public class GameTest {
 	}
 	
 	@Test
+	public void onNewGame_PlayerIsGivenRandomPosition_ExcludePitCaves() {
+		Map worldMap = new Map(2, 1);
+		worldMap.addCavern(0, 0);
+		worldMap.addPit(1, 0);
+		int firstCellCount = 0;
+		int secondCellCount = 0;
+		
+		for (int i=0; i < 100; i++) {
+			Game game = new Game(worldMap);
+			Point playerPosition = game.getPlayerPosition();
+			if (playerPosition.x == 0) {
+				firstCellCount++;
+			}
+			else {
+				secondCellCount++;
+			}
+		}
+		assertTrue(firstCellCount == 100);
+		assertTrue(secondCellCount == 0);
+	}
+	
+	@Test
 	public void onNewGame_PlayerIsGivenRandomPosition_ExcludesNonCaverns() {
 		Map worldMap = new Map(2, 1);
 		worldMap.addCavern(0, 0);
@@ -100,6 +122,5 @@ public class GameTest {
 		assertTrue(firstCellCount == 100);
 		assertTrue(secondCellCount == 0);
 	}
-	
 
 }
