@@ -9,16 +9,17 @@ public class Game {
 
 	public Game(Map worldMap) {
 		this.worldMap = worldMap;
-		wumpusLocation = new Point(-1, -1);
+		this.wumpusLocation = new Point(-1, -1);
+	}
+	
+	private Game(Map worldMap, Point wumpusLocation) {
+		this.wumpusLocation = wumpusLocation;
+		this.worldMap = worldMap;
 	}
 
 	public Point getPlayerPosition() {
-		int x, y;
-		do {
-			x = (int)(Math.random() * worldMap.getWidth());
-			y = (int)(Math.random() * worldMap.getHeight());
-		} while(worldMap.isBats(x, y) || worldMap.isPit(x, y) || !worldMap.isCavern(x, y) || (wumpusLocation.x == x && wumpusLocation.y == y));
-		return new Point(x, y);
+		PlayerPositionStrategy strategy = new PlayerPositionStrategy();
+		return strategy.getPoint(this);
 	}
 
 	public void setWumpusLocation(int x, int y) {
@@ -26,13 +27,28 @@ public class Game {
 	}
 
 	public Point getWumpusLocation() {
-		// TODO Auto-generated method stub
 		return wumpusLocation;
 	}
 
 	public Map getWorldMap() {
-		// TODO Auto-generated method stub
 		return worldMap;
+	}
+	
+	public static class GameBuilder{
+		private Point wumpusLocation;
+		private Map worldMap;
+		
+		public void setWumpusLocation(Point wumpusLocation) {
+			this.wumpusLocation = wumpusLocation;
+		}
+		
+		public void setWorldMap(Map worldMap) {
+			this.worldMap = worldMap;
+		}
+		
+		public Game build() {
+			return new Game(worldMap, wumpusLocation);
+		}
 	}
 
 }
