@@ -1,0 +1,10 @@
+---
+Suite
+---
+[[Player starts in Random Cavern Test][.FitNesse.HuntTheWumpus.StartPositionTests.PlayerStartPositionTests.TestPlayerStartsInRandomCavern]]
+
+[[Player can't start with Bats Test][.FitNesse.HuntTheWumpus.StartPositionTests.PlayerStartPositionTests.TestPlayerCantStartBats]]
+
+[[Player can't start in Pits Test][.FitNesse.HuntTheWumpus.StartPositionTests.PlayerStartPositionTests.TestPlayerCantStartPit]]
+
+[[Player can't start with Wumpus Test][.FitNesse.HuntTheWumpus.StartPositionTests.PlayerStartPositionTests.TestPlayerCantStartWumpus]]

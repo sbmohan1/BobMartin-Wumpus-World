@@ -1,0 +1,16 @@
+!4 Make sure the player does not start in a cavern with bats.
+
+Use the horizontal map
+
+{{{
+[0,0][0,1][0,2]
+}}}
+
+Put the bats in cavern (0,2). Then repeat the following 100 times
+
+|Check random start location|
+|cavern||count?|
+|0|0|>30|
+|0|1|>30|
+|0|2|=0|
+
