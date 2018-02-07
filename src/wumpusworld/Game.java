@@ -15,7 +15,7 @@ public class Game {
 		do {
 			x = (int)(Math.random() * worldMap.getWidth());
 			y = (int)(Math.random() * worldMap.getHeight());
-		} while(worldMap.isBats(x, y));
+		} while(worldMap.isBats(x, y) || !worldMap.isCavern(x, y));
 		return new Point(x, y);
 	}
 
