@@ -18,12 +18,12 @@ Use 4 caverns
 |width|height|
 |2|2|
 
-!|script|PlayerStartsInRandomCavern|
+!|script|PlayerCantStartPit|
 |run|100|
 
 
-!|script|PlayerStartsInRandomCavern|
-|occurrences|0||0||>30|
-|occurrences|0||1||>30|
+!|script|PlayerCantStartPit|
+|occurrences|0||0||20|
+|occurrences|0||1||20|
 |occurrences|1||0||0|
 |occurrences|1||1||0|
