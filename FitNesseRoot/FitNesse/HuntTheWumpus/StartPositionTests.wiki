@@ -1,0 +1,6 @@
+---
+Suite
+---
+[[Player start Position Tests][.FitNesse.HuntTheWumpus.StartPositionTests.PlayerStartPositionTests]]
+
+[[Wumpus start Position Tests][.FitNesse.HuntTheWumpus.StartPositionTests.WumpusStartPositionTests]]

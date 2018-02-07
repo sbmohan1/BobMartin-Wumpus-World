@@ -1,7 +1,0 @@
-[[Player starts in Random Cavern Test][.FitNesse.HuntTheWumpus.PlayerStartPositionTests.TestPlayerStartsInRandomCavern]]
-
-[[Player can't start with Bats Test][.FitNesse.HuntTheWumpus.PlayerStartPositionTests.TestPlayerCantStartBats]]
-
-[[Player can't start in Pits Test][.FitNesse.HuntTheWumpus.PlayerStartPositionTests.TestPlayerCantStartPit]]
-
-[[Player can't start with Wumpus Test][.FitNesse.HuntTheWumpus.PlayerStartPositionTests.TestPlayerCantStartWumpus]]

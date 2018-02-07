@@ -7,9 +7,11 @@ import wumpusworld.Game;
 import wumpusworld.Map;
 
 public class PlayerStartsInRandomCavern {
-	private int width, height;
-	private Map worldMap;
-	private java.util.Map<Point, Integer> startingPositions;
+	
+	private static int width, height;
+	private static Map worldMap;
+	private static java.util.Map<Point, Integer> startingPositions;
+	private static int x, y;
 	
 	public void cavern(int x, int y) {
 		if (worldMap == null) {
@@ -18,15 +20,18 @@ public class PlayerStartsInRandomCavern {
 	}
 	
 	public void setWidth(int width) {
-		this.width = width;
+		PlayerStartsInRandomCavern.width = width;
 	}
 
 	public void setHeight(int height) {
-		this.height = height;
+		PlayerStartsInRandomCavern.height = height;
 	}
 	
 	public void run(int times) {
 		startingPositions = new HashMap<>();
+		if (worldMap == null) {
+			worldMap = new Map(width, height);
+		}
 		for (int i=0; i< times; i++) {
 			Game game = new Game(worldMap);
 			Point pos = game.getPlayerPosition();
@@ -39,8 +44,16 @@ public class PlayerStartsInRandomCavern {
 		}
 	}
 	
-	public int occurrences(int x, int y) {
+	public boolean occurrences(int x, int y, int minAmount) {
 		Point p = new Point(x, y);
-		return startingPositions.getOrDefault(p, 0);
+		return startingPositions.getOrDefault(p, 0) >= minAmount;
+	}
+
+	public void setX(int x) {
+		this.x = x;
+	}
+
+	public void setY(int y) {
+		this.y = y;
 	}
 }

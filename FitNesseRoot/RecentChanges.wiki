@@ -1,10 +1,22 @@
+<<<<<<< HEAD
 |FitNesse.HuntTheWumpus.PlayerStartPositionTests.TestPlayerCantStartWumpus||11:29:09 Wed, Feb 07, 2018|
+=======
+|FitNesse.HuntTheWumpus.StartPositionTests.WumpusStartPositionTests||11:40:15 Wed, Feb 07, 2018|
+|FitNesse.HuntTheWumpus||11:28:42 Wed, Feb 07, 2018|
+|FitNesse.HuntTheWumpus.MovementTests||11:27:21 Wed, Feb 07, 2018|
+|FitNesse.HuntTheWumpus.StartPositionTests.PlayerStartPositionTests||11:26:30 Wed, Feb 07, 2018|
+|FitNesse.HuntTheWumpus.StartPositionTests||11:25:38 Wed, Feb 07, 2018|
+|FitNesse.HuntTheWumpus.WumpusStartPositionTests||11:18:36 Wed, Feb 07, 2018|
+|FitNesse.HuntTheWumpus.WumpusMovementTests||11:08:24 Wed, Feb 07, 2018|
+|FitNesse.HuntTheWumpus.PlayerMovementTests||11:08:19 Wed, Feb 07, 2018|
+|FitNesse.HuntTheWumpus.WumpusStartPositionTests.TestWumpusStartsInRandomCavern||11:06:21 Wed, Feb 07, 2018|
+|FitNesse.HuntTheWumpus.PlayerStartPositionTests||10:59:04 Wed, Feb 07, 2018|
+|FitNesse.HuntTheWumpus.PlayerStartPositionTests.TestPlayerCantStartBats||10:50:31 Wed, Feb 07, 2018|
+|FitNesse.HuntTheWumpus.PlayerStartPositionTests.TestPlayerStartsInRandomCavern||10:50:18 Wed, Feb 07, 2018|
+>>>>>>> ff2cf2d81cf72363c237a46213fea7bb92d45726
 |FrontPage.POCTest||10:14:44 Wed, Feb 07, 2018|
-|FitNesse.HuntTheWumpus.PlayerStartPositionTests.TestPlayerStartsInRandomCavern||10:24:12 Wed, Feb 07, 2018|
-|FitNesse.HuntTheWumpus||16:34:39 Tue, Feb 06, 2018|
 |FrontPage||16:33:32 Tue, Feb 06, 2018|
 |FrontPage.BobMartin||16:32:42 Tue, Feb 06, 2018|
-|FitNesse.HuntTheWumpus.PlayerStartPositionTests||16:16:46 Tue, Feb 06, 2018|
 |FitNesse.HuntTheWumpus.TestPlayerCantStartWumpus||16:01:38 Tue, Feb 06, 2018|
 |FitNesse.HuntTheWumpus.TestPlayerCantStartPit||16:01:16 Tue, Feb 06, 2018|
 |FitNesse.HuntTheWumpus.TestPlayerCantStartBats||16:01:00 Tue, Feb 06, 2018|
