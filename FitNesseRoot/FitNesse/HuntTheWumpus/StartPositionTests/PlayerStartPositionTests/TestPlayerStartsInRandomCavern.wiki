@@ -29,10 +29,3 @@ Check occurences with lower bound
 |occurrences|1||0||30|
 
 
-
-
-
-{{{
-[0,0][0,1]
-}}}
-

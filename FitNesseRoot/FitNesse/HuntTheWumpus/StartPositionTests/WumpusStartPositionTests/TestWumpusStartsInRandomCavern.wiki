@@ -9,21 +9,25 @@
 
 Make sure the wumpus starts in a random cavern
 
-Create 2x1 grid
+Create 2x2 grid
 !|WumpusStartsInRandomCavern|
 |width|height|
-|2|1|
+|2|2|
 
-Use 2 caverns
+Use 4 caverns
 !|script|WumpusStartsInRandomCavern|
 |cavern|0||0|
 |cavern|1||0|
+|cavern|0||1|
+|cavern|1||1|
 
 Run 100 times
 !|script|WumpusStartsInRandomCavern|
 |run|100|
 
-Check occurences with lower bound
-!|script|WumpusStartsInRandomCavern|
-|occurrences|0||0||30|
-|occurrences|1||0||30|
+Check occurences with lower bound & Uppper bound
+!|script|WumpusStartsInRandomCavern||
+|occurrences|0||0||16|40|
+|occurrences|1||0||16|40|
+|occurrences|0||1||16|40|
+|occurrences|1||1||16|40|
