@@ -4,7 +4,16 @@
 
 |import|
 |wumpusworld.test.fitnesse|
+|script|POCTest|
+!2 Fixture setup
 
-|POCTest                   |
+|setWidth|2|
+|setHeight|1|
+
+!4 Caverns
+|cavern|0||0|
+|cavern|1||0|
+
+
 |numerator?|
 |10       |

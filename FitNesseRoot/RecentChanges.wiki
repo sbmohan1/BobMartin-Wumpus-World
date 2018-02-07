@@ -1,3 +1,4 @@
+|FrontPage.POCTest||10:14:44 Wed, Feb 07, 2018|
 |FitNesse.HuntTheWumpus.PlayerStartPositionTests.TestPlayerStartsInRandomCavern||10:24:12 Wed, Feb 07, 2018|
 |FitNesse.HuntTheWumpus||16:34:39 Tue, Feb 06, 2018|
 |FrontPage||16:33:32 Tue, Feb 06, 2018|
@@ -20,4 +21,3 @@
 |FrontPage.dummy1||15:32:25 Tue, Feb 06, 2018|
 |PlayerStartsInRandomCavern||15:30:24 Tue, Feb 06, 2018|
 |FrontPage.PlayerStartsInRandomCavern||15:28:10 Tue, Feb 06, 2018|
-|FrontPage.POCTest||15:22:34 Tue, Feb 06, 2018|
