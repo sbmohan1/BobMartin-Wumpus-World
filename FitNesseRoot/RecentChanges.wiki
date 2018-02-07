@@ -1,3 +1,4 @@
+|FitNesse.HuntTheWumpus.StartPositionTests.WumpusStartPositionTests||11:40:15 Wed, Feb 07, 2018|
 |FitNesse.HuntTheWumpus||11:28:42 Wed, Feb 07, 2018|
 |FitNesse.HuntTheWumpus.MovementTests||11:27:21 Wed, Feb 07, 2018|
 |FitNesse.HuntTheWumpus.StartPositionTests.PlayerStartPositionTests||11:26:30 Wed, Feb 07, 2018|
