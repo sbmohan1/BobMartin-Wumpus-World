@@ -1,3 +1,14 @@
-|Player Start Location X|Player Start Location Y|Frequency from 100|
+Make sure the player starts in a random cavern
+
+Use 2 caverns
+
+{{{
+[0,0][0,1]
+}}}
+
+
+|Check random start location|
+|cavern||count?|
 |0|0|>30|
 |0|1|>30|
+
