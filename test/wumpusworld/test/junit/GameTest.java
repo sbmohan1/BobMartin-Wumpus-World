@@ -74,5 +74,24 @@ public class GameTest {
 		assertTrue(secondCellCount == 100);
 	}
 	
-
+	@Test
+	public void onNewGame_PlayerIsGivenRandomPosition_ExcludePitCaves() {
+		Map worldMap = new Map(2,1);
+		worldMap.addPit(0, 0);
+		int firstCellCount = 0;
+		int secondCellCount = 0;
+		
+		for(int i=0; i < 100; i++) {
+			Game game = new Game(worldMap);
+			Point playerPosition = game.getPlayerPosition();
+			if(playerPosition.x == 0) {
+				firstCellCount++;
+			} 
+			else {
+				secondCellCount++;
+			}
+		}
+		assertTrue(firstCellCount == 0);
+		assertTrue(secondCellCount == 100);
+	}
 }
