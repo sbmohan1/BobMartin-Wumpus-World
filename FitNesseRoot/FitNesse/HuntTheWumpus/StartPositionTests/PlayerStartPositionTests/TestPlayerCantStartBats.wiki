@@ -36,11 +36,4 @@ Check occurences with lower bound and upper bound
 
 
 
-!4 Make sure the player does not start in a cavern with bats.
-
-Use the horizontal map
-
-{{{
-[0,0][0,1][0,2]
-}}}
 
