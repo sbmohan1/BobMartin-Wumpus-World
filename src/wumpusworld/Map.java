@@ -1,14 +1,11 @@
 package wumpusworld;
 
-import java.awt.Point;
-import java.util.ArrayList;
-import java.util.List;
-
 public class Map {
 	
 	private enum CELL_TYPE {
 		EMPTY,
-		CAVERN
+		CAVERN,
+		BATS
 	}
 	
 	private int width;
@@ -38,6 +35,14 @@ public class Map {
 
 	public boolean isCavern(int x, int y) {
 		return grid[x][y] == CELL_TYPE.CAVERN;
+	}
+
+	public void addBats(int x, int y) {
+		grid[x][y] = CELL_TYPE.BATS;
+	}
+	
+	public boolean isBats(int x, int y) {
+		return grid[x][y] == CELL_TYPE.BATS;
 	}
 
 }
