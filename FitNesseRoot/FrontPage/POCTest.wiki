@@ -1,6 +1,6 @@
 !define TEST_SYSTEM {slim}
 
-!path /Users/sishirmohan/eclipse-workspace/WumpusWorld/bin
+!path bin
 
 |import|
 |wumpusworld.test.fitnesse|
