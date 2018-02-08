@@ -1,5 +1,5 @@
+|FitNesse.HuntTheWumpus.FireArrowTests.ArrowCountTest||13:47:16 Thu, Feb 08, 2018|
 <<<<<<< HEAD
-|FitNesse.HuntTheWumpus.FireArrowTests.ArrowCountTest||12:14:36 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.FireArrowTests||11:41:16 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.FireArrowTests.PlayersStartWith5Arrows||11:35:06 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.FireArrowTests.PlayerStartWith5Arrows||11:32:48 Thu, Feb 08, 2018|
