@@ -4,10 +4,13 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.awt.Point;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.Test;
 
 import wumpusworld.Game;
+import wumpusworld.Game.Direction;
 import wumpusworld.Map;
 
 public class GameTest {
@@ -142,6 +145,97 @@ public class GameTest {
 		}
 		assertTrue(firstCellCount == 100);
 		assertTrue(secondCellCount == 0);
+	}
+	
+	@Test
+	public void testGetAvailableDirections_NWSE() {
+		Map worldMap = new Map(3, 3);
+		
+		worldMap.addCavern(0, 0);
+		worldMap.addCavern(1, 0);
+		worldMap.addCavern(2, 0);
+		worldMap.addCavern(0, 1);
+		worldMap.addCavern(1, 1);
+		worldMap.addCavern(2, 1);
+		worldMap.addCavern(0, 2);
+		worldMap.addCavern(1, 2);
+		worldMap.addCavern(2, 2);
+		
+		Game game = new Game(worldMap);
+		game.setWumpusLocation(1,0);
+		game.setPlayerPosition(new Point(1, 1));
+		
+		List<Direction> expected = new ArrayList<>();
+		expected.add(Direction.NORTH);
+		expected.add(Direction.WEST);
+		expected.add(Direction.SOUTH);
+		expected.add(Direction.EAST);
+		
+		assertEquals(expected, game.getAvailableDirections());
+	}
+	
+	@Test
+	public void testGetAvailableDirections_None() {
+		Map worldMap = new Map(1, 1);
+		
+		worldMap.addCavern(0, 0);
+		
+		Game game = new Game(worldMap);
+		game.setPlayerPosition(new Point(0, 0));
+		
+		List<Direction> expected = new ArrayList<>();
+		
+		assertEquals(expected, game.getAvailableDirections());
+	}
+	
+	@Test
+	public void testGetAvailableDirections_NoWest() {
+		Map worldMap = new Map(3, 3);
+		
+		worldMap.addCavern(0, 0);
+		worldMap.addCavern(1, 0);
+		worldMap.addCavern(2, 0);
+		worldMap.addCavern(0, 1);
+		worldMap.addCavern(1, 1);
+		worldMap.addCavern(2, 1);
+		worldMap.addCavern(0, 2);
+		worldMap.addCavern(1, 2);
+		worldMap.addCavern(2, 2);
+		
+		Game game = new Game(worldMap);
+		game.setPlayerPosition(new Point(0, 1));
+		
+		List<Direction> expected = new ArrayList<>();
+		expected.add(Direction.NORTH);
+		expected.add(Direction.SOUTH);
+		expected.add(Direction.EAST);
+		
+		assertEquals(expected, game.getAvailableDirections());
+	}
+	
+	@Test
+	public void testGetAvailableDirections_NoNorth() {
+		Map worldMap = new Map(3, 3);
+		
+		worldMap.addCavern(0, 0);
+		worldMap.addCavern(1, 0);
+		worldMap.addCavern(2, 0);
+		worldMap.addCavern(0, 1);
+		worldMap.addCavern(1, 1);
+		worldMap.addCavern(2, 1);
+		worldMap.addCavern(0, 2);
+		worldMap.addCavern(1, 2);
+		worldMap.addCavern(2, 2);
+		
+		Game game = new Game(worldMap);
+		game.setPlayerPosition(new Point(1, 0));
+		
+		List<Direction> expected = new ArrayList<>();
+		expected.add(Direction.WEST);
+		expected.add(Direction.SOUTH);
+		expected.add(Direction.EAST);
+		
+		assertEquals(expected, game.getAvailableDirections());
 	}
 
 }
