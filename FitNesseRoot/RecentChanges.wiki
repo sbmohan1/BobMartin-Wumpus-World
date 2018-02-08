@@ -1,7 +1,8 @@
+|FitNesse.HuntTheWumpus.GameOverTests.PlayerRestingEatenTest||12:01:35 Thu, Feb 08, 2018|
+|FitNesse.HuntTheWumpus.GameOverTests||11:56:15 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.GameOverTests.PlayerClosesGameTest||11:51:53 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.GameOverTests.PlayerFallsIntoPitTest||11:46:35 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.GameOverTests.WumpusEatsPlayerTest||11:42:06 Thu, Feb 08, 2018|
-|FitNesse.HuntTheWumpus.GameOverTests||11:32:12 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.WumpusEatsPlayerTest||11:29:36 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus||11:28:17 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.MovementTests.PlayerCantMoveIntoWallTest||11:13:28 Thu, Feb 08, 2018|
