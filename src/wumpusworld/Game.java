@@ -40,15 +40,27 @@ public class Game {
 
 	public Point getPlayerPosition() {
 		PlayerPositionStrategy strategy = new PlayerPositionStrategy();
+		return strategy.getPoint(this);
+	}
+	
+	public void setPlayerLocation() {
+		PlayerPositionStrategy strategy = new PlayerPositionStrategy();
 		playerPosition = strategy.getPoint(this);
+	}
+	
+	public Point getPlayerLocation() {
 		return playerPosition;
 	}
 	
-	public Point getWumpusPosition() {
+	public void setWumpusPosition() {
 		WumpusPositionStrategy strategy = new WumpusPositionStrategy();
-		return strategy.getPoint(this);
+		wumpusLocation =  strategy.getPoint(this);
 	}
 
+	public Point retrieveWumpusPosition() {
+		return wumpusLocation;
+	}
+	
 	public void setWumpusLocation(int x, int y) {
 		wumpusLocation = new Point(x, y);
 	}
@@ -93,12 +105,14 @@ public class Game {
 		return directions;
 	}
 
+
 	public void move(Direction d) throws NoDoorException {
 		Point newPos = new Point(playerPosition.x + d.x, playerPosition.y + d.y);
 		if (!worldMap.contains(newPos) || !worldMap.isCavern(newPos.x, newPos.y)) {
 			throw new NoDoorException();
 		}
 		playerPosition = newPos;
+
 	}
 
 }

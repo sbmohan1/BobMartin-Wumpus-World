@@ -15,7 +15,7 @@ public class WumpusStartsInRandomCavern extends CommonPlayerStartingPositionFixt
 		}
 		for (int i=0; i< times; i++) {
 			Game game = new Game(worldMap);
-			Point pos = game.getWumpusPosition();
+			Point pos = game.getWumpusLocation();
 			if (startingPositions.containsKey(pos)) {
 				startingPositions.put(pos, startingPositions.get(pos) + 1);
 			}

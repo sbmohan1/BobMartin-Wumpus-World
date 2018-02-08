@@ -74,6 +74,10 @@ public class ConsoleUI {
 
 	public void parseInput(String string) {
 		Direction d = DirectionLabel.findByLabel(string);
+		if (d == null) {
+			out.print("Player rested.\n");
+			return;
+		}
 		try {
 			game.move(d);
 			printAvailableDirections(out, game);

@@ -11,10 +11,24 @@
 |width|height|
 |3|3|
 
+* Use 9 caverns
+!|script|PlayerCanRest|
+|cavern|0||0|
+|cavern|1||0|
+|cavern|2||0|
+|cavern|0||1|
+|cavern|1||1|
+|cavern|2||1|
+|cavern|0||2|
+|cavern|1||2|
+|cavern|2||2|
+
+!|script|PlayerCanRest|
+|setPlayerPosition|1||1|
+
 A player can rest for his turn.  This is a valid command that does not move the player.
 
-!|script|
-|put|player|in cavern|1,1|
-|enter command|R|
-|check|message|Player rested.|was printed|true|
-|check|message|Available Directions are N, W, S, E.|was printed|true|
+!|PlayerCanRest|
+|move|checkOutput?|
+||Available Directions are N, W, S, E.|
+|R|Player rested.|
