@@ -9,8 +9,8 @@ import java.util.List;
 
 import org.junit.Test;
 
+import wumpusworld.Direction;
 import wumpusworld.Game;
-import wumpusworld.Game.Direction;
 import wumpusworld.Map;
 
 public class GameTest {
