@@ -86,7 +86,7 @@ public class Game {
 		List<Direction> directions = new ArrayList<>();
 		for (Direction d : Direction.values()) {
 			Point p = d.getPoint(playerPosition);
-			if (worldMap.contains(p)) {
+			if (worldMap.contains(p) && worldMap.isCavern(p.x, p.y)) {
 				directions.add(d);
 			}
 		}
@@ -95,7 +95,7 @@ public class Game {
 
 	public void move(Direction d) throws NoDoorException {
 		Point newPos = new Point(playerPosition.x + d.x, playerPosition.y + d.y);
-		if (!worldMap.isCavern(newPos.x, newPos.y)) {
+		if (!worldMap.contains(newPos) || !worldMap.isCavern(newPos.x, newPos.y)) {
 			throw new NoDoorException();
 		}
 		playerPosition = newPos;

@@ -1,6 +1,17 @@
-A player can rest for his turn.  This is a valid command that does not move the player.
+!define TEST_SYSTEM {slim}
 
-!include <HuntTheWumpus.MapLayout
+!path bin
+!path lib
+
+|import|
+|wumpusworld.test.fitnesse|
+|org.apache.commons.io|
+
+!|PlayerCanRest|
+|width|height|
+|3|3|
+
+A player can rest for his turn.  This is a valid command that does not move the player.
 
 !|script|
 |put|player|in cavern|1,1|

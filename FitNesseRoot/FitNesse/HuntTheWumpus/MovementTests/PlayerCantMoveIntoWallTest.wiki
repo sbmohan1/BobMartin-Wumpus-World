@@ -44,9 +44,7 @@ Create 3x3 grid
 
 !|PlayerCantMoveIntoWall|
 |move|checkOutput?|
-|E|Sorry there is no Door there.|
 ||Available Directions are S.|
-|enter command|S|
-|check|message|Available Directions are N,S,E.|was printed|true|
-|enter command|W|
-|check|message|Sorry there is no Door there.|was printed|true|
+|E|Sorry there is no Door there.|
+|S|Available Directions are N, S, E.|
+|W|Sorry there is no Door there.|

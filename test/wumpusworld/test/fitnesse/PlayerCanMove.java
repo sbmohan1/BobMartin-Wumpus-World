@@ -33,11 +33,14 @@ public class PlayerCanMove extends CommonPlayerStartingPositionFixture {
 	}
 	
 	public void setMove(String s) {
+		if (s == null || s.isEmpty()) {
+			return;
+		}
 		consoleUI.parseInput(s);
 	}
 	
 	public String checkOutput() {
 		String[] lines = baos.toString().split("\n");
-		return lines[++lineNumber];
+		return lines[lineNumber++];
 	}
 }

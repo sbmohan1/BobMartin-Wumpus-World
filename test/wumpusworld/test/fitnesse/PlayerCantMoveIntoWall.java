@@ -36,6 +36,6 @@ public class PlayerCantMoveIntoWall extends CommonPlayerStartingPositionFixture 
 	
 	public String checkOutput() {
 		String[] lines = baos.toString().split("\n");
-		return lines[++lineNumber];
+		return lines[lineNumber++];
 	}
 }

@@ -353,5 +353,20 @@ public class GameTest {
 		
 		assertEquals(expected, game.getAvailableDirections());
 	}
+	
+	@Test
+	public void testGetAvailableDirectionsDoesntReturnNonCaverns() {
+Map worldMap = new Map(3, 3);
+		
+		worldMap.addCavern(1, 0);
+		
+		Game game = new Game(worldMap);
+		game.setPlayerPosition(new Point(1, 1));
+		
+		List<Direction> expected = new ArrayList<>();
+		expected.add(Direction.NORTH);
+		
+		assertEquals(expected, game.getAvailableDirections());
+	}
 
 }
