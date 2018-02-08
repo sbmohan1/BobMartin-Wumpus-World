@@ -19,7 +19,7 @@ Use 4 caverns
 |cavern|0||0|
 |cavern|1||0|
 |cavern|0||1|
-|CavernWithPlayer|1||1|
+|cavernWithPlayer|1||1|
 
 Run 100 times
 !|script|WumpusCantStartInPlayerCavern|
@@ -27,7 +27,7 @@ Run 100 times
 
 Check occurences with lower bound
 !|script|WumpusCantStartInPlayerCavern|
-|occurrences|0||0||>=24|
-|occurrences|1||0||>=24|
-|occurrences|0||1||>=24|
-|occurrences|1||1||=0|
+|occurrences|0||0||0||24|
+|occurrences|1||0||0||24|
+|occurrences|0||1||0||24|
+|occurrences|1||1||0||0|
