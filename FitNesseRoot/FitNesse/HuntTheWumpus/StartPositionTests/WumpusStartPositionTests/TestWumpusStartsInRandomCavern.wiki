@@ -25,6 +25,6 @@ Run 100 times
 |run|100|
 
 Check occurences with lower bound & upper bound
-!|script|PlayerStartsInRandomCavern|
+!|script|WumpusStartsInRandomCavern|
 |occurrences|0||0||30|
 |occurrences|1||0||30|

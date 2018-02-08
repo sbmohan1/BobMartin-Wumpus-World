@@ -1,3 +1,12 @@
+!define TEST_SYSTEM {slim}
+
+!path bin
+!path lib
+
+|import|
+|wumpusworld.test.fitnesse|
+|org.apache.commons.io|
+
 Test to count number of arrows a player has remaining.
 
 Create 3x3 grid
@@ -27,15 +36,15 @@ Create 3x3 grid
 |cavern|2||1|
 |cavern|2||2|
 
+!|script|PlayerArrowCount|
+|setPlayerPosition|2||1|
+
  * Shoot 1 arrow per turn
 
-!|script|
-|put|player|in cavern|2|1|
-|give|player|Arrow_Count|5|
-|check|message|Available Directions are N, W, S.|was printed|true|
-|check|message|Press F to Fire Arrow.|was printed|true|
-|enter command|F|
-|check|message|Available Directions to Fire Arrows are N, W, S. Which Direction do you want to shoot?|was printed|true|
+!|PlayerArrowCount|
+|move|checkOutput?|
+||Available Directions are N, W, S.|
+|F|Available Directions to Fire Arrows are N, W, S. Which Direction do you want to shoot?|was printed|true|
 |enter command|N|
 |check|message|Arrow missed.|was printed|true|
 |give|player|ArrowCount|4|

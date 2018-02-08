@@ -12,9 +12,17 @@ public class DefaultActionHandler implements ActionHandler {
 
 	@Override
 	public ActionHandler parseInput(String string, PrintStream out, Game game) {
+		if (string.equalsIgnoreCase("F")) {
+//			rest(out);
+			return this;
+		}
+		if (string.equalsIgnoreCase("R")) {
+//			rest(out);
+			return this;
+		}
 		Direction d = DirectionLabel.findByLabel(string);
 		if (d == null) {
-			out.print("Player rested.\n");
+			rest(out);
 			return this;
 		}
 		try {
@@ -25,6 +33,10 @@ public class DefaultActionHandler implements ActionHandler {
 			out.print("Sorry there is no Door there.\n");
 		}
 		return this;
+	}
+	
+	private void rest(PrintStream out) {
+		out.print("Player rested.\n");
 	}
 	
 	public void printAvailableDirections(PrintStream out, Game game) {
