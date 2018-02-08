@@ -93,8 +93,12 @@ public class Game {
 		return directions;
 	}
 
-	public void move(Direction d) {
-		playerPosition = new Point(playerPosition.x + d.x, playerPosition.y + d.y);
+	public void move(Direction d) throws NoDoorException {
+		Point newPos = new Point(playerPosition.x + d.x, playerPosition.y + d.y);
+		if (!worldMap.isCavern(newPos.x, newPos.y)) {
+			throw new NoDoorException();
+		}
+		playerPosition = newPos;
 	}
 
 }
