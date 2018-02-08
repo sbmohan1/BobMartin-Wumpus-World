@@ -3,3 +3,11 @@
 [[Player can't move into Wall][.FitNesse.HuntTheWumpus.MovementTests.PlayerCantMoveIntoWallTest]]
 
 [[Player can rest][.FitNesse.HuntTheWumpus.MovementTests.PlayerCanRestTest]]
+
+[[Player is Transported by Bats][.FitNesse.HuntTheWumpus.MovementTests.BatsTransportTest]]
+
+[[Player can hear Bats][.FitNesse.HuntTheWumpus.MovementTests.PlayerCanHearBatsTest]]
+
+[[Player can hear Wind][.FitNesse.HuntTheWumpus.MovementTests.PlayerCanHearWindTest]]
+
+[[Player can smell the Wumpus][.FitNesse.HuntTheWumpus.MovementTests.PlayerCanSmellWumpusTest]]

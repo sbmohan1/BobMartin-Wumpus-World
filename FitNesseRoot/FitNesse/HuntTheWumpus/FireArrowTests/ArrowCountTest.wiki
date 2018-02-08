@@ -9,41 +9,75 @@ Create 3x3 grid
 * Map Layout
  
 {{{	  
-(1,2) (2,2) (3,2)
-(1,1) (2,1) (3,1)	
-(1,0) (2,0) (3,0)
+(0,0) (1,0) (2,0)
+(0,1) (1,1) (2,1)	
+(0,2) (1,2) (2,2)
 }}}
 
 
 * Use 9 caverns
 !|script|PlayerArrowCount|
-|cavern|1||2|
-|cavern|2||2|
-|cavern|3||2|
-|cavern|1||1|
-|cavern|2||1|
-|cavern|3||1|
+|cavern|0||0|
+|cavern|0||1|
+|cavern|0||2|
 |cavern|1||0|
+|cavern|1||1|
+|cavern|1||2|
 |cavern|2||0|
-|cavern|3||0|
+|cavern|2||1|
+|cavern|2||2|
 
  * Shoot 1 arrow per turn
 
 !|script|
 |put|player|in cavern|2|1|
-|check|message|Shoot Arrow directions are N, W, S, E.|was printed|true|
-|enter command|E|
-|check|message|Arrow missed, you have 4 arrows remaining.|was printed|true|
-|check|message|Shoot Arrow directions remaining are N, W, S.|was printed|true|
+|give|player|Arrow_Count|5|
+|check|message|Available Directions are N, W, S.|was printed|true|
+|check|message|Press F to Fire Arrow.|was printed|true|
+|enter command|F|
+|check|message|Available Directions to Fire Arrows are N, W, S. Which Direction do you want to shoot?|was printed|true|
 |enter command|N|
-|check|message|Arrow missed, you have 3 arrows remaining.|was printed|true|
-|check|message|Shoot Arrow directions remaining are W, S.|was printed|true|
+|check|message|Arrow missed.|was printed|true|
+|give|player|ArrowCount|4|
+|check|message|You have 4 arrows remaining.|was printed|true|
+|player|turn|ends|
+
+|put|player|in cavern|2|1|
+|give|player|Arrow_Count|4|
+|check|message|Available Directions are W, S.|was printed|true|
+|check|message|Press F to Fire Arrow.|was printed|true|
+|enter command|F|
+|check|message|Available Directions to Fire Arrows are W, S. Which Direction do you want to shoot?|was printed|true|
 |enter command|W|
-|check|message|Arrow missed, you have 2 arrows remaining.|was printed|true|
-|check|message|Shoot Arrow directions remaining are S.|was printed|true|
+|check|message|Arrow missed.|was printed|true|
+|give|player|Arrow_Count|3|
+|check|message|You have 3 arrows remaining.|was printed|true|
+|player|turn|ends|
+
+
+|put|player|in cavern|2|1|
+|give|player|Arrow_Count|3|
+|check|message|Available Directions are S.|was printed|true|
+|check|message|Press F to Fire Arrow.|was printed|true|
+|enter command|F|
+|check|message|Available Directions to Fire Arrows are S. Which Direction do you want to shoot?|was printed|true|
 |enter command|S|
-|check|message|Arrow missed, you have 1 arrow remaining.|was printed|true|
-|check|message|Shoot Arrow directions remaining are N, W, S, E.|was printed|true|
-|enter command|E|
-|check|message|Arrow missed, you have 0 arrows remaining. |was printed|true|
-|check|message|Shoot Arrow directions remaining N, W, S. you cant shoot as you have no arrows!!|was printed|true|
+|check|message|Arrow missed.|was printed|true|
+|give|player|Arrow_Count|2|
+|check|message|You have 2 arrows remaining.|was printed|true|
+|player|turn|ends|
+
+|put|player|in cavern|2|1|
+|give|player|Arrow_Count|2|
+|check|message|Available Directions are N, W, S.|was printed|true|
+|check|message|Press F to Fire Arrow.|was printed|true|
+|enter command|F|
+|check|message|Available Directions to Fire Arrows are N, W, S. Which Direction do you want to shoot?|was printed|true|
+|enter command|N|
+|check|message|Arrow missed.|was printed|true|
+|give|player|Arrow_Count|1|
+|check|message|You have 1 arrows remaining.|was printed|true|
+|player|turn|ends|
+
+
+
