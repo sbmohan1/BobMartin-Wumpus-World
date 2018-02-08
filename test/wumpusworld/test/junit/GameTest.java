@@ -251,8 +251,8 @@ public class GameTest {
 		
 		for(int i = 0; i <100; i++) {
 			Game game = new Game(worldMap);
-			game.setWumpusLocation(2, 2);
-			Point playerPosition = game.getPlayerPosition();
+			Point playerPosition = new Point(2,2);
+			game.setPlayerPosition(playerPosition);
 			if(playerPosition.equals(aboveWumpus)) {
 				aboveCount++;
 			}
@@ -284,7 +284,11 @@ public class GameTest {
 		Map worldMap = new Map(2, 2);
 		worldMap.addCavern(0, 0);
 		worldMap.addCavern(0, 1);
+		worldMap.addCavern(1, 0);
+		worldMap.addCavern(1, 1);
 		Game game = new Game(worldMap);
+		game.setPlayerLocation();
+		game.setWumpusPosition();
 		Point wumpusPosition = game.retrieveWumpusPosition();
 		assertTrue(wumpusPosition.x > -1 && wumpusPosition.x < 2);
 		assertTrue(wumpusPosition.y > -1 && wumpusPosition.y < 2);
@@ -292,14 +296,18 @@ public class GameTest {
 	
 	@Test
 	public void onNewGame_WumpusIsGivenRandomPosition() {
-		Map worldMap = new Map(2, 1);
+		Map worldMap = new Map(2, 2);
 		int firstCellCount = 0;
 		int secondCellCount = 0;
 		worldMap.addCavern(0, 0);
 		worldMap.addCavern(1, 0);
+		worldMap.addCavern(0, 1);
+		worldMap.addCavern(1, 1);
 		
 		for (int i=0; i < 100; i++) {
 			Game game = new Game(worldMap);
+			game.setPlayerLocation();
+			game.setWumpusPosition();
 			Point wumpusPosition = game.retrieveWumpusPosition();
 			if (wumpusPosition.x == 0) {
 				firstCellCount++;
