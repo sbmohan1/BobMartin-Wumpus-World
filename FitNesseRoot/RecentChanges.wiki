@@ -1,6 +1,6 @@
+|FitNesse.HuntTheWumpus.MovementTests.WumpusMovementTests.WumpusMovesRandomlyTest||12:14:52 Thu, Feb 08, 2018|
 <<<<<<< HEAD
 <<<<<<< HEAD
-|FitNesse.HuntTheWumpus.MovementTests.WumpusMovementTests.WumpusMovesRandomlyTest||12:00:36 Thu, Feb 08, 2018|
 =======
 =======
 |FitNesse.HuntTheWumpus.GameOverTests.PlayerRestingEatenTest||12:01:35 Thu, Feb 08, 2018|
