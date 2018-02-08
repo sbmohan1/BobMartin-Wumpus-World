@@ -42,6 +42,11 @@ public class Game {
 		PlayerPositionStrategy strategy = new PlayerPositionStrategy();
 		return strategy.getPoint(this);
 	}
+	
+	public Point getWumpusPosition() {
+		WumpusPositionStrategy strategy = new WumpusPositionStrategy();
+		return strategy.getPoint(this);
+	}
 
 	public void setWumpusLocation(int x, int y) {
 		wumpusLocation = new Point(x, y);
