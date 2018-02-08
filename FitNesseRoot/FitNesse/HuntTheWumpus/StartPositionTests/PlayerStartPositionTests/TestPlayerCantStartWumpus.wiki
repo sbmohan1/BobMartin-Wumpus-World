@@ -5,29 +5,29 @@
 |import|
 |wumpusworld.test.fitnesse|
 
-!|script|PlayerCantStartInWumpusCavern|
+!|script|PlayerCantStartInOrNextToWumpusCavern|
 
 Make sure the player cannot start in the same cavern as the wumpus
 
 Create 2x2 grid
-!|PlayerCantStartInWumpusCavern|
+!|PlayerCantStartInOrNextToWumpusCavern|
 |width|height|
 |2|2|
 
 Use 4 caverns
-!|script|PlayerCantStartInWumpusCavern|
+!|script|PlayerCantStartInOrNextToWumpusCavern|
 |cavern|0||0|
 |cavern|1||0|
 |cavern|0||1|
 |cavernWithWumpus|1||1|
 
 Run 100 times
-!|script|PlayerCantStartInWumpusCavern|
+!|script|PlayerCantStartInOrNextToWumpusCavern|
 |run|100|
 
 Check occurences with lower bound
-!|script|PlayerCantStartInWumpusCavern|
-|occurrences|0||0||15||45|
-|occurrences|1||0||15||45|
-|occurrences|0||1||15||45|
+!|script|PlayerCantStartInOrNextToWumpusCavern|
+|occurrences|0||0||100||100|
+|occurrences|1||0||0||0|
+|occurrences|0||1||0||0|
 |occurrences|1||1||0||0|

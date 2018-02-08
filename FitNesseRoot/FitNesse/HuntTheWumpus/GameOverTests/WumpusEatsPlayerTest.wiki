@@ -1,0 +1,36 @@
+If the player enters a cavern that contains the wumpus, then the player dies and the game is over.
+
+Create 3x3 grid
+!|PlayerEaten|
+|width|height|
+|3|3|
+
+
+* Map Layout
+ 
+{{{	  
+(0,2) (1,2) (2,2)
+(0,1) (1,1) (2,1)	
+(0,0) (1,0) (2,0)
+}}}
+
+
+* Use 9 caverns
+!|script|PlayerEaten|
+|cavern|0||0|
+|cavern|1||0|
+|cavern|2||0|
+|cavern|0||1|
+|cavern|1||1|
+|cavern|2||1|
+|cavern|0||2|
+|cavern|1||2|
+|cavern|2||2|
+
+!|script|
+|put|player|in cavern|1|1|
+|put|wumpus|in cavern|1|0|
+|enter command|S|
+|check|message|You were eaten by the wumpus.|was printed|true|
+|check|message|Game over.|was printed|true|
+|check|game terminated|true|
