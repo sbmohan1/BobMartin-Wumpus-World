@@ -22,7 +22,7 @@ Create 3x3 grid
 |cavern|3||2|
 |cavern|1||1|
 |cavern|2||1|
-|cavern|3||2|
+|cavern|3||1|
 |cavern|1||0|
 |cavern|2||0|
 |cavern|3||0|
@@ -31,21 +31,14 @@ Create 3x3 grid
 
 !|script|
 |put|player|in cavern|2|1|
+|check|message|Available Directions are N, W, S, E.|was printed|true|
 |enter command|E|
-|check|cavern|3|1|has|player|true|
+|check|message|Available Directions are N, W, S.|was printed|true|
 |enter command|N|
-|check|cavern|3|2|has|player|true|
+|check|message|Available Directions are W, S.|was printed|true|
 |enter command|W|
-|check|cavern|2|2|has|player|true|
-|enter command|W|
-|check|cavern|1|2|has|player|true|
+|check|message|Available Directions are W, S, E.|was printed|true|
 |enter command|S|
-|check|cavern|1|1|has|player|true|
+|check|message|Available Directions are N, W, S, E.|was printed|true|
 |enter command|S|
-|check|cavern|1|0|has|player|true|
-|enter command|E|
-|check|cavern|2|0|has|player|true|
-|enter command|N|
-|check|cavern|2|1|has|player|true|
-|enter command|N|
-|check|cavern|2|1|has|player|false|
+|check|message|Available Directions are N, E.|was printed|false|
