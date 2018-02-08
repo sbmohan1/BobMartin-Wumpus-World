@@ -1,0 +1,33 @@
+!define TEST_SYSTEM {slim}
+
+!path bin
+
+|import|
+|wumpusworld.test.fitnesse|
+
+!|script|WumpusCantStartNextToPlayerCavern|
+
+Make sure the Wumpus cannot start next to the Player
+
+Create 2x2 grid
+!|WumpusCantStartNextToPlayerCavern|
+|width|height|
+|2|2|
+
+Use 4 caverns
+!|script|WumpusCantStartNextToPlayerCavern|
+|cavern|0||0|
+|cavernNextToWumpus|1||0|
+|cavernNextToWumpus|0||1|
+|cavernWithWumpus|1||1|
+
+Run 100 times
+!|script|WumpusCantStartNextToPlayerCavern|
+|run|100|
+
+Check occurences with lower bound
+!|script|WumpusCantStartNextToPlayerCavern|
+|occurrences|0||0||15||45|
+|occurrences|1||0||0||0|
+|occurrences|0||1||0||0|
+|occurrences|1||1||0||0|
