@@ -1,4 +1,19 @@
+<<<<<<< HEAD
 |FitNesse.HuntTheWumpus.MovementTests.WumpusMovementTests.WumpusMovesRandomlyTest||12:21:10 Thu, Feb 08, 2018|
+=======
+<<<<<<< HEAD
+|FitNesse.HuntTheWumpus.FireArrowTests.ArrowCountTest||12:14:36 Thu, Feb 08, 2018|
+|FitNesse.HuntTheWumpus.FireArrowTests||11:41:16 Thu, Feb 08, 2018|
+|FitNesse.HuntTheWumpus.FireArrowTests.PlayersStartWith5Arrows||11:35:06 Thu, Feb 08, 2018|
+|FitNesse.HuntTheWumpus.FireArrowTests.PlayerStartWith5Arrows||11:32:48 Thu, Feb 08, 2018|
+<<<<<<< HEAD
+|FitNesse.HuntTheWumpus.MovementTests.PlayerCantMoveWall||10:58:44 Thu, Feb 08, 2018|
+|FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest||09:32:29 Thu, Feb 08, 2018|
+|FitNesse.HuntTheWumpus.MovementTests||14:56:35 Wed, Feb 07, 2018|
+=======
+=======
+|FitNesse.HuntTheWumpus.MovementTests.WumpusMovementTests.WumpusMovesRandomlyTest||12:14:52 Thu, Feb 08, 2018|
+>>>>>>> 6138e0d9cb0cf61be655f6eb2266d85d3faf9408
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -12,6 +27,7 @@
 |FitNesse.HuntTheWumpus.WumpusEatsPlayerTest||11:29:36 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus||11:28:17 Thu, Feb 08, 2018|
 >>>>>>> cdb3e179621fbefbc125b09648835059355deb45
+>>>>>>> 7ff7157c44d06155cfaddb937a07f7f2dbc4dcff
 |FitNesse.HuntTheWumpus.MovementTests.PlayerCantMoveIntoWallTest||11:13:28 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.MovementTests.WumpusMovementTests||11:01:15 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.MovementTests||10:54:53 Thu, Feb 08, 2018|
@@ -20,6 +36,7 @@
 |FitNesse.HuntTheWumpus.WumpusMovementTests||10:53:40 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest||10:50:18 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.MovementTests.PlayerCantMoveWall||10:22:04 Thu, Feb 08, 2018|
+>>>>>>> 4186855245744f7dbf3a4d9d8ebbdda6164a9777
 |FitNesse.HuntTheWumpus.StartPositionTests.PlayerStartPositionTests.TestPlayerCantStartWumpus||13:48:53 Wed, Feb 07, 2018|
 <<<<<<< HEAD
 |FitNesse.HuntTheWumpus.PlayerStartPositionTests.TestPlayerCantStartWumpus||11:29:09 Wed, Feb 07, 2018|

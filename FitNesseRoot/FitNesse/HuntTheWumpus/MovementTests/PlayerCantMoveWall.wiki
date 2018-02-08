@@ -5,9 +5,9 @@ Put player in cavern 1,1.
 
 Create  3 x 3 grid
 
-|PlayerCantMoveWall|
-|Width   | Height  |
-| 3      |   3     |
+|Player Cant Move into Wall|
+|Width   |    Height       |
+| 3      |      3          |
 
 
 Use 9 caverns
