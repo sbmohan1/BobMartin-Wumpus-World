@@ -1,4 +1,4 @@
-|FitNesse.HuntTheWumpus.MovementTests.PlayerCantMoveWall||10:22:04 Thu, Feb 08, 2018|
+|FitNesse.HuntTheWumpus.MovementTests.PlayerCantMoveWall||10:58:44 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest||09:32:29 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.MovementTests||14:56:35 Wed, Feb 07, 2018|
 |FitNesse.HuntTheWumpus.StartPositionTests.PlayerStartPositionTests.TestPlayerCantStartWumpus||13:48:53 Wed, Feb 07, 2018|
