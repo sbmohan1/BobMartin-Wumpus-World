@@ -1,1 +1,2 @@
 [[Arrow Count Test][.FitNesse.HuntTheWumpus.FireArrowTests.ArrowCountTest]]
+[[Zero Arrow Test][.FitNesse.HuntTheWumpus.FireArrowTests.ZeroArrowsTest]]
