@@ -46,25 +46,15 @@ public class ConsoleUI {
 	private InputStream in;
 	private PrintStream out;
 	private Game game;
-
-	public ConsoleUI(InputStream in, PrintStream out, Game game) {
-		this.in = in;
+	
+	public ConsoleUI(PrintStream out, Game game) {
+		this.in = null;
 		this.out = out;
 		this.game = game;
+	}
+
+	public void run() {
 		printAvailableDirections(out, game);
-		Scanner sc = new Scanner(in);
-		while (sc.hasNextLine()) {
-			String line = sc.nextLine();
-			if (line.isEmpty()) {
-				break;
-			} else {
-				Direction d = DirectionLabel.findByLabel(line);
-				game.move(d);
-				printAvailableDirections(out, game);
-			}
-		}
-		sc.close();
-		
 	}
 
 	private void printAvailableDirections(PrintStream out, Game game) {
@@ -73,12 +63,18 @@ public class ConsoleUI {
 			out.print("No directions to move\n");
 		}
 		else {
-			String s = "Available directions: ";
+			String s = "Available Directions are ";
 			for (Direction d : directions) {
-				s += DirectionLabel.findByDirection(d).label;
+				s += DirectionLabel.findByDirection(d).label + ", ";
 			}
-			out.print(s + "\n");
+			out.print(s.substring(0, s.length() - 2) + ".\n");
 		}
+	}
+
+	public void parseInput(String string) {
+		Direction d = DirectionLabel.findByLabel(string);
+		game.move(d);
+		printAvailableDirections(out, game);
 	}
 
 }
