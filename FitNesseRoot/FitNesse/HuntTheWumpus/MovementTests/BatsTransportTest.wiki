@@ -1,0 +1,69 @@
+!define TEST_SYSTEM {slim}
+
+!path bin
+!path lib
+
+|import|
+|wumpusworld.test.fitnesse|
+|org.apache.commons.io|
+
+Test that we can walk around the map. This makes sure we can move both directions through each corridor.
+
+Create 3x3 grid
+!|BatsTransport|
+|width|height|
+|3|3|
+
+
+* Map Layout
+ 
+{{{	  
+(0,0) (1,0) (2,0)
+(0,1) (1,1) (2,1)	
+(0,2) (1,2) (2,2)
+}}}
+
+
+* Use 9 caverns
+!|script|BatsTransport|
+|cavern|0||0|
+|cavern|0||1|
+|cavern|0||2|
+|cavern|1||0|
+|cavern|1||1|
+|cavern|1||2|
+|cavern|2||0|
+|cavern|2||1|
+|cavern|2||2|
+
+ * Walk into bats cavern.
+
+!|script|BatsTransport|
+|setPlayerPosition|1||1|
+|setBatsPosition|0||1|
+|setWumpusPosition|0||2|
+|setPitPosition|2||0|
+
+
+!|BatsTransport|
+|move|checkOutput?|
+|W|You were transported by Bats!|
+
+Run 100 times
+!|script|BatsTransport|
+|run|100|
+
+Check occurences with lower bound
+!|script|PlayerNewPosition|
+|occurrences|0||1||=0|
+|occurrences|0||2||=0|
+|occurrences|2||0||=0|
+|occurrences|0||0||>9|
+|occurrences|1||0||>9|
+|occurrences|1||1||>9|
+|occurrences|1||2||>9|
+|occurrences|2||1||>9|
+|occurrences|2||2||>9|
+
+
+
