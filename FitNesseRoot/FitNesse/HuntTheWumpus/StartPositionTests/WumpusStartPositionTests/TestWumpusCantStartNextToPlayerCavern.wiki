@@ -16,10 +16,10 @@ Create 2x2 grid
 
 Use 4 caverns
 !|script|WumpusCantStartNextToPlayerCavern|
-|cavern|0||0|
-|cavernNextToWumpus|1||0|
-|cavernNextToWumpus|0||1|
-|cavernWithWumpus|1||1|
+|cavernWithPlayer|0||0|
+|cavernNextToPlayer|1||0|
+|cavernNextToPlayer|0||1|
+|cavern|1||1|
 
 Run 100 times
 !|script|WumpusCantStartNextToPlayerCavern|
@@ -27,7 +27,7 @@ Run 100 times
 
 Check occurences with lower bound
 !|script|WumpusCantStartNextToPlayerCavern|
-|occurrences|0||0||15||45|
+|occurrences|0||0||0||0|
 |occurrences|1||0||0||0|
 |occurrences|0||1||0||0|
-|occurrences|1||1||0||0|
+|occurrences|1||1||15||45|
