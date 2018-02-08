@@ -3,3 +3,5 @@
 [[Player Falls into Pit Test][.FitNesse.HuntTheWumpus.GameOverTests.PlayerFallsIntoPitTest]]
 
 [[Player closes game Test][.FitNesse.HuntTheWumpus.GameOverTests.PlayerClosesGameTest]]
+
+[[Player Rests and Wumpus eats them Test][.FitNesse.HuntTheWumpus.GameOverTests.PlayerRestingEatenTest]]
