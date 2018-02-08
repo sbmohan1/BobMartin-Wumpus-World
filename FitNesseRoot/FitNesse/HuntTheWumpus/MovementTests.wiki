@@ -3,4 +3,4 @@ Suite
 ---
 [[Player Movement Tests][.FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest]]
 
-[[Wumpus Movement Tests][.FitNesse.HuntTheWumpus.WumpusMovementTests]]
+[[Wumpus Movement Tests][.FitNesse.HuntTheWumpus.MovementTests.WumpusMovementTests]]
