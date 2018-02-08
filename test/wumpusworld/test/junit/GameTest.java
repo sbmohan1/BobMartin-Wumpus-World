@@ -219,16 +219,6 @@ public class GameTest {
 	}
 	
 	@Test
-	public void onNewGame_returnWumpusPositionWhenMapIsOneCell() {
-		Map worldMap = new Map(1, 1);
-		worldMap.addCavern(0, 0);
-		Game game = new Game(worldMap);
-		Point wumpusPosition = game.getWumpusPosition();
-		assertEquals(0, wumpusPosition.x);
-		assertEquals(0, wumpusPosition.y);
-	}
-	
-	@Test
 	public void onNewGame_returnWumpusPositionWhenMapIsTwoCells() {
 		Map worldMap = new Map(2, 2);
 		worldMap.addCavern(0, 0);
