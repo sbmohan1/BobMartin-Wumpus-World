@@ -18,3 +18,5 @@ WhereUsed: no
 
 [[Game End Tests][.FitNesse.HuntTheWumpus.GameOverTests]]
 
+[[Invalid Command Test][.FitNesse.HuntTheWumpus.InvalidCommandTest]]
+
