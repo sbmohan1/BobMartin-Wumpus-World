@@ -5,7 +5,7 @@
 |import|
 |wumpusworld.test.fitnesse|
 
-!|script|PlayerCantStartInWumpusCavern|
+!|script|WumpusCantStartInPlayerCavern|
 
 Make sure the wumpus cannot start in the same cavern as the player
 
