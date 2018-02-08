@@ -2,9 +2,10 @@ package wumpusworld;
 
 public class Map {
 	
-	private enum CELL_TYPE {
+	public enum CELL_TYPE {
 		EMPTY,
-		CAVERN, PIT,
+		CAVERN,
+		PIT,
 		BATS
 	}
 	
@@ -21,13 +22,6 @@ public class Map {
 		this.height = height;
 	}
 
-	public int getWidth() {
-		return width;
-	}
-
-	public int getHeight() {
-		return height;
-	}
 
 	public void addCavern(int x, int y) {
 		grid[x][y] = CELL_TYPE.CAVERN;
@@ -53,4 +47,11 @@ public class Map {
 		return grid[x][y] == CELL_TYPE.BATS;
 	}
 
+	public int getWidth() {
+		return width;
+	}
+	
+	public int getHeight() {
+		return height;
+	}
 }

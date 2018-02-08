@@ -20,8 +20,6 @@ public class GameTest {
 		Point playerPosition = game.getPlayerPosition();
 		assertEquals(0, playerPosition.x);
 		assertEquals(0, playerPosition.y);
-		
-		
 	}
 	
 	@Test
@@ -111,6 +109,29 @@ public class GameTest {
 		
 		for (int i=0; i < 100; i++) {
 			Game game = new Game(worldMap);
+			Point playerPosition = game.getPlayerPosition();
+			if (playerPosition.x == 0) {
+				firstCellCount++;
+			}
+			else {
+				secondCellCount++;
+			}
+		}
+		assertTrue(firstCellCount == 100);
+		assertTrue(secondCellCount == 0);
+	}
+	
+	@Test
+	public void onNewGame_PlayerIsGivenRandomPosition_ExcludesWumpusLocation() {
+		Map worldMap = new Map(2, 1);
+		worldMap.addCavern(0, 0);
+		worldMap.addCavern(1, 0);
+		int firstCellCount = 0;
+		int secondCellCount = 0;
+		
+		for (int i=0; i < 100; i++) {
+			Game game = new Game(worldMap);
+			game.setWumpusLocation(1,0);
 			Point playerPosition = game.getPlayerPosition();
 			if (playerPosition.x == 0) {
 				firstCellCount++;

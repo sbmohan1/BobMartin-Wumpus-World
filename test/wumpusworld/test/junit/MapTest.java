@@ -7,15 +7,30 @@ import org.junit.Test;
 import wumpusworld.Map;
 
 public class MapTest {
-
+	
 	@Test
-	public void testInitialMapDimensions() {
-		Map worldMap = new Map(2, 2);
-		assertEquals(2, worldMap.getWidth());
-		assertEquals(2, worldMap.getHeight());
-		worldMap = new Map(3,3);
-		assertEquals(3, worldMap.getWidth());
-		assertEquals(3, worldMap.getHeight());
+	public void cavernCannotBeAddedOutsideMapDimensions() {
+		Map map = new Map(1, 1);
+		try {
+			map.addCavern(-1, 0);
+			fail();
+		}
+		catch (ArrayIndexOutOfBoundsException ex) { }
+		try {
+			map.addCavern(0, -1);
+			fail();
+		}
+		catch (ArrayIndexOutOfBoundsException ex) { }
+		try {
+			map.addCavern(1, 0);
+			fail();
+		}
+		catch (ArrayIndexOutOfBoundsException ex) { }
+		try {
+			map.addCavern(0, 1);
+			fail();
+		}
+		catch (ArrayIndexOutOfBoundsException ex) { }
 	}
 	
 	@Test
