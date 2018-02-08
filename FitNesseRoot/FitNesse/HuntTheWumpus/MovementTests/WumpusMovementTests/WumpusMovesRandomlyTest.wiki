@@ -1,34 +1,37 @@
-!define TEST_SYSTEM {slim}
-
-!path bin
-
-|import|
-|wumpusworld.test.fitnesse|
-
-!|script|WumpusMovesRandomly|
-
 Make sure the wumpus moves randomly
 
-Create 2x2 grid
+Create 3x3 grid
 !|WumpusMovesRandomly|
 |width|height|
-|2|2|
+|3|3|
 
-Use 4 caverns
+
+* Map Layout
+ 
+{{{	  
+(0,2) (1,2) (2,2)
+(0,1) (1,1) (2,1)	
+(0,0) (1,0) (2,0)
+}}}
+
+
+* Use 9 caverns
 !|script|WumpusMovesRandomly|
 |cavern|0||0|
 |cavern|1||0|
+|cavern|2||0|
 |cavern|0||1|
 |cavern|1||1|
+|cavern|2||1|
+|cavern|0||2|
+|cavern|1||2|
+|cavern|2||2|
 
-Run 100 times
-!|script|WumpusMovesRandomly|
-|run|100|
-
-Check occurences with lower bound & upper bound
-!|script|WumpusMovesRandomly|
-|put wumpus in cavern|0|0|||
-|occurrences|0|0||16|40|
-|occurrences|1|0||16|40|
-|occurrences|0|1||16|40|
-|occurrences|1|1||0|0|
+!|script|
+|put|player|in cavern|0|0|
+|put|wumpus|in cavern|2|2|
+|enter command|R|
+|check|message|Player resting.|was printed|true|
+|check|wumpus|in cavern|1|2|or|
+|check|wumpus|in cavern|2|0|or|
+|check|wumpus|in cavern|2|2||
