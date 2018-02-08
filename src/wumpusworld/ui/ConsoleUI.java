@@ -1,9 +1,7 @@
 package wumpusworld.ui;
 
-import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.List;
-import java.util.Scanner;
 
 import wumpusworld.Game;
 import wumpusworld.Game.Direction;
@@ -43,12 +41,10 @@ public class ConsoleUI {
 		}
 	}
 	
-	private InputStream in;
 	private PrintStream out;
 	private Game game;
 	
 	public ConsoleUI(PrintStream out, Game game) {
-		this.in = null;
 		this.out = out;
 		this.game = game;
 	}
@@ -67,8 +63,12 @@ public class ConsoleUI {
 			for (Direction d : directions) {
 				s += DirectionLabel.findByDirection(d).label + ", ";
 			}
-			out.print(s.substring(0, s.length() - 2) + ".\n");
+			out.print(trimTrailingComma(s) + ".\n");
 		}
+	}
+
+	private String trimTrailingComma(String s) {
+		return s.substring(0, s.length() - 2);
 	}
 
 	public void parseInput(String string) {

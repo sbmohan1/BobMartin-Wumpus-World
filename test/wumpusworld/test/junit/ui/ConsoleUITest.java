@@ -4,10 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 import java.awt.Point;
 import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
 import java.io.PrintStream;
 
-import org.apache.commons.io.IOUtils;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -35,8 +33,6 @@ public class ConsoleUITest {
 		ConsoleUI console = new ConsoleUI(printStream, game);
 		console.run();
 		
-		
-		
 		assertEquals("Available Directions are N, W, S, E.\n", baos.toString());
 	}
 	
@@ -62,8 +58,6 @@ public class ConsoleUITest {
 		
 		ConsoleUI console = new ConsoleUI(printStream, game);
 		console.run();
-		
-		
 		
 		assertEquals("Available Directions are N, W, S.\n", baos.toString());
 	}
