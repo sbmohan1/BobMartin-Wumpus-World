@@ -1,0 +1,40 @@
+'''Player cant move into a wall'''
+
+Put player in cavern 1,1.
+
+
+Create  3 x 3 grid
+
+|PlayerCantMoveWall|
+|Width   | Height  |
+| 3      |   3     |
+
+
+Use 9 caverns
+
+|Cavern  | X  |  Y  |
+|        |    |     |
+|        | 0  |  1  |
+|        | 0  |  2  |
+|        | 0  |  3  |
+|        | 1  |  1  |
+|        | 1  |  2  |
+|        | 1  |  3  |
+|        | 2  |  1  |
+|        | 2  |  2  |
+|        | 2  |  3  |
+
+
+
+Add Wall
+
+|    | X  |  Y  |
+|    |    |     |
+|Wall| 1  |  2  |
+
+
+
+
+
+
+
