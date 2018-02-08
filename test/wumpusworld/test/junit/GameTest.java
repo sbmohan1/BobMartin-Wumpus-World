@@ -238,9 +238,9 @@ public class GameTest {
 		worldMap.addCavern(3, 1);
 		worldMap.addCavern(3, 2);
 		worldMap.addCavern(3, 3);
-		Point abovePlayer = new Point(2, 1);
-		Point belowPlayer = new Point(2, 3);
-		Point leftOfPlayer = new Point(1, 2);
+		Point aboveWumpus = new Point(2, 1);
+		Point belowWumpus = new Point(2, 3);
+		Point leftOfWumpus = new Point(1, 2);
 		Point rightOfWumpus = new Point(3, 2);
 		int aboveCount = 0;
 		int belowCount = 0;

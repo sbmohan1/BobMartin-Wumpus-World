@@ -43,6 +43,7 @@ Create 3x3 grid
 
 !|PlayerCanMove|
 |move|checkOutput?|
+||Available Directions are N, W, S, E.|
 |E|Available Directions are N, W, S.|
 |N|Available Directions are W, S.|
 |W|Available Directions are W, S, E.|
