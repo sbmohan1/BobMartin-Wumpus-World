@@ -1,3 +1,6 @@
+---
+Suite
+---
 [[Player Movement Tests][.FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest]]
 
 [[Wompus Movement Tests][.FitNesse.HuntTheWumpus.WumpusMovementTests]]

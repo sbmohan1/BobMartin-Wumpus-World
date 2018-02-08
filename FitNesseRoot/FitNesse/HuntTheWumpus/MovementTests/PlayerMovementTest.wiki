@@ -1,1 +1,5 @@
-!contents -R2 -g -p -f -h
+[[Player can move through Caverns][.FitNesse.HuntTheWumpus.MovementTests.PlayerCanMoveTest]]
+
+[[Player can't move into Wall][.FitNesse.HuntTheWumpus.MovementTests.PlayerCantMoveIntoWallTest]]
+
+[[Player can rest][.FitNesse.HuntTheWumpus.MovementTests.PlayerCanRestTest]]
