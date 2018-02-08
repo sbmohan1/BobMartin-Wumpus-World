@@ -9,39 +9,34 @@
 
 Make sure the player can't start in a pit cavern
 
-Create 2x1 grid
+Create 2x2 grid
 !|PlayerCantStartPit|
 |width|height|
-|1|3|
+|2|2|
 
-Use 2 caverns
+
+Run 100 times
 !|script|PlayerCantStartPit|
 |cavern|0||0|
 |cavern|0||1|
-|cavern|0||2|
+|cavern|1||0|
 
-Add pit cavern
 !|script|PlayerCantStartPit|
-|bats|0||2|
-
 <<<<<<< HEAD
-Run 100 times
+|pit|0||2|
+=======
+|pit|1||1|
+>>>>>>> 683caf696f4abb91fedf654788834ffd46389c8a
+
+
+
 !|script|PlayerCantStartPit|
 |run|100|
 
-Check occurences with lower bound and upper bound
-!|script|PlayerCantStartPit|
-|occurrences|0||0||30||70|
-|occurrences|0||1||30||70|
-|occurrences|0||2||0||0|
 
-
-
-
-=======
 Player Cannot start in a cavern with a pit.
 !|script|PlayerCantStartPit|
-|occurrences|0||0||20||70|
-|occurrences|0||1||20||70|
-|occurrences|0||2||0||0|
->>>>>>> 256985cac1efcac65883c992c8f6e90484cce1fa
+|occurrences|0||0||15||45|
+|occurrences|0||1||15||45|
+|occurrences|1||0||15||45|
+|occurrences|1||1||0||0|

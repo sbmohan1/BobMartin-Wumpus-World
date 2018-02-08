@@ -19,6 +19,13 @@ public class PlayerCantStartPit {
 		worldMap.addCavern(x, y);
 	}
 	
+	public void pit(int x, int y) {
+		if (worldMap == null) {
+			worldMap = new Map(width, height);
+		}
+		worldMap.addPit(x, y);
+	}
+	
 	public void setWidth(int width) {
 		PlayerCantStartPit.width = width;
 	}

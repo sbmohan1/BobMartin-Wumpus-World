@@ -11,6 +11,13 @@ public class CommonPlayerStartingPositionFixture {
 	protected static Map worldMap;
 	protected static java.util.Map<Point, Integer> startingPositions;
 	
+	public void reset() {
+		width = 0;
+		height = 0;
+		worldMap = null;
+		startingPositions = null;
+	}
+	
 	public void setWidth(int width) {
 		CommonPlayerStartingPositionFixture.width = width;
 	}

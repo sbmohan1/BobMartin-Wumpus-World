@@ -1,1 +1,3 @@
-test
+[[Move Position Tests][.FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest]]
+
+[[Start Position Tests][.FitNesse.HuntTheWumpus.StartPositionTests]]
