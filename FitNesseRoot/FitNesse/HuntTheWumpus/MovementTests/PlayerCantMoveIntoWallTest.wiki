@@ -17,17 +17,18 @@ Create 3x3 grid
 
 * Map Layout
  
+* Map Layout
+ 
 {{{	  
-(0,2) (1,2) (2,2)
-(0,1) (1,1) (2,1)	
 (0,0) (1,0) (2,0)
+(0,1) (1,1) (2,1)	
+(0,2) (1,2) (2,2)
 }}}
 
 
 * Use 9 caverns
 !|script|PlayerCantMoveIntoWall|
 |cavern|0||0|
-|cavern|1||0|
 |cavern|2||0|
 |cavern|0||1|
 |cavern|1||1|
@@ -37,16 +38,15 @@ Create 3x3 grid
 |cavern|2||2|
 
 !|script|PlayerCantMoveIntoWall|
-|setPlayerPosition|1||1|
+|setPlayerPosition|0||0|
 
  * Try to walk into a wall.
 
 !|PlayerCantMoveIntoWall|
 |move|checkOutput?|
-|S|Sorry there is no Door there.|
-||Available Directions are N, W, S, E.|
-|enter command|N|
+|E|Sorry there is no Door there.|
+||Available Directions are S.|
+|enter command|S|
 |check|message|Available Directions are N,S,E.|was printed|true|
 |enter command|W|
 |check|message|Sorry there is no Door there.|was printed|true|
-|check|message|Available Directions are N,S,E.|was printed|true|
