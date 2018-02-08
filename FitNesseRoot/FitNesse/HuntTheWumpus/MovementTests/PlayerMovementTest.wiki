@@ -1,3 +1,7 @@
+---
+Suite
+Test: no
+---
 [[Player can move through Caverns][.FitNesse.HuntTheWumpus.MovementTests.PlayerCanMoveTest]]
 
 [[Player can't move into Wall][.FitNesse.HuntTheWumpus.MovementTests.PlayerCantMoveIntoWallTest]]

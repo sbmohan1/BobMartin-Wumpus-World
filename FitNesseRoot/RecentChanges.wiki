@@ -1,3 +1,4 @@
+|FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest||16:22:18 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.FireArrowTests||16:05:10 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.FireArrowTests.ArrowCountTest||15:45:28 Thu, Feb 08, 2018|
 <<<<<<< HEAD
@@ -14,10 +15,8 @@
 =======
 <<<<<<< HEAD
 |FitNesse.HuntTheWumpus.MovementTests.BatsTransportTest||14:26:25 Thu, Feb 08, 2018|
-|FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest||14:11:20 Thu, Feb 08, 2018|
 =======
 |FitNesse.HuntTheWumpus.MovementTests.PlayerCanSmellWumpusTest||14:21:56 Thu, Feb 08, 2018|
-|FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest||14:19:11 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.MovementTests.PlayerCanHearWindTest||14:16:50 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.MovementTests.PlayerCanHearBatsTest||14:11:47 Thu, Feb 08, 2018|
 >>>>>>> abc10d57df34051de98ce720398c2f96d506e574
