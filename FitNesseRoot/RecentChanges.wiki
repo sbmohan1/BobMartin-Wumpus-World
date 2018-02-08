@@ -1,6 +1,7 @@
+|FitNesse.HuntTheWumpus.FireArrowTests.ArrowCountTest||15:22:59 Thu, Feb 08, 2018|
+|FitNesse.HuntTheWumpus.FireArrowTests.ZeroArrowsTest||15:21:57 Thu, Feb 08, 2018|
+|FitNesse.HuntTheWumpus.FireArrowTests||14:50:07 Thu, Feb 08, 2018|
 <<<<<<< HEAD
-|FitNesse.HuntTheWumpus.FireArrowTests.ArrowCountTest||14:26:26 Thu, Feb 08, 2018|
-|FitNesse.HuntTheWumpus.FireArrowTests||13:55:44 Thu, Feb 08, 2018|
 =======
 <<<<<<< HEAD
 |FitNesse.HuntTheWumpus.MovementTests.BatsTransportTest||14:26:25 Thu, Feb 08, 2018|
@@ -19,7 +20,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-|FitNesse.HuntTheWumpus.FireArrowTests.ArrowCountTest||13:47:16 Thu, Feb 08, 2018|
 >>>>>>> d169739c294e57d3f9dd043bab884e5deeb523d3
 <<<<<<< HEAD
 <<<<<<< HEAD
