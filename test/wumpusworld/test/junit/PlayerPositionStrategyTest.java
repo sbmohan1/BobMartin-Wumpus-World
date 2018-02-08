@@ -14,9 +14,11 @@ public class PlayerPositionStrategyTest {
 	@Test
 	public void positionIsNeverWumpusLocation() {
 		PlayerPositionStrategy strategy = new PlayerPositionStrategy();
-		Map worldMap = new Map(2, 1);
+		Map worldMap = new Map(2, 2);
 		worldMap.addCavern(0, 0);
 		worldMap.addCavern(1, 0);
+		worldMap.addCavern(0, 1);
+		worldMap.addCavern(1, 1);
 		int firstCellCount = 0;
 		int secondCellCount = 0;
 		
