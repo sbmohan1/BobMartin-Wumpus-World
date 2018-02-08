@@ -1,0 +1,9 @@
+A player can rest for his turn.  This is a valid command that does not move the player.
+
+!include <HuntTheWumpus.MapLayout
+
+!|script|
+|put|player|in cavern|1,1|
+|enter command|R|
+|check|message|Player rested.|was printed|true|
+|check|message|Available Directions are N, W, S, E.|was printed|true|

@@ -1,5 +1,7 @@
 package wumpusworld;
 
+import java.awt.Point;
+
 public class Map {
 	
 	public enum CELL_TYPE {
@@ -53,5 +55,13 @@ public class Map {
 	
 	public int getHeight() {
 		return height;
+	}
+
+
+	public boolean contains(Point point) {
+		return point.x >= 0 
+			&& point.x < width 
+			&& point.y >= 0 
+			&& point.y < height;
 	}
 }

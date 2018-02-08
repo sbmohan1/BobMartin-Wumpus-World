@@ -1,1 +1,9 @@
+<<<<<<< HEAD
 PlayerCantMoveWall
+=======
+[[Player can move through Caverns][.FitNesse.HuntTheWumpus.MovementTests.PlayerCanMoveTest]]
+
+[[Player can't move into Wall][.FitNesse.HuntTheWumpus.MovementTests.PlayerCantMoveIntoWallTest]]
+
+[[Player can rest][.FitNesse.HuntTheWumpus.MovementTests.PlayerCanRestTest]]
+>>>>>>> 1b63c955e4b7a47d20710e9071823b16fc25a2a9

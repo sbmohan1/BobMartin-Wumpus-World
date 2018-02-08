@@ -2,6 +2,8 @@ package wumpusworld.test.junit;
 
 import static org.junit.Assert.*;
 
+import java.awt.Point;
+
 import org.junit.Test;
 
 import wumpusworld.Map;
@@ -51,6 +53,21 @@ public class MapTest {
 		assertFalse(worldMap.isBats(1,0));
 		assertFalse(worldMap.isBats(0,1));
 		assertFalse(worldMap.isBats(1,1));
+	}
+	
+	@Test
+	public void testContainsPoint_Centre() {
+		Map worldMap = new Map(3, 3);
+		assertTrue(worldMap.contains(new Point(1, 1)));
+	}
+	
+	@Test
+	public void testContainsPoint_Outside() {
+		Map worldMap = new Map(3, 3);
+		assertFalse(worldMap.contains(new Point(-1, 1)));
+		assertFalse(worldMap.contains(new Point(3, 1)));
+		assertFalse(worldMap.contains(new Point(1, -1)));
+		assertFalse(worldMap.contains(new Point(1, 3)));
 	}
 
 }

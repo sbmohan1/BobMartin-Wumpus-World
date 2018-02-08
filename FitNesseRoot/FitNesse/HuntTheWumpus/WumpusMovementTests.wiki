@@ -1,1 +1,31 @@
-!contents -R2 -g -p -f -h
+!define TEST_SYSTEM {slim}
+
+!path bin
+
+|import|
+|wumpusworld.test.fitnesse|
+
+!|script|PlayerStartsInRandomCavern|
+
+Make sure the player starts in a random cavern
+
+Create 3x3 grid
+!|PlayerStartsInRandomCavern|
+|width|height|
+|2|1|
+
+Use 2 caverns
+!|script|PlayerStartsInRandomCavern|
+|cavern|0||0|
+|cavern|1||0|
+
+Run 100 times
+!|script|PlayerStartsInRandomCavern|
+|run|100|
+
+Check occurences with lower bound
+!|script|PlayerStartsInRandomCavern|
+|occurrences|0||0||30|
+|occurrences|1||0||30|
+
+
