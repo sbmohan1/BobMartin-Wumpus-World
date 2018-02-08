@@ -1,8 +1,8 @@
+|FitNesse.HuntTheWumpus.FireArrowTests||16:05:10 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.FireArrowTests.ArrowCountTest||15:45:28 Thu, Feb 08, 2018|
 <<<<<<< HEAD
 <<<<<<< HEAD
 |FitNesse.HuntTheWumpus.FireArrowTests.ZeroArrowsTest||15:21:57 Thu, Feb 08, 2018|
-|FitNesse.HuntTheWumpus.FireArrowTests||14:50:07 Thu, Feb 08, 2018|
 =======
 =======
 |FitNesse.HuntTheWumpus.InvalidCommandTest||15:26:32 Thu, Feb 08, 2018|
