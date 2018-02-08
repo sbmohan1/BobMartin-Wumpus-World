@@ -76,11 +76,11 @@ public class ConsoleUI {
 		Direction d = DirectionLabel.findByLabel(string);
 		try {
 			game.move(d);
+			printAvailableDirections(out, game);
 		}
 		catch (NoDoorException ndex) {
 			out.print("Sorry there is no Door there.\n");
 		}
-		printAvailableDirections(out, game);
 	}
 
 }

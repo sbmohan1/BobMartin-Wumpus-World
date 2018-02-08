@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 |FitNesse.HuntTheWumpus.FireArrowTests.ArrowCountTest||15:22:59 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.FireArrowTests.ZeroArrowsTest||15:21:57 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.FireArrowTests||14:50:07 Thu, Feb 08, 2018|
+=======
+|FitNesse.HuntTheWumpus.StartPositionTests.PlayerStartPositionTests.TestPlayerCantStartPit||14:49:13 Thu, Feb 08, 2018|
+>>>>>>> 86da4650c50e0bacdab9bc4c79ec7e5c50ccb6e7
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
