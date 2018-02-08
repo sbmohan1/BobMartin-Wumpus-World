@@ -4,4 +4,12 @@
 
 [[Player can rest][.FitNesse.HuntTheWumpus.MovementTests.PlayerCanRestTest]]
 
+<<<<<<< HEAD
 [[Player is Transported by Bats][.FitNesse.HuntTheWumpus.MovementTests.BatsTransportTest]]
+=======
+[[Player can hear Bats][.FitNesse.HuntTheWumpus.MovementTests.PlayerCanHearBatsTest]]
+
+[[Player can hear Wind][.FitNesse.HuntTheWumpus.MovementTests.PlayerCanHearWindTest]]
+
+[[Player can smell the Wumpus][.FitNesse.HuntTheWumpus.MovementTests.PlayerCanSmellWumpusTest]]
+>>>>>>> abc10d57df34051de98ce720398c2f96d506e574

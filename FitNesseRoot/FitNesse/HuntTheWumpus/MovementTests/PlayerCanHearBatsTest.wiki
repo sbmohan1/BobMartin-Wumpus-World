@@ -1,0 +1,48 @@
+!define TEST_SYSTEM {slim}
+
+!path bin
+!path lib
+
+|import|
+|wumpusworld.test.fitnesse|
+|org.apache.commons.io|
+
+Test that player can hear bats
+
+Create 3x3 grid
+!|PlayerCanHearBats|
+|width|height|
+|3|3|
+
+
+* Map Layout
+ 
+{{{	  
+(0,0) (1,0) (2,0)
+(0,1) (1,1) (2,1)	
+(0,2) (1,2) (2,2)
+}}}
+
+
+* Use 9 caverns
+!|script|PlayerCanHearBats|
+|cavern|0||0|
+|cavern|0||1|
+|cavern|0||2|
+|cavern|1||0|
+|cavern|1||1|
+|cavern|1||2|
+|cavern|2||0|
+|cavern|2||1|
+|cavern|2||2|
+
+ * Set Player & Bats positions.
+
+!|script|PlayerCanHearBats|
+|setPlayerPosition|0||0|
+|setBatsPosition|1||1|
+
+!|PlayerCanHearBats|
+|check|message|Available Directions are S,E.|was printed|true|
+|enter command|E|
+|check|message|Chirping. There are bats nearby.|was printed|true|
