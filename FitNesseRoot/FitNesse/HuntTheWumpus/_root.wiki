@@ -16,3 +16,5 @@ WhereUsed: no
 
 [[Map Layout][.FitNesse.HuntTheWumpus.MapLayout]]
 
+[[Game End Tests][.FitNesse.HuntTheWumpus.GameOverTests]]
+
