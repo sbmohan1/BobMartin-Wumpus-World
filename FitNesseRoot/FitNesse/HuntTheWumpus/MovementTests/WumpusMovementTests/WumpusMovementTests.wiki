@@ -1,0 +1,3 @@
+[[Wumpus Moves Randomly Test][.FitNesse.HuntTheWumpus.MovementTests.WumpusMovesRandomlyTest]]
+
+[[Wumpus can Rest Test][.FitNesse.HuntTheWumpus.MovementTests.WumpusRestTest]]

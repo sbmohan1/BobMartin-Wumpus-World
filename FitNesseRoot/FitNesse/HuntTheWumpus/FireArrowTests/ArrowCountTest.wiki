@@ -1,0 +1,49 @@
+Test to count number of arrows a player has remaining.
+
+Create 3x3 grid
+!|PlayerArrowCount|
+|width|height|
+|3|3|
+
+
+* Map Layout
+ 
+{{{	  
+(1,2) (2,2) (3,2)
+(1,1) (2,1) (3,1)	
+(1,0) (2,0) (3,0)
+}}}
+
+
+* Use 9 caverns
+!|script|PlayerArrowCount|
+|cavern|1||2|
+|cavern|2||2|
+|cavern|3||2|
+|cavern|1||1|
+|cavern|2||1|
+|cavern|3||1|
+|cavern|1||0|
+|cavern|2||0|
+|cavern|3||0|
+
+ * Shoot 1 arrow while in cavern.
+
+!|script|
+|put|player|in cavern|2|1|
+|check|message|Shoot Arrow directions are N, W, S, E.|was printed|true|
+|enter command|E|
+|check|message|Arrow missed, you have 4 arrows remaining.|was printed|true|
+|check|message|Shoot Arrow directions remaining are N, W, S.|was printed|true|
+|enter command|N|
+|check|message|Arrow missed, you have 3 arrows remaining.|was printed|true|
+|check|message|Shoot Arrow directions remaining are W, S.|was printed|true|
+|enter command|W|
+|check|message|Arrow missed, you have 2 arrows remaining.|was printed|true|
+|check|message|Shoot Arrow directions remaining are S.|was printed|true|
+|enter command|S|
+|check|message|Arrow missed, you have 1 arrow remaining.|was printed|true|
+|check|message|Shoot Arrow directions remaining are N, W, S, E.|was printed|true|
+|enter command|E|
+|check|message|Arrow missed, you have 0 arrows remaining. |was printed|true|
+|check|message|Shoot Arrow directions remaining N, W, S. you cant shoot as you have no arrows!!|was printed|true|

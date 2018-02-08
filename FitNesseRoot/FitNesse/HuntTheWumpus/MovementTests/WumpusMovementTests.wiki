@@ -1,1 +1,6 @@
-!contents -R2 -g -p -f -h
+---
+Suite
+---
+[[Wumpus Moves Randomly Test][.FitNesse.HuntTheWumpus.MovementTests.WumpusMovementTests.WumpusMovesRandomlyTest]]
+
+[[Wumpus can Rest Test][.FitNesse.HuntTheWumpus.MovementTests.WumpusMovementTests.WumpusRestTest]]
