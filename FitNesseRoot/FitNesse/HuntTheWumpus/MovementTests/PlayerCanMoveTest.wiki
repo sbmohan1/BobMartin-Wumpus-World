@@ -1,3 +1,12 @@
+!define TEST_SYSTEM {slim}
+
+!path bin
+!path lib
+
+|import|
+|wumpusworld.test.fitnesse|
+|org.apache.commons.io|
+
 Test that we can walk around the map. This makes sure we can move both directions through each corridor.
 
 Create 3x3 grid
@@ -9,36 +18,32 @@ Create 3x3 grid
 * Map Layout
  
 {{{	  
-(1,2) (2,2) (3,2)
-(1,1) (2,1) (3,1)	
-(1,0) (2,0) (3,0)
+(0,0) (1,0) (2,0)
+(0,1) (1,1) (2,1)	
+(0,2) (1,2) (2,2)
 }}}
 
 
 * Use 9 caverns
 !|script|PlayerCanMove|
-|cavern|1||2|
-|cavern|2||2|
-|cavern|3||2|
-|cavern|1||1|
-|cavern|2||1|
-|cavern|3||1|
+|cavern|0||0|
+|cavern|0||1|
+|cavern|0||2|
 |cavern|1||0|
+|cavern|1||1|
+|cavern|1||2|
 |cavern|2||0|
-|cavern|3||0|
+|cavern|2||1|
+|cavern|2||2|
 
  * Walk from one cavern to the other.
 
-!|script|
-|put|player|in cavern|2|1|
-|check|message|Available Directions are N, W, S, E.|was printed|true|
-|enter command|E|
-|check|message|Available Directions are N, W, S.|was printed|true|
-|enter command|N|
-|check|message|Available Directions are W, S.|was printed|true|
-|enter command|W|
-|check|message|Available Directions are W, S, E.|was printed|true|
-|enter command|S|
-|check|message|Available Directions are N, W, S, E.|was printed|true|
-|enter command|S|
-|check|message|Available Directions are N, E.|was printed|false|
+!|script|PlayerCanMove|
+|setPlayerPosition|1||1|
+
+!|PlayerCanMove|
+|move|checkOutput?|
+|E|Available Directions are N, W, S.|
+|N|Available Directions are W, S.|
+|W|Available Directions are W, S, E.|
+|S|Available Directions are N, W, S, E.|

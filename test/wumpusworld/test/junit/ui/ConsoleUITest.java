@@ -8,6 +8,7 @@ import java.io.InputStream;
 import java.io.PrintStream;
 
 import org.apache.commons.io.IOUtils;
+import org.junit.Before;
 import org.junit.Test;
 
 import wumpusworld.Game;
@@ -15,52 +16,56 @@ import wumpusworld.Map;
 import wumpusworld.ui.ConsoleUI;
 
 public class ConsoleUITest {
+	private PrintStream printStream;
+	private ByteArrayOutputStream baos;
+	
+	@Before
+	public void setUp() {
+		baos = new ByteArrayOutputStream();
+		printStream = new PrintStream(baos);
+	}
+
 	@Test
 	public void testUIDisplaysAvailableDirections() {
-		ByteArrayOutputStream baos = new ByteArrayOutputStream();
-		PrintStream ps = new PrintStream(baos);
 		
 		Map worldMap = new Map(3, 3);
 		Game game = new Game(worldMap);
 		game.setPlayerPosition(new Point(1, 1));
 		
-		InputStream is = IOUtils.toInputStream("\n");
+		ConsoleUI console = new ConsoleUI(printStream, game);
+		console.run();
 		
-		ConsoleUI console = new ConsoleUI(is, ps, game);
 		
-		assertEquals("Available directions: NWSE\n", baos.toString());
+		
+		assertEquals("Available Directions are N, W, S, E.\n", baos.toString());
 	}
 	
 	@Test
 	public void testUIDisplaysAvailableDirections_CantMove() {
-		ByteArrayOutputStream baos = new ByteArrayOutputStream();
-		PrintStream ps = new PrintStream(baos);
 		
 		Map worldMap = new Map(1, 1);
 		Game game = new Game(worldMap);
 		game.setPlayerPosition(new Point(0, 0));
 		
-		InputStream is = IOUtils.toInputStream("\n");
-		
-		ConsoleUI console = new ConsoleUI(is, ps, game);
+		ConsoleUI console = new ConsoleUI(printStream, game);
+		console.run();
 		
 		assertEquals("No directions to move\n", baos.toString());
 	}
 	
 	@Test
 	public void testUIDisplaysAvailableNoEast() {
-		ByteArrayOutputStream baos = new ByteArrayOutputStream();
-		PrintStream ps = new PrintStream(baos);
 		
 		Map worldMap = new Map(3, 3);
 		Game game = new Game(worldMap);
 		game.setPlayerPosition(new Point(2, 1));
 		
-		InputStream is = IOUtils.toInputStream("\n");
+		ConsoleUI console = new ConsoleUI(printStream, game);
+		console.run();
 		
-		ConsoleUI console = new ConsoleUI(is, ps, game);
 		
-		assertEquals("Available directions: NWS\n", baos.toString());
+		
+		assertEquals("Available Directions are N, W, S.\n", baos.toString());
 	}
 	
 	@Test
@@ -72,11 +77,12 @@ public class ConsoleUITest {
 		Game game = new Game(worldMap);
 		game.setPlayerPosition(new Point(1, 1));
 		
-		InputStream is = IOUtils.toInputStream("E\n");
+		ConsoleUI console = new ConsoleUI(ps, game);
+		console.run();
 		
-		ConsoleUI console = new ConsoleUI(is, ps, game);
+		console.parseInput("E");
 		
-		assertEquals("Available directions: NWSE\nAvailable directions: NWSE\n", baos.toString());
+		assertEquals("Available Directions are N, W, S, E.\nAvailable Directions are N, W, S, E.\n", baos.toString());
 	}
 	
 	@Test
@@ -88,58 +94,55 @@ public class ConsoleUITest {
 		Game game = new Game(worldMap);
 		game.setPlayerPosition(new Point(1, 1));
 		
-		InputStream is = IOUtils.toInputStream("W\n");
+		ConsoleUI console = new ConsoleUI(ps, game);
+		console.run();
 		
-		ConsoleUI console = new ConsoleUI(is, ps, game);
+		console.parseInput("W");
 		
-		assertEquals("Available directions: NWSE\nAvailable directions: NSE\n", baos.toString());
+		assertEquals("Available Directions are N, W, S, E.\nAvailable Directions are N, S, E.\n", baos.toString());
 	}
 	
 	@Test
 	public void testUIDisplaysAvailable_AfterMoveToRightEdge() {
-		ByteArrayOutputStream baos = new ByteArrayOutputStream();
-		PrintStream ps = new PrintStream(baos);
 		
 		Map worldMap = new Map(3, 3);
 		Game game = new Game(worldMap);
 		game.setPlayerPosition(new Point(1, 1));
 		
-		InputStream is = IOUtils.toInputStream("E\n");
+		ConsoleUI console = new ConsoleUI(printStream, game);
+		console.run();
 		
-		ConsoleUI console = new ConsoleUI(is, ps, game);
+		console.parseInput("E");
 		
-		assertEquals("Available directions: NWSE\nAvailable directions: NWS\n", baos.toString());
+		assertEquals("Available Directions are N, W, S, E.\nAvailable Directions are N, W, S.\n", baos.toString());
 	}
 	
 	@Test
 	public void testUIDisplaysAvailable_AfterMoveToTopEdge() {
-		ByteArrayOutputStream baos = new ByteArrayOutputStream();
-		PrintStream ps = new PrintStream(baos);
 		
 		Map worldMap = new Map(3, 3);
 		Game game = new Game(worldMap);
 		game.setPlayerPosition(new Point(1, 1));
 		
-		InputStream is = IOUtils.toInputStream("N\n");
+		ConsoleUI console = new ConsoleUI(printStream, game);
+		console.run();
 		
-		ConsoleUI console = new ConsoleUI(is, ps, game);
+		console.parseInput("N");
 		
-		assertEquals("Available directions: NWSE\nAvailable directions: WSE\n", baos.toString());
+		assertEquals("Available Directions are N, W, S, E.\nAvailable Directions are W, S, E.\n", baos.toString());
 	}
 	
 	@Test
-	public void testUIDisplaysAvailable_AfterMoveToBottomEdge() {
-		ByteArrayOutputStream baos = new ByteArrayOutputStream();
-		PrintStream ps = new PrintStream(baos);
-		
+	public void testParseInput() {
 		Map worldMap = new Map(3, 3);
 		Game game = new Game(worldMap);
 		game.setPlayerPosition(new Point(1, 1));
 		
-		InputStream is = IOUtils.toInputStream("S\n");
+		ConsoleUI console = new ConsoleUI(printStream, game);
+		console.run();
 		
-		ConsoleUI console = new ConsoleUI(is, ps, game);
+		console.parseInput("S");
 		
-		assertEquals("Available directions: NWSE\nAvailable directions: NWE\n", baos.toString());
+		assertEquals("Available Directions are N, W, S, E.\nAvailable Directions are N, W, E.\n", baos.toString());
 	}
 }
