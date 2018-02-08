@@ -40,7 +40,8 @@ public class Game {
 
 	public Point getPlayerPosition() {
 		PlayerPositionStrategy strategy = new PlayerPositionStrategy();
-		return strategy.getPoint(this);
+		playerPosition = strategy.getPoint(this);
+		return playerPosition;
 	}
 	
 	public Point getWumpusPosition() {

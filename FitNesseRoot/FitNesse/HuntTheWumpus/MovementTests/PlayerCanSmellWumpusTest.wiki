@@ -1,0 +1,48 @@
+!define TEST_SYSTEM {slim}
+
+!path bin
+!path lib
+
+|import|
+|wumpusworld.test.fitnesse|
+|org.apache.commons.io|
+
+Test that player can smell the Wumpus
+
+Create 3x3 grid
+!|PlayerCanSmellWumpus|
+|width|height|
+|3|3|
+
+
+* Map Layout
+ 
+{{{	  
+(0,0) (1,0) (2,0)
+(0,1) (1,1) (2,1)	
+(0,2) (1,2) (2,2)
+}}}
+
+
+* Use 9 caverns
+!|script|PlayerCanSmellWumpus|
+|cavern|0||0|
+|cavern|0||1|
+|cavern|0||2|
+|cavern|1||0|
+|cavern|1||1|
+|cavern|1||2|
+|cavern|2||0|
+|cavern|2||1|
+|cavern|2||2|
+
+ * Set Player & Wumpus positions.
+
+!|script|PlayerCanSmellWumpus|
+|setPlayerPosition|2||2|
+|setWumpusPosition|0||2|
+
+!|PlayerCanSmellWumpus|
+|check|message|Available Directions are N,W.|was printed|true|
+|enter command|W|
+|check|message|The Wumpus is nearby.|was printed|true|

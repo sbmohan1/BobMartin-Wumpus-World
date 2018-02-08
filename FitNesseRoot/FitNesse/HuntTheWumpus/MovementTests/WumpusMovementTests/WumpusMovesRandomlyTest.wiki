@@ -29,9 +29,17 @@ Create 3x3 grid
 
 !|script|
 |put|player|in cavern|0|0|
-|put|wumpus|in cavern|2|2|
+|put|wumpus|in cavern|2|1|
 |enter command|R|
 |check|message|Player resting.|was printed|true|
-|check|wumpus|in cavern|1|2|true|or|
-|check|wumpus|in cavern|2|0|true|or|
-|check|wumpus|in cavern|2|2|true|
+
+Run 100 times
+!|script|WumpusNewCavern|
+|run|100|
+
+Check occurences with lower bound & upper bound
+!|script|WumpusMovesRandomly|
+|occurrences|2||0||30|
+|occurrences|2||1||30|
+|occurrences|2||2||30|
+|occurrences|1||1||0|
