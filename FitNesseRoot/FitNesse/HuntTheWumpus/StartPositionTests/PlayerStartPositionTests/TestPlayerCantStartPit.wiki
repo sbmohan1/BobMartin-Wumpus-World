@@ -21,10 +21,13 @@ Run 100 times
 |cavern|0||1|
 |cavern|1||0|
 
+<<<<<<< HEAD
+=======
 !|script|PlayerCantStartPit|
 |pit|1||1|
 
 
+>>>>>>> 8ef21461349c06f782a6be86a824519ff99c8408
 
 !|script|PlayerCantStartPit|
 |run|100|
