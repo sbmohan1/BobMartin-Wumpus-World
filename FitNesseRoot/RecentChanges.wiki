@@ -1,3 +1,4 @@
+|FitNesse.HuntTheWumpus.StartPositionTests.PlayerStartPositionTests.TestPlayerCantStartPit||14:49:13 Thu, Feb 08, 2018|
 <<<<<<< HEAD
 |FitNesse.HuntTheWumpus.FireArrowTests.ArrowCountTest||14:26:26 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.FireArrowTests||13:55:44 Thu, Feb 08, 2018|
