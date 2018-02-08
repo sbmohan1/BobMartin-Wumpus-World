@@ -14,3 +14,5 @@ WhereUsed: no
 
 [[Fire Arrow Tests][.FitNesse.HuntTheWumpus.FireArrowTests]]
 
+[[Map Layout][.FitNesse.HuntTheWumpus.MapLayout]]
+
