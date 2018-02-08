@@ -1,4 +1,5 @@
-|FitNesse.HuntTheWumpus.FireArrowTests.ArrowCountTest||13:47:16 Thu, Feb 08, 2018|
+|FitNesse.HuntTheWumpus.FireArrowTests.ArrowCountTest||14:26:26 Thu, Feb 08, 2018|
+|FitNesse.HuntTheWumpus.FireArrowTests||13:55:44 Thu, Feb 08, 2018|
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -12,9 +13,7 @@
 |FitNesse.HuntTheWumpus.StartPositionTests.WumpusStartPositionTests||12:03:45 Thu, Feb 08, 2018|
 
 >>>>>>> 7b33eb91cab214c0f1f7e14313a769f9998aed88
-|FitNesse.HuntTheWumpus.FireArrowTests.ArrowCountTest||12:14:36 Thu, Feb 08, 2018|
 >>>>>>> 2d380c3c5095140bf63505e6dea79ac14183327b
-|FitNesse.HuntTheWumpus.FireArrowTests||11:41:16 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.FireArrowTests.PlayersStartWith5Arrows||11:35:06 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.FireArrowTests.PlayerStartWith5Arrows||11:32:48 Thu, Feb 08, 2018|
 
