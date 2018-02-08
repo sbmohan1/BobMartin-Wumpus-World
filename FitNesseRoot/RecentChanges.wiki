@@ -1,6 +1,6 @@
+|FitNesse.HuntTheWumpus.FireArrowTests.ArrowCountTest||15:45:28 Thu, Feb 08, 2018|
 <<<<<<< HEAD
 <<<<<<< HEAD
-|FitNesse.HuntTheWumpus.FireArrowTests.ArrowCountTest||15:22:59 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.FireArrowTests.ZeroArrowsTest||15:21:57 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.FireArrowTests||14:50:07 Thu, Feb 08, 2018|
 =======
@@ -98,7 +98,3 @@
 |FitNesse.UserGuide.TestPlayerStartsInRandomCavern||15:42:24 Tue, Feb 06, 2018|
 |FitNesse.UserGuide.HuntTheWumpus.TestPlayerSpawnsRandomCavern||15:40:32 Tue, Feb 06, 2018|
 |TestPlayerStartsInRandomCavern||15:40:14 Tue, Feb 06, 2018|
-|FrontPage.HuntTheWumpus||15:36:44 Tue, Feb 06, 2018|
-|FrontPage.dummy1||15:32:25 Tue, Feb 06, 2018|
-|PlayerStartsInRandomCavern||15:30:24 Tue, Feb 06, 2018|
-|FrontPage.PlayerStartsInRandomCavern||15:28:10 Tue, Feb 06, 2018|
