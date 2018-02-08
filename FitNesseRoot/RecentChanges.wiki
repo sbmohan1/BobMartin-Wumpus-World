@@ -1,3 +1,5 @@
+|FitNesse.HuntTheWumpus.StartPositionTests.WumpusStartPositionTests.TestWumpusStartsInRandomCavern||12:21:09 Thu, Feb 08, 2018|
+|FitNesse.HuntTheWumpus.StartPositionTests.WumpusStartPositionTests||12:03:45 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.GameOverTests.PlayerFallsIntoPitTest||11:46:35 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.GameOverTests.WumpusEatsPlayerTest||11:42:06 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.GameOverTests||11:32:12 Thu, Feb 08, 2018|
@@ -17,7 +19,6 @@
 <<<<<<< HEAD
 |FitNesse.HuntTheWumpus.PlayerStartPositionTests.TestPlayerCantStartWumpus||11:29:09 Wed, Feb 07, 2018|
 =======
-|FitNesse.HuntTheWumpus.StartPositionTests.WumpusStartPositionTests||11:40:15 Wed, Feb 07, 2018|
 |FitNesse.HuntTheWumpus.StartPositionTests.PlayerStartPositionTests||11:26:30 Wed, Feb 07, 2018|
 |FitNesse.HuntTheWumpus.StartPositionTests||11:25:38 Wed, Feb 07, 2018|
 |FitNesse.HuntTheWumpus.WumpusStartPositionTests||11:18:36 Wed, Feb 07, 2018|
