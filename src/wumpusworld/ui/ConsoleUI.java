@@ -4,6 +4,7 @@ import java.io.PrintStream;
 import java.util.List;
 
 import wumpusworld.Game;
+import wumpusworld.NoDoorException;
 import wumpusworld.Game.Direction;
 
 public class ConsoleUI {
@@ -73,7 +74,12 @@ public class ConsoleUI {
 
 	public void parseInput(String string) {
 		Direction d = DirectionLabel.findByLabel(string);
-		game.move(d);
+		try {
+			game.move(d);
+		}
+		catch (NoDoorException ndex) {
+			out.print("Sorry there is no Door there.\n");
+		}
 		printAvailableDirections(out, game);
 	}
 

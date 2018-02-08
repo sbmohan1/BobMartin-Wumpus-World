@@ -68,6 +68,7 @@ public class ConsoleUITest {
 		PrintStream ps = new PrintStream(baos);
 		
 		Map worldMap = new Map(4, 4);
+		worldMap.addCavern(2, 1);
 		Game game = new Game(worldMap);
 		game.setPlayerPosition(new Point(1, 1));
 		
@@ -85,8 +86,10 @@ public class ConsoleUITest {
 		PrintStream ps = new PrintStream(baos);
 		
 		Map worldMap = new Map(3, 3);
+		worldMap.addCavern(0, 1);
 		Game game = new Game(worldMap);
 		game.setPlayerPosition(new Point(1, 1));
+		
 		
 		ConsoleUI console = new ConsoleUI(ps, game);
 		console.run();
@@ -100,6 +103,7 @@ public class ConsoleUITest {
 	public void testUIDisplaysAvailable_AfterMoveToRightEdge() {
 		
 		Map worldMap = new Map(3, 3);
+		worldMap.addCavern(2, 1);
 		Game game = new Game(worldMap);
 		game.setPlayerPosition(new Point(1, 1));
 		
@@ -115,6 +119,7 @@ public class ConsoleUITest {
 	public void testUIDisplaysAvailable_AfterMoveToTopEdge() {
 		
 		Map worldMap = new Map(3, 3);
+		worldMap.addCavern(1, 0);
 		Game game = new Game(worldMap);
 		game.setPlayerPosition(new Point(1, 1));
 		
@@ -129,6 +134,7 @@ public class ConsoleUITest {
 	@Test
 	public void testParseInput() {
 		Map worldMap = new Map(3, 3);
+		worldMap.addCavern(1, 2);
 		Game game = new Game(worldMap);
 		game.setPlayerPosition(new Point(1, 1));
 		
@@ -138,5 +144,19 @@ public class ConsoleUITest {
 		console.parseInput("S");
 		
 		assertEquals("Available Directions are N, W, S, E.\nAvailable Directions are N, W, E.\n", baos.toString());
+	}
+	
+	@Test
+	public void testNoDoorThere() {
+		Map worldMap = new Map(3, 3);
+		Game game = new Game(worldMap);
+		game.setPlayerPosition(new Point(1, 1));
+		
+		ConsoleUI console = new ConsoleUI(printStream, game);
+		console.run();
+		
+		console.parseInput("S");
+		
+		assertEquals("Available Directions are N, W, S, E.\nSorry there is no Door there.\nAvailable Directions are N, W, S, E.\n", baos.toString());
 	}
 }

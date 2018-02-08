@@ -1,3 +1,4 @@
+|FitNesse.HuntTheWumpus.MovementTests.PlayerCantMoveIntoWallTest||14:29:53 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.FireArrowTests.ArrowCountTest||13:47:16 Thu, Feb 08, 2018|
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -40,7 +41,6 @@
 |FitNesse.HuntTheWumpus.WumpusEatsPlayerTest||11:29:36 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus||11:28:17 Thu, Feb 08, 2018|
 
-|FitNesse.HuntTheWumpus.MovementTests.PlayerCantMoveIntoWallTest||11:13:28 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.MovementTests.WumpusMovementTests||11:01:15 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.MovementTests||10:54:53 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.MovementTests.WumpusRestTest||10:54:07 Thu, Feb 08, 2018|
