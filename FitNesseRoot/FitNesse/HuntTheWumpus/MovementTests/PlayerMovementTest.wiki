@@ -7,3 +7,5 @@
 [[Player can hear Bats][.FitNesse.HuntTheWumpus.MovementTests.PlayerCanHearBatsTest]]
 
 [[Player can hear Wind][.FitNesse.HuntTheWumpus.MovementTests.PlayerCanHearWindTest]]
+
+[[Player can smell the Wumpus][.FitNesse.HuntTheWumpus.MovementTests.PlayerCanSmellWumpusTest]]
