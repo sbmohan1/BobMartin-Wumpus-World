@@ -219,6 +219,51 @@ public class GameTest {
 	}
 	
 	@Test
+	public void onNewGame_returnWumpusPositionWhenMapIsOneCell() {
+		Map worldMap = new Map(1, 1);
+		worldMap.addCavern(0, 0);
+		Game game = new Game(worldMap);
+		Point wumpusPosition = game.getWumpusPosition();
+		assertEquals(0, wumpusPosition.x);
+		assertEquals(0, wumpusPosition.y);
+	}
+	
+	@Test
+	public void onNewGame_returnWumpusPositionWhenMapIsTwoCells() {
+		Map worldMap = new Map(2, 2);
+		worldMap.addCavern(0, 0);
+		worldMap.addCavern(0, 1);
+		Game game = new Game(worldMap);
+		Point wumpusPosition = game.getWumpusPosition();
+		assertTrue(wumpusPosition.x > -1 && wumpusPosition.x < 2);
+		assertTrue(wumpusPosition.y > -1 && wumpusPosition.y < 2);
+	}
+	
+	@Test
+	public void onNewGame_WumpusIsGivenRandomPosition() {
+		Map worldMap = new Map(2, 1);
+		int firstCellCount = 0;
+		int secondCellCount = 0;
+		worldMap.addCavern(0, 0);
+		worldMap.addCavern(1, 0);
+		
+		for (int i=0; i < 100; i++) {
+			Game game = new Game(worldMap);
+			Point wumpusPosition = game.getWumpusPosition();
+			if (wumpusPosition.x == 0) {
+				firstCellCount++;
+			}
+			else {
+				secondCellCount++;
+			}
+		}
+		int lowerBound = 30;
+		assertTrue(firstCellCount > lowerBound);
+		assertTrue(secondCellCount > lowerBound);
+	}
+	
+	
+	@Test
 	public void testGetAvailableDirections_NWSE() {
 		Map worldMap = new Map(3, 3);
 		

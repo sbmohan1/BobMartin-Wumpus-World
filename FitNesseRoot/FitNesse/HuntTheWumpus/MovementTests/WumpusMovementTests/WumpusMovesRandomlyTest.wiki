@@ -32,6 +32,6 @@ Create 3x3 grid
 |put|wumpus|in cavern|2|2|
 |enter command|R|
 |check|message|Player resting.|was printed|true|
-|check|wumpus|in cavern|1|2|or|
-|check|wumpus|in cavern|2|0|or|
-|check|wumpus|in cavern|2|2||
+|check|wumpus|in cavern|1|2|true|or|
+|check|wumpus|in cavern|2|0|true|or|
+|check|wumpus|in cavern|2|2|true|
