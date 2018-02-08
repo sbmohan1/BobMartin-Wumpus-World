@@ -1,1 +1,42 @@
-!contents -R2 -g -p -f -h
+Test that we can walk around the map. This makes sure we can move both directions through each corridor.
+
+Create 3x3 grid
+!|PlayerCanMove|
+|width|height|
+|3|3|
+
+
+* Map Layout
+ 
+{{{	  
+(0,2) (1,2) (2,2)
+(0,1) (1,1) (2,1)	
+(0,0) (1,0) (2,0)
+}}}
+
+
+* Use 9 caverns
+!|script|PlayerCanMove|
+|cavern|0||0|
+|cavern|1||0|
+|cavern|2||0|
+|cavern|0||1|
+|cavern|1||1|
+|cavern|2||1|
+|cavern|0||2|
+|cavern|1||2|
+|cavern|2||2|
+
+ * Try to walk into a wall.
+
+!|script|
+|put|player|in cavern|0|0|
+|check|message|Available Directions are N,E.|was printed|true|
+|enter command|S|
+|check|message|Sorry there is no Door there.|was printed|true|
+|check|message|Available Directions are N,E.|was printed|true|
+|enter command|N|
+|check|message|Available Directions are N,S,E.|was printed|true|
+|enter command|W|
+|check|message|Sorry there is no Door there.|was printed|true|
+|check|message|Available Directions are N,S,E.|was printed|true|
