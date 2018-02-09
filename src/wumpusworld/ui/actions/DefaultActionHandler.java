@@ -33,12 +33,14 @@ public class DefaultActionHandler implements ActionHandler {
 				return this;
 			}
 			try {
-				Event event = game.move(d);
-				switch(event) {
-				case TRANSPORTED_BY_BATS:
-					out.print("You were transported by Bats!\n");
-				default:
-					printAvailableDirections(out, game);
+				List<Event> events = game.move(d);
+				for (Event e : events) {
+					switch(e) {
+					case TRANSPORTED_BY_BATS:
+						out.print("You were transported by Bats!\n");
+					default:
+						printAvailableDirections(out, game);
+					}
 				}
 			}
 			catch (NoDoorException ndex) {

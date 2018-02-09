@@ -88,17 +88,20 @@ public class Game {
 	}
 
 
-	public Event move(Direction d) throws NoDoorException {
+	public List<Event> move(Direction d) throws NoDoorException {
+		List<Event> events = new ArrayList<>();
 		Point newPos = new Point(playerPosition.x + d.x, playerPosition.y + d.y);
 		if (worldMap.contains(newPos) && worldMap.isBats(newPos.x, newPos.y)) {
 			playerPosition = new PlayerPositionStrategy().getPoint(this);
-			return Event.TRANSPORTED_BY_BATS;
+			events.add(Event.TRANSPORTED_BY_BATS);
+			return events;
 		}
 		if (!worldMap.contains(newPos) || !worldMap.isCavern(newPos.x, newPos.y)) {
 			throw new NoDoorException();
 		}
 		playerPosition = newPos;
-		return Event.MOVED;
+		events.add(Event.MOVED);
+		return events;
 	}
 
 	public void shootArrow(Direction north) {

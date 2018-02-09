@@ -510,10 +510,14 @@ public class GameTest {
 		Game game = new Game(worldMap);
 		game.setPlayerPosition(new Point(1, 0));
 		
-		Game.Event event = game.move(Direction.EAST);
+		List<Game.Event> expected = new ArrayList<>();
+		expected.add(Game.Event.MOVED);
+		
+		List<Game.Event> events = game.move(Direction.EAST);
+		
+		assertEquals(expected, events);
 		
 		assertEquals(new Point(2,  0), game.getPlayerPosition());
-		assertEquals(Game.Event.MOVED, event);
 	}
 	
 	@Test
@@ -534,8 +538,12 @@ public class GameTest {
 		Game game = new Game(worldMap);
 		game.setPlayerPosition(new Point(1, 0));
 		
-		Game.Event event = game.move(Direction.EAST);
+		List<Game.Event> expected = new ArrayList<>();
+		expected.add(Game.Event.TRANSPORTED_BY_BATS);
 		
-		assertEquals(Game.Event.TRANSPORTED_BY_BATS, event);
+		
+		List<Game.Event> events = game.move(Direction.EAST);
+		
+		assertEquals(expected, events);
 	}
 }
