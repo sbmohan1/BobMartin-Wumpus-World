@@ -546,4 +546,31 @@ public class GameTest {
 		
 		assertEquals(expected, events);
 	}
+	
+	@Test
+	public void testIfPlayerMovesNextToBats_ReturnsEvent() {
+		Map worldMap = new Map(3, 3);
+		
+		worldMap.addCavern(0, 0);
+		worldMap.addCavern(1, 0);
+		worldMap.addBats(1, 1);
+		worldMap.addCavern(0, 1);
+		worldMap.addCavern(2, 1);
+		worldMap.addCavern(0, 2);
+		worldMap.addCavern(1, 2);
+		worldMap.addCavern(2, 2);
+		
+		
+		Game game = new Game(worldMap);
+		game.setPlayerPosition(new Point(0, 0));
+		
+		List<Game.Event> expected = new ArrayList<>();
+		expected.add(Game.Event.BATS_NEARBY);
+		expected.add(Game.Event.MOVED);
+		
+		
+		List<Game.Event> events = game.move(Direction.EAST);
+		
+		assertEquals(expected, events);
+	}
 }

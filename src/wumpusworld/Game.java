@@ -7,6 +7,7 @@ import java.util.List;
 public class Game {
 	
 	public enum Event {
+		BATS_NEARBY,
 		TRANSPORTED_BY_BATS,
 		MOVED,
 		FALL_INTO_PIT
@@ -92,11 +93,17 @@ public class Game {
 	public List<Event> move(Direction d) throws NoDoorException {
 		List<Event> events = new ArrayList<>();
 		Point newPos = new Point(playerPosition.x + d.x, playerPosition.y + d.y);
+<<<<<<< HEAD
 		if(worldMap.contains(newPos) && worldMap.isPit(newPos.x, newPos.y)) {
 			playerPosition = new PlayerPositionStrategy().getPoint(this);
 			events.add(Event.FALL_INTO_PIT);
 			return events;
 		}
+=======
+		
+		checkIfBatsAreNearby(newPos, events);
+		
+>>>>>>> 9abe90f1e934733ab11c4b5c9113cc3737289f82
 		if (worldMap.contains(newPos) && worldMap.isBats(newPos.x, newPos.y)) {
 			playerPosition = new PlayerPositionStrategy().getPoint(this);
 			events.add(Event.TRANSPORTED_BY_BATS);
@@ -108,6 +115,20 @@ public class Game {
 		playerPosition = newPos;
 		events.add(Event.MOVED);
 		return events;
+	}
+	
+	private void checkIfBatsAreNearby(Point pos, List<Event> events) {
+		boolean found = false;
+		for (Direction d : Direction.values()) {
+			Point p = d.getPoint(pos);
+			if (worldMap.contains(p) && worldMap.isBats(p.x, p.y)) {
+				found = true;
+				break;
+			}
+		}
+		if (found) {
+			events.add(Event.BATS_NEARBY);
+		}
 	}
 
 	public void shootArrow(Direction north) {
