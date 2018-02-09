@@ -30,6 +30,7 @@ Create 3x3 grid
 !|script|
 |put|player|in cavern|1|1|
 |put|Wumpus|in cavern|0|0|
+|enter command|S|
 |Available Directions are N, W, S.|
 |F|Available Directions to Fire Arrows are N, W, S. Which Direction do you want to shoot?|
 |enter command|W|
