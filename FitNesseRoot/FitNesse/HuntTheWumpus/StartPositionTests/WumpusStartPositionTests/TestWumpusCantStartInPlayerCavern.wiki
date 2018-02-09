@@ -20,7 +20,7 @@ Run 100 times
 
 Check occurences with lower bound
 !|script|WumpusCantStartInPlayerCavern|
-|occurrences|0||0||0||24|
-|occurrences|1||0||0||24|
-|occurrences|0||1||0||24|
+|occurrences|0||0||1||24|
+|occurrences|1||0||0||0|
+|occurrences|0||1||0||0|
 |occurrences|1||1||0||0|

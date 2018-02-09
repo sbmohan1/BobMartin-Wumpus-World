@@ -5,4 +5,3 @@ Suite
 
 [[Wumpus can't start in Player Cavern Test][.FitNesse.HuntTheWumpus.StartPositionTests.WumpusStartPositionTests.TestWumpusCantStartInPlayerCavern]]
 
-[[Wumpus can't start next to Player Cavern Test][.FitNesse.HuntTheWumpus.StartPositionTests.WumpusStartPositionTests.TestWumpusCantStartNextToPlayerCavern]]
