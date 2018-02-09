@@ -21,6 +21,8 @@ public class WumpusCantStartInPlayerCavern extends CommonPlayerStartingPositionF
 		}
 		for (int i=0; i< times; i++) {
 			Game game = new Game(worldMap);
+			game.setPlayerPosition(playerLocation);
+			game.setWumpusPosition();
 			Point pos = game.getWumpusLocation();
 			if (startingPositions.containsKey(pos)) {
 				startingPositions.put(pos, startingPositions.get(pos) + 1);
