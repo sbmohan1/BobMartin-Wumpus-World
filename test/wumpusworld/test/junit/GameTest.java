@@ -548,6 +548,33 @@ public class GameTest {
 	}
 	
 	@Test
+	public void testIfPlayerMovedIntoPit_ReturnsEvent() {
+		Map worldMap = new Map(3, 3);
+		
+		worldMap.addCavern(0, 0);
+		worldMap.addCavern(1, 0);
+		worldMap.addPit(2, 0);
+		worldMap.addCavern(0, 1);
+		worldMap.addCavern(1, 1);
+		worldMap.addCavern(2, 1);
+		worldMap.addCavern(0, 2);
+		worldMap.addCavern(1, 2);
+		worldMap.addCavern(2, 2);
+		
+		
+		Game game = new Game(worldMap);
+		game.setPlayerPosition(new Point(1, 0));
+		
+		List<Game.Event> expected = new ArrayList<>();
+		expected.add(Game.Event.FALL_INTO_PIT);
+		
+		
+		List<Game.Event> events = game.move(Direction.EAST);
+		
+		assertEquals(expected, events);
+	}
+	
+	@Test
 	public void testIfPlayerMovesNextToBats_ReturnsEvent() {
 		Map worldMap = new Map(3, 3);
 		

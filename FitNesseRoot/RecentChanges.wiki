@@ -1,5 +1,9 @@
+|FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest.BatsTransportTest||11:54:26 Fri, Feb 09, 2018|
+<<<<<<< HEAD
 |FitNesse.HuntTheWumpus.GameOverTests.WumpusEatsPlayerTest||11:15:37 Fri, Feb 09, 2018|
-|FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest.BatsTransportTest||10:52:57 Fri, Feb 09, 2018|
+=======
+|FitNesse.HuntTheWumpus.GameOverTests.PlayerFallsIntoPitTest||11:49:47 Fri, Feb 09, 2018|
+>>>>>>> pitfunction
 <<<<<<< HEAD
 |FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest.PlayerCanHearBatsTest||10:46:42 Fri, Feb 09, 2018|
 =======
@@ -91,10 +95,6 @@
 >>>>>>> 7b33eb91cab214c0f1f7e14313a769f9998aed88
 |FitNesse.HuntTheWumpus.GameOverTests.PlayerRestingEatenTest||12:01:35 Thu, Feb 08, 2018|
 
+<<<<<<< HEAD
 |FitNesse.HuntTheWumpus.GameOverTests.PlayerFallsIntoPitTest||11:46:35 Thu, Feb 08, 2018|
-|FitNesse.HuntTheWumpus.WumpusEatsPlayerTest||11:29:36 Thu, Feb 08, 2018|
-
-|FitNesse.HuntTheWumpus.MovementTests.PlayerCantMoveIntoWallTest||11:13:28 Thu, Feb 08, 2018|
-|FitNesse.HuntTheWumpus.MovementTests||10:54:53 Thu, Feb 08, 2018|
-|FitNesse.HuntTheWumpus.MovementTests.WumpusRestTest||10:54:07 Thu, Feb 08, 2018|
-|FitNesse.HuntTheWumpus.MovementTests.WumpusMovesRandomlyTest||10:54:01 Thu, Feb 08, 2018|
+=======

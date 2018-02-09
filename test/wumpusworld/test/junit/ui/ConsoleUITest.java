@@ -291,12 +291,39 @@ public class ConsoleUITest {
 	}
 	
 	@Test
-	public void whenPlayerMovesNextToBats_IsNotified() {
-		Map worldMap = new Map(3, 3);
+
+	public void whenPlayerMovesIntoPit_GameOver() {
+		Map worldMap = new Map(3, 3);	
+		worldMap.addCavern(0, 0);
+		worldMap.addPit(0, 1);
+		worldMap.addCavern(0, 2);
+		worldMap.addCavern(1, 0);
+		worldMap.addCavern(1, 1);
+		worldMap.addCavern(1, 2);
+		worldMap.addCavern(2, 0);
+		worldMap.addCavern(2, 1);
+		worldMap.addCavern(2, 2);
 		
+		Game game = new Game(worldMap);
+		game.setPlayerPosition(new Point(1, 1));
+		
+		ConsoleUI console = new ConsoleUI(printStream, game);
+		console.run();
+		
+		console.parseInput("W");
+		
+		assertEquals("Available Directions are N, W, S, E.", baos.toString().split("\n")[0]);
+		assertEquals("You fell to your death.", baos.toString().split("\n")[1]);
+		assertEquals("Game over.", baos.toString().split("\n")[2]);
+		
+	}
+
+	@Test
+	public void whenPlayerMovesNextToBats_IsNotified() {
+		Map worldMap = new Map(3, 3);	
 		worldMap.addCavern(0, 0);
 		worldMap.addCavern(0, 1);
-		worldMap.addCavern(0, 2);
+		worldMap.addCavern(0, 2);			
 		worldMap.addCavern(1, 0);
 		worldMap.addBats(1, 1);
 		worldMap.addCavern(1, 2);
@@ -311,7 +338,7 @@ public class ConsoleUITest {
 		console.run();
 		
 		console.parseInput("E");
-		
+			
 		assertEquals("Available Directions are S, E.", baos.toString().split("\n")[0]);
 		assertEquals("*Chirping* There are bats nearby.", baos.toString().split("\n")[1]);
 		assertEquals("Available Directions are W, S, E.", baos.toString().split("\n")[2]);
