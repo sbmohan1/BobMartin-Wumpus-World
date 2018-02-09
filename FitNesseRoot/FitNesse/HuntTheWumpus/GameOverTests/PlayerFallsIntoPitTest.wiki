@@ -1,7 +1,10 @@
+!include <FitNesse.HuntTheWumpus.CommonSetup
+
+
 If the player enters a cavern that contains the pit, then the player dies and the game is over.
 
 Create 3x3 grid
-!|PlayerFalls|
+!|PlayerFallsIntoPitTest|
 |width|height|
 |3|3|
 
@@ -15,24 +18,22 @@ Create 3x3 grid
 }}}
 
 
-* Use 9 caverns
-!|script|PlayerFalls|
-|cavern|0||0|
-|cavern|1||0|
-|cavern|2||0|
-|cavern|0||1|
-|cavern|1||1|
-|cavern|2||1|
-|cavern|0||2|
-|cavern|1||2|
-|cavern|2||2|
 
-!|script|
-|put|player|in cavern|1|1|
-|put|pit|in cavern|0|0|
-|enter command|S|
-|check|message|Available Directions N, W, E.|was printed|true|
-|enter command|W|
-|check|message|You fell to your death.|was printed|true|
-|check|message|Game over.|was printed|true|
-|check|game terminated|true|
+!|script|PlayerFallsIntoPitTest|
+|cavern|0||0|
+|pit|0||1|
+|cavernWithWumpus|0||2|
+|cavern|1||0|
+|cavern|1||1|
+|cavern|1||2|
+|pit|2||0|
+|cavern|2||1|
+|cavern|2||2|
+!|script|PlayerFallsIntoPitTest|
+|setPlayerPosition|1||1|
+
+
+!|PlayerFallsIntoPitTest|
+|move|checkOutput?|
+||Available Directions are N, W, S, E.|
+|W|You fell to your death.|Game over.|

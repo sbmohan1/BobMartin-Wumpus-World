@@ -82,7 +82,7 @@ public class Game {
 		List<Direction> directions = new ArrayList<>();
 		for (Direction d : Direction.values()) {
 			Point p = d.getPoint(playerPosition);
-			if (worldMap.contains(p) && (worldMap.isCavern(p.x, p.y) || worldMap.isBats(p.x, p.y))) {
+			if (worldMap.contains(p) && (worldMap.isCavern(p.x, p.y) || worldMap.isBats(p.x, p.y) || worldMap.isPit(p.x, p.y))) {
 				directions.add(d);
 			}
 		}
@@ -93,17 +93,12 @@ public class Game {
 	public List<Event> move(Direction d) throws NoDoorException {
 		List<Event> events = new ArrayList<>();
 		Point newPos = new Point(playerPosition.x + d.x, playerPosition.y + d.y);
-<<<<<<< HEAD
 		if(worldMap.contains(newPos) && worldMap.isPit(newPos.x, newPos.y)) {
-			playerPosition = new PlayerPositionStrategy().getPoint(this);
+			this.setPlayerPosition(newPos);
 			events.add(Event.FALL_INTO_PIT);
 			return events;
 		}
-=======
-		
 		checkIfBatsAreNearby(newPos, events);
-		
->>>>>>> 9abe90f1e934733ab11c4b5c9113cc3737289f82
 		if (worldMap.contains(newPos) && worldMap.isBats(newPos.x, newPos.y)) {
 			playerPosition = new PlayerPositionStrategy().getPoint(this);
 			events.add(Event.TRANSPORTED_BY_BATS);
