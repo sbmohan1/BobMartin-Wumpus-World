@@ -51,6 +51,8 @@ public class ConsoleUITest {
 	public void testUIDisplaysAvailableDirections_CantMove() {
 		
 		Map worldMap = new Map(1, 1);
+		worldMap.addCavern(0, 0);
+		
 		Game game = new Game(worldMap);
 		game.setPlayerPosition(new Point(0, 0));
 		

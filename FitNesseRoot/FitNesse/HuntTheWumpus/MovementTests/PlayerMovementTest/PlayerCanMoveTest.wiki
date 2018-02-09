@@ -1,11 +1,4 @@
-!define TEST_SYSTEM {slim}
-
-!path bin
-!path lib
-
-|import|
-|wumpusworld.test.fitnesse|
-|org.apache.commons.io|
+!include <FitNesse.HuntTheWumpus.CommonSetup
 
 Test that we can walk around the map. This makes sure we can move both directions through each corridor.
 

@@ -1,8 +1,10 @@
 package wumpusworld.test.junit;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.awt.Point;
+import java.util.HashMap;
 
 import org.junit.Test;
 
@@ -14,44 +16,31 @@ public class PlayerPositionStrategyTest {
 	@Test
 	public void positionIsNeverWumpusLocation() {
 		PlayerPositionStrategy strategy = new PlayerPositionStrategy();
-		Map worldMap = new Map(2, 2);
+		Map worldMap = new Map(3, 3);
+		
 		worldMap.addCavern(0, 0);
 		worldMap.addCavern(1, 0);
+		worldMap.addCavern(2, 0);
 		worldMap.addCavern(0, 1);
 		worldMap.addCavern(1, 1);
-		int firstCellCount = 0;
-		int secondCellCount = 0;
+		worldMap.addCavern(2, 1);
+		worldMap.addCavern(0, 2);
+		worldMap.addCavern(1, 2);
+		worldMap.addCavern(2, 2);
+		
+		java.util.Map<Point, Integer> occurrences = new HashMap<>();
 		
 		for (int i=0; i < 100; i++) {
 			Game game = new Game(worldMap);
-			game.setWumpusLocation(1,0);
+			game.setWumpusLocation(1,1);
 			Point playerPosition = strategy.getPoint(game);
-			if (playerPosition.x == 0) {
-				firstCellCount++;
-			}
-			else {
-				secondCellCount++;
-			}
+			occurrences.put(playerPosition, occurrences.getOrDefault(playerPosition, 0) + 1);
 		}
-		assertTrue(firstCellCount == 100);
-		assertTrue(secondCellCount == 0);
-
-		firstCellCount = 0;
-		secondCellCount = 0;
-		
-		for (int i=0; i < 100; i++) {
-			Game game = new Game(worldMap);
-			game.setWumpusLocation(0,0);
-			Point playerPosition = strategy.getPoint(game);
-			if (playerPosition.x == 0) {
-				firstCellCount++;
-			}
-			else {
-				secondCellCount++;
-			}
-		}
-		assertTrue(firstCellCount == 0);
-		assertTrue(secondCellCount == 100);
+		assertFalse(occurrences.containsKey(new Point(1, 0)));
+		assertFalse(occurrences.containsKey(new Point(1, 2)));
+		assertFalse(occurrences.containsKey(new Point(0, 1)));
+		assertFalse(occurrences.containsKey(new Point(2, 1)));
+		assertFalse(occurrences.containsKey(new Point(1, 1)));
 	}
 	
 	@Test
@@ -161,5 +150,14 @@ public class PlayerPositionStrategyTest {
 		assertTrue(firstCellCount == 100);
 		assertTrue(secondCellCount == 0);
 	}
+	
+	@Test(expected = Exception.class)
+	public void ifNoValidPosition_throwException() {
+		PlayerPositionStrategy strategy = new PlayerPositionStrategy();
+		Map worldMap = new Map(2, 1);
+		Game game = new Game(worldMap);
+		strategy.getPoint(game);
+	}
+	
 	
 }

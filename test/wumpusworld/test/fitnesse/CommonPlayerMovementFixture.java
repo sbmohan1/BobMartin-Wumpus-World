@@ -8,7 +8,7 @@ import java.io.PrintStream;
 import wumpusworld.Game;
 import wumpusworld.ui.ConsoleUI;
 
-public class CommonPlayerMovementFixture extends CommonPlayerStartingPositionFixture {
+public class CommonPlayerMovementFixture extends CommonFixture {
 	public static Game game;
 	public static ConsoleUI consoleUI;
 	public static PrintStream printStream;
@@ -16,8 +16,8 @@ public class CommonPlayerMovementFixture extends CommonPlayerStartingPositionFix
 	public static ByteArrayOutputStream baos;
 	public static int lineNumber;
 	
-	public void reset() {
-		super.reset();
+	public void resetStatic() {
+		super.resetStatic();
 		game = null;
 		consoleUI = null;
 		printStream = null;
@@ -28,7 +28,7 @@ public class CommonPlayerMovementFixture extends CommonPlayerStartingPositionFix
 	
 	public void setPlayerPosition(int x, int y) {
 		if (consoleUI == null) {
-			game = new Game(CommonPlayerStartingPositionFixture.worldMap);
+			game = new Game(worldMap);
 			baos = new ByteArrayOutputStream();
 			printStream = new PrintStream(baos);
 			consoleUI = new ConsoleUI(printStream, game);
@@ -38,11 +38,15 @@ public class CommonPlayerMovementFixture extends CommonPlayerStartingPositionFix
 	}
 	
 	public void setMove(String s) {
+		if (s == null || s.isEmpty()) {
+			return;
+		}
 		consoleUI.parseInput(s);
 	}
 	
 	public String checkOutput() {
+		baos.toString();
 		String[] lines = baos.toString().split("\n");
-		return lines[++lineNumber];
+		return lines[lineNumber++];
 	}
 }

@@ -1,11 +1,4 @@
-!define TEST_SYSTEM {slim}
-
-!path bin
-
-|import|
-|wumpusworld.test.fitnesse|
-
-!|script|PlayerCantStartPit|
+!include <FitNesse.HuntTheWumpus.CommonSetup
 
 Make sure the player can't start in a pit cavern
 

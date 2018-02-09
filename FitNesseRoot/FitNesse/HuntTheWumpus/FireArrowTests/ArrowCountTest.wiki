@@ -1,11 +1,4 @@
-!define TEST_SYSTEM {slim}
-
-!path bin
-!path lib
-
-|import|
-|wumpusworld.test.fitnesse|
-|org.apache.commons.io|
+!include <FitNesse.HuntTheWumpus.CommonSetup
 
 Test to count number of arrows a player has remaining.
 
@@ -44,72 +37,25 @@ Create 3x3 grid
 !|PlayerArrowCount|
 |move|checkOutput?|
 ||Available Directions are N, W, S.|
-|F|Available Directions to Fire Arrows are N, W, S. Which Direction do you want to shoot?|was printed|true|
-|enter command|N|
-|check|message|Arrow missed.|was printed|true|
-|give|player|ArrowCount|4|
-|check|message|You have 4 arrows remaining.|was printed|true|
-|player|turn|ends|
+|F|Available Directions to Fire Arrows are N, W, S. Which Direction do you want to shoot?|
+|N|Arrow missed.|
+||You have 4 arrows remaining.|
+|F|Available Directions to Fire Arrows are N, W, S. Which Direction do you want to shoot?|
+|N|Arrow missed.|
+||You have 3 arrows remaining.|
+|F|Available Directions to Fire Arrows are N, W, S. Which Direction do you want to shoot?|
+|N|Arrow missed.|
+||You have 2 arrows remaining.|
+|F|Available Directions to Fire Arrows are N, W, S. Which Direction do you want to shoot?|
+|N|Arrow missed.|
+||You have 1 arrows remaining.|
+|F|Available Directions to Fire Arrows are N, W, S. Which Direction do you want to shoot?|
+|N|Arrow missed.|
+||You have 0 arrows remaining.|
+|F|You have no arrows.|
+|N|Available Directions are W, S.|
 
-!|script|
-|put|player|in cavern|2|1|
-|give|player|Arrow_Count|4|
-|check|message|Available Directions are W, S.|was printed|true|
-|check|message|Press F to Fire Arrow.|was printed|true|
-|enter command|F|
-|check|message|Available Directions to Fire Arrows are W, S. Which Direction do you want to shoot?|was printed|true|
-|enter command|W|
-|check|message|Arrow missed.|was printed|true|
-|give|player|Arrow_Count|3|
-|check|message|You have 3 arrows remaining.|was printed|true|
-|player|turn|ends|
 
-!|script|
-|put|player|in cavern|2|1|
-|give|player|Arrow_Count|3|
-|check|message|Available Directions are S.|was printed|true|
-|check|message|Press F to Fire Arrow.|was printed|true|
-|enter command|F|
-|check|message|Available Directions to Fire Arrows are S. Which Direction do you want to shoot?|was printed|true|
-|enter command|S|
-|check|message|Arrow missed.|was printed|true|
-|give|player|Arrow_Count|2|
-|check|message|You have 2 arrows remaining.|was printed|true|
-|player|turn|ends|
-
-!|script|
-|put|player|in cavern|2|1|
-|give|player|Arrow_Count|2|
-|check|message|Available Directions are N, W, S.|was printed|true|
-|check|message|Press F to Fire Arrow.|was printed|true|
-|enter command|F|
-|check|message|Available Directions to Fire Arrows are N, W, S. Which Direction do you want to shoot?|was printed|true|
-|enter command|N|
-|check|message|Arrow missed.|was printed|true|
-|give|player|Arrow_Count|1|
-|check|message|You have 1 arrows remaining.|was printed|true|
-|player|turn|ends|
-
-!|script|
-|put|player|in cavern|2|1|
-|give|player|Arrow_Count|1|
-|check|message|Available Directions are W, S.|was printed|true|
-|check|message|Press F to Fire Arrow.|was printed|true|
-|enter command|F|
-|check|message|Available Directions to Fire Arrows are W, S. Which Direction do you want to shoot?|was printed|true|
-|enter command|W|
-|check|message|Arrow missed.|was printed|true|
-|give|player|Arrow_Count|0|
-|check|message|You have 0 arrows remaining.|was printed|true|
-|player|turn|ends|
-
-!|script|
-|put|player|in cavern|2|1|
-|give|player|Arrow_Count|0|
-|check|message|Available Directions are S.|was printed|true|
-|check|message|Press F to Fire Arrow.|was printed|true|
-|Display|message| You cannot shoot arrows!, you have 0 arrows remaining!|was printed|true|
-|player|turn|ends|
 
 
 

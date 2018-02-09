@@ -9,28 +9,23 @@ public class Game {
 	private Map worldMap;
 	private Point wumpusLocation;
 	private Point playerPosition;
+	private int playerArrows = 5;
 
 	public Game(Map worldMap) {
 		this.worldMap = worldMap;
 		this.wumpusLocation = new Point(-1, -1);
+		PlayerPositionStrategy strategy = new PlayerPositionStrategy();
+		playerPosition = strategy.getPoint(this);
 	}
 	
 	private Game(Map worldMap, Point wumpusLocation) {
 		this.wumpusLocation = wumpusLocation;
 		this.worldMap = worldMap;
-	}
-
-	public Point getPlayerPosition() {
-		PlayerPositionStrategy strategy = new PlayerPositionStrategy();
-		return strategy.getPoint(this);
-	}
-	
-	public void setPlayerLocation() {
 		PlayerPositionStrategy strategy = new PlayerPositionStrategy();
 		playerPosition = strategy.getPoint(this);
 	}
-	
-	public Point getPlayerLocation() {
+
+	public Point getPlayerPosition() {
 		return playerPosition;
 	}
 	
@@ -95,6 +90,14 @@ public class Game {
 		}
 		playerPosition = newPos;
 
+	}
+
+	public void shootArrow(Direction north) {
+		playerArrows--;
+	}
+
+	public int getNumberOfArrows() {
+		return playerArrows;
 	}
 
 }

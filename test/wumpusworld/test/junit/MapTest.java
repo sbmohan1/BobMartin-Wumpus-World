@@ -3,6 +3,8 @@ package wumpusworld.test.junit;
 import static org.junit.Assert.*;
 
 import java.awt.Point;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.Test;
 
@@ -68,6 +70,19 @@ public class MapTest {
 		assertFalse(worldMap.contains(new Point(3, 1)));
 		assertFalse(worldMap.contains(new Point(1, -1)));
 		assertFalse(worldMap.contains(new Point(1, 3)));
+	}
+	
+	@Test
+	public void testGetCaverns() {
+		Map worldMap = new Map(3, 3);
+		worldMap.addCavern(0, 0);
+		worldMap.addCavern(1, 1);
+		
+		List<Point> expected = new ArrayList<>();
+		expected.add(new Point(0, 0));
+		expected.add(new Point(1, 1));
+		
+		assertEquals(expected, worldMap.getCaverns());
 	}
 
 }

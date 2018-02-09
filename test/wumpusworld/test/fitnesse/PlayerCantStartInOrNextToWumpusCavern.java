@@ -7,6 +7,7 @@ import java.util.HashMap;
 
 import wumpusworld.Game;
 import wumpusworld.Map;
+import wumpusworld.Game.GameBuilder;
 
 public class PlayerCantStartInOrNextToWumpusCavern extends CommonPlayerStartingPositionFixture {
 	
@@ -24,8 +25,11 @@ public class PlayerCantStartInOrNextToWumpusCavern extends CommonPlayerStartingP
 			worldMap = new Map(CommonPlayerStartingPositionFixture.width, CommonPlayerStartingPositionFixture.height);
 		}
 		for (int i=0; i< times; i++) {
-			Game game = new Game(worldMap);
-			game.setWumpusLocation(wumpusLocation.x, wumpusLocation.y);
+			GameBuilder gameBuilder = new GameBuilder();
+			gameBuilder.setWorldMap(worldMap);
+			gameBuilder.setWumpusLocation(wumpusLocation);
+			Game game = gameBuilder.build();
+//			game.setWumpusLocation(wumpusLocation.x, wumpusLocation.y);
 			Point pos = game.getPlayerPosition();
 			if (startingPositions.containsKey(pos)) {
 				startingPositions.put(pos, startingPositions.get(pos) + 1);

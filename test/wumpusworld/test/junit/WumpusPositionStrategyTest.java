@@ -26,8 +26,8 @@ public class WumpusPositionStrategyTest {
 		
 		for (int i=0; i < 100; i++) {
 			Game game = new Game(worldMap);
-			game.setPlayerLocation();
-			Point playerPosition = game.getPlayerLocation();
+//			game.setPlayerLocation();
+			Point playerPosition = game.getPlayerPosition();
 			game.setWumpusPosition();
 			Point wumpusPosition = game.getWumpusLocation();
 			if (wumpusPosition.equals(playerPosition)) {

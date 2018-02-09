@@ -1,6 +1,19 @@
+|FitNesse.HuntTheWumpus.FireArrowTests.ArrowCountTest||19:34:51 Thu, Feb 08, 2018|
+|FitNesse.HuntTheWumpus.PlayerStartPositionTests.TestPlayerStartsInRandomCavern||19:33:26 Thu, Feb 08, 2018|
+|FitNesse.HuntTheWumpus.CommonSetup||19:30:54 Thu, Feb 08, 2018|
+|FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest.PlayerCanMoveTest||19:28:32 Thu, Feb 08, 2018|
+|FitNesse.HuntTheWumpus.StartPositionTests.WumpusStartPositionTests.TestWumpusCantStartNextToPlayerCavern||19:26:33 Thu, Feb 08, 2018|
+|FitNesse.HuntTheWumpus.StartPositionTests.WumpusStartPositionTests.TestWumpusCantStartInPlayerCavern||19:26:24 Thu, Feb 08, 2018|
+|FitNesse.HuntTheWumpus.StartPositionTests.WumpusStartPositionTests.TestWumpusStartsInRandomCavern||19:26:15 Thu, Feb 08, 2018|
+|FitNesse.HuntTheWumpus.StartPositionTests.PlayerStartPositionTests.TestPlayerCantStartInNonCavern||19:25:40 Thu, Feb 08, 2018|
+|FitNesse.HuntTheWumpus.StartPositionTests.PlayerStartPositionTests.TestPlayerCantStartWumpus||19:25:24 Thu, Feb 08, 2018|
+|FitNesse.HuntTheWumpus.StartPositionTests.PlayerStartPositionTests.TestPlayerCantStartPit||19:25:09 Thu, Feb 08, 2018|
+|FitNesse.HuntTheWumpus.StartPositionTests.PlayerStartPositionTests.TestPlayerCantStartBats||19:24:51 Thu, Feb 08, 2018|
+|FitNesse.HuntTheWumpus.StartPositionTests.PlayerStartPositionTests.TestPlayerStartsInRandomCavern||19:24:24 Thu, Feb 08, 2018|
+|FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest.PlayerCanRestTest||19:15:00 Thu, Feb 08, 2018|
+|FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest.PlayerCantMoveIntoWallTest||19:10:09 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest||16:27:50 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.FireArrowTests||16:05:10 Thu, Feb 08, 2018|
-|FitNesse.HuntTheWumpus.FireArrowTests.ArrowCountTest||15:45:28 Thu, Feb 08, 2018|
 <<<<<<< HEAD
 <<<<<<< HEAD
 |FitNesse.HuntTheWumpus.FireArrowTests.ZeroArrowsTest||15:21:57 Thu, Feb 08, 2018|
@@ -9,7 +22,6 @@
 |FitNesse.HuntTheWumpus.InvalidCommandTest||15:26:32 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus||15:26:29 Thu, Feb 08, 2018|
 >>>>>>> 241ca95a863c906de26d34338d7f73be76efec73
-|FitNesse.HuntTheWumpus.StartPositionTests.PlayerStartPositionTests.TestPlayerCantStartPit||14:49:13 Thu, Feb 08, 2018|
 >>>>>>> 86da4650c50e0bacdab9bc4c79ec7e5c50ccb6e7
 <<<<<<< HEAD
 =======
@@ -23,7 +35,6 @@
 <<<<<<< HEAD
 |FitNesse.HuntTheWumpus.MovementTests.WumpusMovementTests.WumpusMovesRandomlyTest||13:53:42 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.MovementTests.WumpusMovementTests||13:53:34 Thu, Feb 08, 2018|
-|FitNesse.HuntTheWumpus.StartPositionTests.WumpusStartPositionTests.TestWumpusStartsInRandomCavern||13:51:14 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.MovementTests.WumpusMovementTests.WumpusRestTest||13:41:41 Thu, Feb 08, 2018|
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -79,7 +90,6 @@
 |FitNesse.HuntTheWumpus.WumpusStartPositionTests.TestWumpusStartsInRandomCavern||11:06:21 Wed, Feb 07, 2018|
 |FitNesse.HuntTheWumpus.PlayerStartPositionTests||10:59:04 Wed, Feb 07, 2018|
 |FitNesse.HuntTheWumpus.PlayerStartPositionTests.TestPlayerCantStartBats||10:50:31 Wed, Feb 07, 2018|
-|FitNesse.HuntTheWumpus.PlayerStartPositionTests.TestPlayerStartsInRandomCavern||10:50:18 Wed, Feb 07, 2018|
 
 |FrontPage.POCTest||10:14:44 Wed, Feb 07, 2018|
 |FrontPage||16:33:32 Tue, Feb 06, 2018|
@@ -88,12 +98,3 @@
 |FitNesse.HuntTheWumpus.TestPlayerCantStartPit||16:01:16 Tue, Feb 06, 2018|
 |FitNesse.HuntTheWumpus.TestPlayerCantStartBats||16:01:00 Tue, Feb 06, 2018|
 |FitNesse.HuntTheWumpus.TestPlayerStartsInRandomCavern||16:00:20 Tue, Feb 06, 2018|
-|FitNesse.TestPlayerStartsInRandomCavern||15:54:58 Tue, Feb 06, 2018|
-|FitNesse.UserGuide.HuntTheWumpus||15:52:08 Tue, Feb 06, 2018|
-|FitNesse.HuntTheWumbus.TestPlayerCantStartWumpus||15:50:47 Tue, Feb 06, 2018|
-|FitNesse.HuntTheWumbus.TestPlayerCantStartBats||15:50:15 Tue, Feb 06, 2018|
-|FitNesse.HuntTheWumbus.TestPlayerCantStartPit||15:49:36 Tue, Feb 06, 2018|
-|FitNesse.HuntTheWumbus.TestPlayerStartsInRandomCavern||15:47:34 Tue, Feb 06, 2018|
-|FitNesse.UserGuide.TestPlayerStartsInRandomCavern||15:42:24 Tue, Feb 06, 2018|
-|FitNesse.UserGuide.HuntTheWumpus.TestPlayerSpawnsRandomCavern||15:40:32 Tue, Feb 06, 2018|
-|TestPlayerStartsInRandomCavern||15:40:14 Tue, Feb 06, 2018|
