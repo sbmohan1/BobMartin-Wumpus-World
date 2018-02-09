@@ -16,11 +16,11 @@ public class Main {
 		worldMap.addCavern(1, 1);
 		
 		Game game = new Game(worldMap);
+//		game.getPlayerPosition();
 		
-		game.getPlayerPosition();
+		printUsage();
 		
 		ConsoleUI consoleUI = new ConsoleUI(System.out, game);
-		
 		consoleUI.run();
 		
 		while (sc.hasNextLine()) {
@@ -29,5 +29,15 @@ public class Main {
 		}
 		
 		sc.close();
+	}
+
+	private static void printUsage() {
+		System.out.println("**********  Wumpus World  *********");
+		System.out.println("\\                                 /");
+		System.out.println("/    Enter direction to move.     \\");
+		System.out.println("\\    Enter 'F' to fire arrows.    /");
+		System.out.println("/    Enter 'R' to rest.           \\");
+		System.out.println("\\                                 /");
+		System.out.println("***********************************\n\n");
 	}
 }

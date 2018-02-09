@@ -7,7 +7,7 @@ import java.util.List;
 public class Map {
 	
 	public enum CELL_TYPE {
-		EMPTY,
+		EMPTY, 
 		CAVERN,
 		PIT,
 		BATS
