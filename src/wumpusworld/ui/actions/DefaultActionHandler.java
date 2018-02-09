@@ -36,7 +36,7 @@ public class DefaultActionHandler implements ActionHandler {
 				Event event = game.move(d);
 				switch(event) {
 				case TRANSPORTED_BY_BATS:
-					out.println("You were transported by Bats!");
+					out.print("You were transported by Bats!\n");
 				default:
 					printAvailableDirections(out, game);
 				}

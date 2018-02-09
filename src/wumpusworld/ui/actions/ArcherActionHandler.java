@@ -12,8 +12,8 @@ public class ArcherActionHandler extends DefaultActionHandler {
 	@Override
 	public ActionHandler parseInput(String string, PrintStream out, Game game) {
 		game.shootArrow(Direction.NORTH);
-		out.println("Arrow missed.");
-		out.println("You have " + game.getNumberOfArrows() + " arrows remaining.");
+		out.print("Arrow missed.\n");
+		out.print("You have " + game.getNumberOfArrows() + " arrows remaining.\n");
 		return new DefaultActionHandler();
 	}
 	
