@@ -1,3 +1,5 @@
+|FitNesse.HuntTheWumpus.FireArrowTests||10:22:31 Fri, Feb 09, 2018|
+|FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest.PlayerCanHearBatsTest||10:21:24 Fri, Feb 09, 2018|
 |FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest.BatsTransportTest||10:08:24 Fri, Feb 09, 2018|
 <<<<<<< HEAD
 |FitNesse.HuntTheWumpus.GameOverTests.ArrowCavernWumpusTest||09:58:32 Fri, Feb 09, 2018|
@@ -31,7 +33,6 @@
 |FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest.PlayerCantMoveIntoWallTest||19:10:09 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest||16:27:50 Thu, Feb 08, 2018|
 >>>>>>> af412c9f8ce00c4f9b5b635ef19e654141b4c3b3
-|FitNesse.HuntTheWumpus.FireArrowTests||16:05:10 Thu, Feb 08, 2018|
 <<<<<<< HEAD
 <<<<<<< HEAD
 |FitNesse.HuntTheWumpus.FireArrowTests.ZeroArrowsTest||15:21:57 Thu, Feb 08, 2018|
@@ -97,20 +98,3 @@
 |FitNesse.HuntTheWumpus.MovementTests.WumpusMovesRandomlyTest||10:54:01 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.WumpusMovementTests||10:53:40 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.MovementTests.PlayerCantMoveWall||10:22:04 Thu, Feb 08, 2018|
-
-|FitNesse.HuntTheWumpus.StartPositionTests.PlayerStartPositionTests||11:26:30 Wed, Feb 07, 2018|
-|FitNesse.HuntTheWumpus.StartPositionTests||11:25:38 Wed, Feb 07, 2018|
-|FitNesse.HuntTheWumpus.WumpusStartPositionTests||11:18:36 Wed, Feb 07, 2018|
-|FitNesse.HuntTheWumpus.PlayerMovementTests||11:08:19 Wed, Feb 07, 2018|
-|FitNesse.HuntTheWumpus.WumpusStartPositionTests.TestWumpusStartsInRandomCavern||11:06:21 Wed, Feb 07, 2018|
-|FitNesse.HuntTheWumpus.PlayerStartPositionTests||10:59:04 Wed, Feb 07, 2018|
-|FitNesse.HuntTheWumpus.PlayerStartPositionTests.TestPlayerCantStartBats||10:50:31 Wed, Feb 07, 2018|
-<<<<<<< HEAD
-
-|FrontPage.POCTest||10:14:44 Wed, Feb 07, 2018|
-<<<<<<< HEAD
-|FrontPage||16:33:32 Tue, Feb 06, 2018|
-=======
-=======
->>>>>>> ccdaeff65122e75975cd013ba42074ef9df8554b
->>>>>>> 2e43b0edb705db92c9b14e106fe7fcb8e5cb71e4

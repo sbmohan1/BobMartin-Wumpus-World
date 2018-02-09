@@ -1,1 +1,4 @@
+---
+Suite
+---
 [[Arrow Count Test][.FitNesse.HuntTheWumpus.FireArrowTests.ArrowCountTest]]

@@ -45,4 +45,4 @@ Create 3x3 grid
 !|PlayerCanHearBats|
 |check|message|Available Directions are S,E.|was printed|true|
 |enter command|E|
-|check|message|Chirping. There are bats nearby.|was printed|true|
+|check|message|*Chirping* There are bats nearby.|was printed|true|
