@@ -5,3 +5,8 @@
 [[Player closes game Test][.FitNesse.HuntTheWumpus.GameOverTests.PlayerClosesGameTest]]
 
 [[Player Rests and Wumpus eats them Test][.FitNesse.HuntTheWumpus.GameOverTests.PlayerRestingEatenTest]]
+
+[[Player Rests and Wumpus eats them Test][.FitNesse.HuntTheWumpus.GameOverTests.PlayerRestingEatenTest]]
+
+[[Arrow moves into Cavern with Wumpus Test][.FitNesse.HuntTheWumpus.GameOverTests.ArrowCavernWumpusTest]]
+
