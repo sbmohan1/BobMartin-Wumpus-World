@@ -16,7 +16,7 @@ public class DefaultActionHandler implements ActionHandler {
 		switch(string) {
 		case "F":
 			if (game.getNumberOfArrows() < 1) {
-				out.println("You have no arrows.");
+				out.print("You have no arrows.\n");
 				return this;
 			}
 			ArcherActionHandler actionHandler = new ArcherActionHandler();
