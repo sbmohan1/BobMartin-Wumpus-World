@@ -1,7 +1,19 @@
 |FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest.BatsTransportTest||10:08:24 Fri, Feb 09, 2018|
 <<<<<<< HEAD
+|FitNesse.HuntTheWumpus.GameOverTests.ArrowCavernWumpusTest||09:58:32 Fri, Feb 09, 2018|
+|FitNesse.HuntTheWumpus.GameOverTests||09:27:24 Fri, Feb 09, 2018|
+|FitNesse.HuntTheWumpus||09:25:21 Fri, Feb 09, 2018|
+|FitNesse.HuntTheWumpus.PlayerKillsWumpusArrow||09:22:41 Fri, Feb 09, 2018|
+=======
+|FitNesse.HuntTheWumpus.GameOverTests.PlayerShootsWallAndDiesTest||09:29:12 Fri, Feb 09, 2018|
+<<<<<<< HEAD
+|FitNesse.HuntTheWumpus.GameOverTests||09:14:28 Fri, Feb 09, 2018|
+=======
+>>>>>>> ccdaeff65122e75975cd013ba42074ef9df8554b
+<<<<<<< HEAD
 |FitNesse.HuntTheWumpus.StartPositionTests.WumpusStartPositionTests.TestWumpusCantStartInPlayerCavern||16:30:20 Thu, Feb 08, 2018|
 =======
+>>>>>>> fcab1a8afb7146fd94213b6f3b07289ed326b5f2
 |FitNesse.HuntTheWumpus.StartPositionTests.WumpusStartPositionTests||08:56:12 Fri, Feb 09, 2018|
 |FitNesse.HuntTheWumpus.FireArrowTests.ArrowCountTest||19:34:51 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.PlayerStartPositionTests.TestPlayerStartsInRandomCavern||19:33:26 Thu, Feb 08, 2018|
@@ -26,7 +38,6 @@
 =======
 =======
 |FitNesse.HuntTheWumpus.InvalidCommandTest||15:26:32 Thu, Feb 08, 2018|
-|FitNesse.HuntTheWumpus||15:26:29 Thu, Feb 08, 2018|
 >>>>>>> 241ca95a863c906de26d34338d7f73be76efec73
 >>>>>>> 86da4650c50e0bacdab9bc4c79ec7e5c50ccb6e7
 <<<<<<< HEAD
@@ -75,7 +86,6 @@
 
 >>>>>>> 7b33eb91cab214c0f1f7e14313a769f9998aed88
 |FitNesse.HuntTheWumpus.GameOverTests.PlayerRestingEatenTest||12:01:35 Thu, Feb 08, 2018|
-|FitNesse.HuntTheWumpus.GameOverTests||11:56:15 Thu, Feb 08, 2018|
 
 |FitNesse.HuntTheWumpus.GameOverTests.PlayerFallsIntoPitTest||11:46:35 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.GameOverTests.WumpusEatsPlayerTest||11:42:06 Thu, Feb 08, 2018|
@@ -95,6 +105,12 @@
 |FitNesse.HuntTheWumpus.WumpusStartPositionTests.TestWumpusStartsInRandomCavern||11:06:21 Wed, Feb 07, 2018|
 |FitNesse.HuntTheWumpus.PlayerStartPositionTests||10:59:04 Wed, Feb 07, 2018|
 |FitNesse.HuntTheWumpus.PlayerStartPositionTests.TestPlayerCantStartBats||10:50:31 Wed, Feb 07, 2018|
+<<<<<<< HEAD
 
 |FrontPage.POCTest||10:14:44 Wed, Feb 07, 2018|
+<<<<<<< HEAD
 |FrontPage||16:33:32 Tue, Feb 06, 2018|
+=======
+=======
+>>>>>>> ccdaeff65122e75975cd013ba42074ef9df8554b
+>>>>>>> 2e43b0edb705db92c9b14e106fe7fcb8e5cb71e4
