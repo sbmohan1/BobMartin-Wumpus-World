@@ -290,13 +290,11 @@ public class ConsoleUITest {
 		assertEquals("Available Directions are N, W, S, E.", baos.toString().split("\n")[0]);
 		assertEquals("You were transported by Bats!", baos.toString().split("\n")[1]);
 	}
-	
-	@Test
-	public void whenPlayerMovesIntoBatsNearWumpus_IsTransported() {
-		Map worldMap = new Map(3, 3);
-		
+
+	public void whenPlayerMovesIntoPit_GameOver() {
+		Map worldMap = new Map(3, 3);	
 		worldMap.addCavern(0, 0);
-		worldMap.addBats(0, 1);
+		worldMap.addPit(0, 1);
 		worldMap.addCavern(0, 2);
 		worldMap.addCavern(1, 0);
 		worldMap.addCavern(1, 1);
@@ -318,33 +316,6 @@ public class ConsoleUITest {
 		assertEquals("The Wumpus is nearby.", baos.toString().split("\n")[1]);
 		assertEquals("You were transported by Bats!", baos.toString().split("\n")[2]);
 		assertNotEquals(new Point(0, 1), game.getPlayerPosition());
-	}
-	
-	@Test
-	public void whenPlayerMovesNextToBats_IsNotified() {
-		Map worldMap = new Map(3, 3);
-		
-		worldMap.addCavern(0, 0);
-		worldMap.addCavern(0, 1);
-		worldMap.addCavern(0, 2);
-		worldMap.addCavern(1, 0);
-		worldMap.addBats(1, 1);
-		worldMap.addCavern(1, 2);
-		worldMap.addCavern(2, 0);
-		worldMap.addCavern(2, 1);
-		worldMap.addCavern(2, 2);
-		
-		Game game = new Game(worldMap);
-		game.setPlayerPosition(new Point(0, 0));
-		
-		ConsoleUI console = new ConsoleUI(printStream, game);
-		console.run();
-		
-		console.parseInput("E");
-		
-		assertEquals("Available Directions are S, E.", baos.toString().split("\n")[0]);
-		assertEquals("*Chirping* There are bats nearby.", baos.toString().split("\n")[1]);
-		assertEquals("Available Directions are W, S, E.", baos.toString().split("\n")[2]);
 	}
 	
 	@Test

@@ -11,7 +11,8 @@ public class Game {
 		TRANSPORTED_BY_BATS,
 		MOVED,
 		EATEN_BY_WUMPUS,
-		WUMPUS_NEARBY
+		WUMPUS_NEARBY,
+		FALL_INTO_PIT
 	}
 	
 	private Map worldMap;
@@ -83,7 +84,7 @@ public class Game {
 		List<Direction> directions = new ArrayList<>();
 		for (Direction d : Direction.values()) {
 			Point p = d.getPoint(playerPosition);
-			if (worldMap.contains(p) && (worldMap.isCavern(p.x, p.y) || worldMap.isBats(p.x, p.y))) {
+			if (worldMap.contains(p) && (worldMap.isCavern(p.x, p.y) || worldMap.isBats(p.x, p.y) || worldMap.isPit(p.x, p.y))) {
 				directions.add(d);
 			}
 		}
@@ -98,10 +99,14 @@ public class Game {
 		if (checkIfEatenByWumpus(newPos, events)) {
 			return events;
 		}
-		
+		if(worldMap.contains(newPos) && worldMap.isPit(newPos.x, newPos.y)) {
+			this.setPlayerPosition(newPos);
+			events.add(Event.FALL_INTO_PIT);
+			return events;
+		}
 		checkIfBatsAreNearby(newPos, events);
 		checkIfWumpusIsNearby(newPos, events);
-		
+	
 		if (worldMap.contains(newPos) && worldMap.isBats(newPos.x, newPos.y)) {
 			playerPosition = new PlayerPositionStrategy().getPoint(this);
 			events.add(Event.TRANSPORTED_BY_BATS);

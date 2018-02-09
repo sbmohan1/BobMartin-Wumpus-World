@@ -51,6 +51,11 @@ public class DefaultActionHandler implements ActionHandler {
 						out.print("You were transported by Bats!\n");
 						printAvailableDirections(out, game);
 						break;
+					case FALL_INTO_PIT:
+						out.print("You fell to your death.\nGame over.\n");
+						printAvailableDirections(out, game);
+						break;
+
 					default:
 						printAvailableDirections(out, game);
 					}
