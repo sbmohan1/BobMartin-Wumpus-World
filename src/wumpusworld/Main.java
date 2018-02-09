@@ -8,14 +8,27 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		Map worldMap = new Map(2, 2);
+		Map worldMap = new Map(4, 4);
 		
 		worldMap.addCavern(0, 0);
-		worldMap.addBats(0, 1);
 		worldMap.addCavern(1, 0);
+		worldMap.addCavern(2, 0);
+		worldMap.addCavern(3, 0);
+		worldMap.addCavern(0, 1);
 		worldMap.addCavern(1, 1);
+		worldMap.addCavern(2, 1);
+		worldMap.addBats(3, 1);
+		worldMap.addCavern(0, 2);
+		worldMap.addPit(1, 2);
+		worldMap.addCavern(2, 2);
+		worldMap.addCavern(3, 2);
+		worldMap.addCavern(0, 3);
+		worldMap.addCavern(1, 3);
+		worldMap.addCavern(2, 3);
+		worldMap.addCavern(3, 3);
 		
 		Game game = new Game(worldMap);
+		game.setWumpusLocation(3, 3);
 		
 		printUsage();
 		

@@ -1,11 +1,4 @@
-!define TEST_SYSTEM {slim}
-
-!path bin
-!path lib
-
-|import|
-|wumpusworld.test.fitnesse|
-|org.apache.commons.io|
+!include <FitNesse.HuntTheWumpus.CommonSetup
 
 Test that player can smell the Wumpus
 
@@ -28,7 +21,7 @@ Create 3x3 grid
 !|script|PlayerCanSmellWumpus|
 |cavern|0||0|
 |cavern|0||1|
-|cavern|0||2|
+|cavernWithWumpus|0||2|
 |cavern|1||0|
 |cavern|1||1|
 |cavern|1||2|
@@ -40,9 +33,9 @@ Create 3x3 grid
 
 !|script|PlayerCanSmellWumpus|
 |setPlayerPosition|2||2|
-|setWumpusPosition|0||2|
 
 !|PlayerCanSmellWumpus|
-|check|message|Available Directions are N,W.|was printed|true|
-|enter command|W|
-|check|message|The Wumpus is nearby.|was printed|true|
+|move|checkOutput?|
+||Available Directions are N, W.|
+|W|The Wumpus is nearby.|
+||Available Directions are N, W, E.|

@@ -548,6 +548,35 @@ public class GameTest {
 	}
 	
 	@Test
+	public void testIfPlayerMovedToBats_NextToWumpus_ReturnsEvents() {
+		Map worldMap = new Map(3, 3);
+		
+		worldMap.addCavern(0, 0);
+		worldMap.addCavern(1, 0);
+		worldMap.addBats(2, 0);
+		worldMap.addCavern(0, 1);
+		worldMap.addCavern(1, 1);
+		worldMap.addCavern(2, 1);
+		worldMap.addCavern(0, 2);
+		worldMap.addCavern(1, 2);
+		worldMap.addCavern(2, 2);
+		
+		
+		Game game = new Game(worldMap);
+		game.setPlayerPosition(new Point(1, 0));
+		game.setWumpusLocation(2, 1);
+		
+		List<Game.Event> expected = new ArrayList<>();
+		expected.add(Game.Event.WUMPUS_NEARBY);
+		expected.add(Game.Event.TRANSPORTED_BY_BATS);
+		
+		
+		List<Game.Event> events = game.move(Direction.EAST);
+		
+		assertEquals(expected, events);
+	}
+	
+	@Test
 	public void testIfPlayerMovesNextToBats_ReturnsEvent() {
 		Map worldMap = new Map(3, 3);
 		
@@ -594,6 +623,33 @@ public class GameTest {
 		
 		List<Game.Event> expected = new ArrayList<>();
 		expected.add(Game.Event.EATEN_BY_WUMPUS);		
+		
+		List<Game.Event> events = game.move(Direction.EAST);
+		
+		assertEquals(expected, events);
+	}
+	
+	@Test
+	public void testIfWumpusIsNearby_ReturnsEvent() {
+		Map worldMap = new Map(3, 3);
+		
+		worldMap.addCavern(0, 0);
+		worldMap.addCavern(1, 0);
+		worldMap.addCavern(1, 1);
+		worldMap.addCavern(0, 1);
+		worldMap.addCavern(2, 1);
+		worldMap.addCavern(0, 2);
+		worldMap.addCavern(1, 2);
+		worldMap.addCavern(2, 2);
+		
+		
+		Game game = new Game(worldMap);
+		game.setPlayerPosition(new Point(0, 0));
+		game.setWumpusLocation(1, 1);
+		
+		List<Game.Event> expected = new ArrayList<>();
+		expected.add(Game.Event.WUMPUS_NEARBY);
+		expected.add(Game.Event.MOVED);
 		
 		List<Game.Event> events = game.move(Direction.EAST);
 		

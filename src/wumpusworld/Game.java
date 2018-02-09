@@ -10,7 +10,8 @@ public class Game {
 		BATS_NEARBY,
 		TRANSPORTED_BY_BATS,
 		MOVED,
-		EATEN_BY_WUMPUS
+		EATEN_BY_WUMPUS,
+		WUMPUS_NEARBY
 	}
 	
 	private Map worldMap;
@@ -99,6 +100,7 @@ public class Game {
 		}
 		
 		checkIfBatsAreNearby(newPos, events);
+		checkIfWumpusIsNearby(newPos, events);
 		
 		if (worldMap.contains(newPos) && worldMap.isBats(newPos.x, newPos.y)) {
 			playerPosition = new PlayerPositionStrategy().getPoint(this);
@@ -113,6 +115,20 @@ public class Game {
 		return events;
 	}
 	
+	private void checkIfWumpusIsNearby(Point newPos, List<Event> events) {
+		boolean found = false;
+		for (Direction d : Direction.values()) {
+			Point p = d.getPoint(newPos);
+			if (worldMap.contains(p) && wumpusLocation.equals(p)) {
+				found = true;
+				break;
+			}
+		}
+		if (found) {
+			events.add(Event.WUMPUS_NEARBY);
+		}
+	}
+
 	private boolean checkIfEatenByWumpus(Point newPos, List<Event> events) {
 		if (wumpusLocation.equals(newPos)) {
 			events.add(Event.EATEN_BY_WUMPUS);

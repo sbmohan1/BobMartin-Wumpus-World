@@ -13,7 +13,7 @@ public class DefaultActionHandler implements ActionHandler {
 
 	@Override
 	public ActionHandler parseInput(String string, PrintStream out, Game game) {
-		switch(string) {
+		switch(string.toUpperCase()) {
 		case "F":
 			if (game.getNumberOfArrows() < 1) {
 				out.print("You have no arrows.\n");
@@ -36,6 +36,9 @@ public class DefaultActionHandler implements ActionHandler {
 				List<Event> events = game.move(d);
 				for (Event e : events) {
 					switch(e) {
+					case WUMPUS_NEARBY:
+						out.print("The Wumpus is nearby.\n");
+						break;
 					case EATEN_BY_WUMPUS:
 						out.print("You were eaten by the wumpus.\n");
 						out.print("Game over.\n");
@@ -43,7 +46,6 @@ public class DefaultActionHandler implements ActionHandler {
 						return this;
 					case BATS_NEARBY:
 						out.print("*Chirping* There are bats nearby.\n");
-						printAvailableDirections(out, game);
 						break;
 					case TRANSPORTED_BY_BATS:
 						out.print("You were transported by Bats!\n");

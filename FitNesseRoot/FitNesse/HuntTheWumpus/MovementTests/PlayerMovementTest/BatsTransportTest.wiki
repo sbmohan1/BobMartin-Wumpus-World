@@ -1,5 +1,8 @@
 !include <FitNesse.HuntTheWumpus.CommonSetup
 
+!|script|BatsTransport|
+|resetStatic|
+
 Test that we can walk around the map. This makes sure we can move both directions through each corridor.
 
 Create 3x3 grid
@@ -38,7 +41,8 @@ Create 3x3 grid
 !|BatsTransport|
 |move|checkOutput?|
 ||Available Directions are N, W, S, E.|
-|W|You were transported by Bats!|
+|W|The Wumpus is nearby.|
+||You were transported by Bats!|
 
 Run 100 times
 !|script|BatsTransport|
