@@ -50,15 +50,9 @@ Run 100 times
 
 Check occurences with lower bound
 !|script|BatsTransport|
-|occurrences|0||0||12||30|
 |occurrences|0||1||0||0|
 |occurrences|0||2||0||0|
-|occurrences|1||0||12||30|
-|occurrences|1||1||12||30|
 |occurrences|1||2||0||0|
 |occurrences|2||0||0||0|
-|occurrences|2||1||12||30|
-|occurrences|2||2||12||30|
-
 
 

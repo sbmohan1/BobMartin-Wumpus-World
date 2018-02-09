@@ -38,7 +38,7 @@ public class DefaultActionHandler implements ActionHandler {
 					switch(e) {
 					case WUMPUS_NEARBY:
 						out.print("The Wumpus is nearby.\n");
-						break;
+						continue;
 					case EATEN_BY_WUMPUS:
 						out.print("You were eaten by the wumpus.\n");
 						out.print("Game over.\n");
@@ -46,16 +46,15 @@ public class DefaultActionHandler implements ActionHandler {
 						return this;
 					case BATS_NEARBY:
 						out.print("*Chirping* There are bats nearby.\n");
-						break;
+						continue;
 					case TRANSPORTED_BY_BATS:
 						out.print("You were transported by Bats!\n");
 						printAvailableDirections(out, game);
 						break;
 					case FALL_INTO_PIT:
 						out.print("You fell to your death.\nGame over.\n");
-						printAvailableDirections(out, game);
-						break;
-
+						out.close();
+						return this;
 					default:
 						printAvailableDirections(out, game);
 					}

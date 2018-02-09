@@ -27,7 +27,7 @@ public enum DirectionLabel {
 	
 	public static Direction findByLabel(String label) {
 		for (DirectionLabel directionLabel : values()) {
-			if (directionLabel.label.equals(label)) {
+			if (directionLabel.label.equalsIgnoreCase(label)) {
 				return directionLabel.direction;
 			}
 		}
