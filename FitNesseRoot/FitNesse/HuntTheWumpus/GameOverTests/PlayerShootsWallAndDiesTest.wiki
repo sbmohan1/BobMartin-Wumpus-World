@@ -1,0 +1,50 @@
+!include <FitNesse.HuntTheWumpus.CommonSetup
+
+Test to check if a Player shoots a wall, the arrow bounces back and they die.
+
+Create 3x3 grid
+!|PlayerShootsWall|
+|width|height|
+|3|3|
+
+
+* Map Layout
+ 
+{{{	  
+(0,0) (1,0) (2,0)
+(0,1) (1,1) (2,1)	
+(0,2) (1,2) (2,2)
+}}}
+
+
+* Use 9 caverns
+!|script|PlayerShootsWall|
+|cavern|0||0|
+|cavern|0||1|
+|cavern|0||2|
+|cavern|1||0|
+|cavern|1||1|
+|cavern|1||2|
+|cavern|2||0|
+|cavern|2||1|
+|cavern|2||2|
+
+!|script|PlayerShootsWall|
+|setPlayerPosition|2||1|
+
+ * Shoot 1 arrow per turn
+
+!|PlayerShootsWall|
+|move|checkOutput?|
+|check|message|Available Directions are N, W, S, E.|was printed|true|
+|enter command|F|
+|check|message|Available Directions to Fire Arrows are N, W, S, E. Which Direction do you want to shoot?|was printed|true|
+|enter command|E|
+|check|message|You shot a wall. Game Over.|was printed|true|
+|check|game terminated|||true|
+
+
+
+
+
+
