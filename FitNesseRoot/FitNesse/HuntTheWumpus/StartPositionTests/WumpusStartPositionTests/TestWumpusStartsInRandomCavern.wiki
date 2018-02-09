@@ -1,11 +1,4 @@
-!define TEST_SYSTEM {slim}
-
-!path bin
-
-|import|
-|wumpusworld.test.fitnesse|
-
-!|script|WumpusStartsInRandomCavern|
+!include <FitNesse.HuntTheWumpus.CommonSetup
 
 Make sure the wumpus starts in a random cavern
 

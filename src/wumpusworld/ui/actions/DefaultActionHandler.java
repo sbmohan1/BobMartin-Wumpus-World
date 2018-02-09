@@ -12,27 +12,34 @@ public class DefaultActionHandler implements ActionHandler {
 
 	@Override
 	public ActionHandler parseInput(String string, PrintStream out, Game game) {
-		if (string.equalsIgnoreCase("F")) {
-//			rest(out);
-			return this;
-		}
-		if (string.equalsIgnoreCase("R")) {
-//			rest(out);
-			return this;
-		}
-		Direction d = DirectionLabel.findByLabel(string);
-		if (d == null) {
+		switch(string) {
+		case "F":
+			if (game.getNumberOfArrows() < 1) {
+				out.println("You have no arrows.");
+				return this;
+			}
+			ArcherActionHandler actionHandler = new ArcherActionHandler();
+			actionHandler.printAvailableDirections(out, game);
+			return actionHandler;
+		
+		case "R":
 			rest(out);
 			return this;
+		default:
+			Direction d = DirectionLabel.findByLabel(string);
+			if (d == null) {
+				rest(out);
+				return this;
+			}
+			try {
+				game.move(d);
+				printAvailableDirections(out, game);
+			}
+			catch (NoDoorException ndex) {
+				out.print("Sorry there is no Door there.\n");
+			}
+			return this;
 		}
-		try {
-			game.move(d);
-			printAvailableDirections(out, game);
-		}
-		catch (NoDoorException ndex) {
-			out.print("Sorry there is no Door there.\n");
-		}
-		return this;
 	}
 	
 	private void rest(PrintStream out) {
@@ -53,7 +60,7 @@ public class DefaultActionHandler implements ActionHandler {
 		}
 	}
 	
-	private String trimTrailingComma(String s) {
+	protected String trimTrailingComma(String s) {
 		return s.substring(0, s.length() - 2);
 	}
 

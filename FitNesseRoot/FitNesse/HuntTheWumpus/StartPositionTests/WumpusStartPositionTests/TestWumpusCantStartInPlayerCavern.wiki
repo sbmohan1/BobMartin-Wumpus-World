@@ -1,11 +1,4 @@
-!define TEST_SYSTEM {slim}
-
-!path bin
-
-|import|
-|wumpusworld.test.fitnesse|
-
-!|script|WumpusCantStartInPlayerCavern|
+!include <FitNesse.HuntTheWumpus.CommonSetup
 
 Make sure the wumpus cannot start in the same cavern as the player
 

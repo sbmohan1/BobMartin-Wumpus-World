@@ -1,0 +1,15 @@
+---
+Test
+---
+!define TEST_SYSTEM {slim}
+
+!path bin
+
+|import|
+|wumpusworld.test.fitnesse|
+
+!|script|CommonPlayerMovementFixture|
+|resetStatic|
+
+!|script|CommonPlayerStartingPositionFixture|
+|resetStatic|

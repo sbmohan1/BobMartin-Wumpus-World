@@ -7,6 +7,9 @@
 |wumpusworld.test.fitnesse|
 |org.apache.commons.io|
 
+!|script|PlayerCanRest|
+|resetStatic|
+
 !|PlayerCanRest|
 |width|height|
 |3|3|

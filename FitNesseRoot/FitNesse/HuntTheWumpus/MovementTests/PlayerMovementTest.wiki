@@ -1,13 +1,17 @@
-[[Player can move through Caverns][.FitNesse.HuntTheWumpus.MovementTests.PlayerCanMoveTest]]
+---
+Suite
+Test: no
+---
+[[Player can move through Caverns][.FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest.PlayerCanMoveTest]]
 
-[[Player can't move into Wall][.FitNesse.HuntTheWumpus.MovementTests.PlayerCantMoveIntoWallTest]]
+[[Player can't move into Wall][.FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest.PlayerCantMoveIntoWallTest]]
 
-[[Player can rest][.FitNesse.HuntTheWumpus.MovementTests.PlayerCanRestTest]]
+[[Player can rest][.FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest.PlayerCanRestTest]]
 
-[[Player is Transported by Bats][.FitNesse.HuntTheWumpus.MovementTests.BatsTransportTest]]
+[[Player is Transported by Bats][.FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest.BatsTransportTest]]
 
-[[Player can hear Bats][.FitNesse.HuntTheWumpus.MovementTests.PlayerCanHearBatsTest]]
+[[Player can hear Bats][.FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest.PlayerCanHearBatsTest]]
 
-[[Player can hear Wind][.FitNesse.HuntTheWumpus.MovementTests.PlayerCanHearWindTest]]
+[[Player can hear Wind][.FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest.PlayerCanHearWindTest]]
 
-[[Player can smell the Wumpus][.FitNesse.HuntTheWumpus.MovementTests.PlayerCanSmellWumpusTest]]
+[[Player can smell the Wumpus][.FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest.PlayerCanSmellWumpusTest]]

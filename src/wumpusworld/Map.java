@@ -1,6 +1,8 @@
 package wumpusworld;
 
 import java.awt.Point;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Map {
 	
@@ -63,5 +65,17 @@ public class Map {
 			&& point.x < width 
 			&& point.y >= 0 
 			&& point.y < height;
+	}
+
+
+	public List<Point> getCaverns() {
+		List<Point> caverns = new ArrayList<>();
+		for (int x=0; x < width; x++) {
+			for (int y=0; y < height; y++) {
+				if (grid[x][y] == CELL_TYPE.CAVERN)
+					caverns.add(new Point(x, y));
+			}
+		}
+		return caverns;
 	}
 }

@@ -11,6 +11,7 @@ import org.junit.Test;
 
 import wumpusworld.Direction;
 import wumpusworld.Game;
+import wumpusworld.Game.GameBuilder;
 import wumpusworld.Map;
 
 public class GameTest {
@@ -136,8 +137,12 @@ public class GameTest {
 
 		
 		for (int i=0; i < 100; i++) {
-			Game game = new Game(worldMap);
-			game.setWumpusLocation(0,0);
+			GameBuilder gameBuilder = new Game.GameBuilder();
+			gameBuilder.setWorldMap(worldMap);
+			gameBuilder.setWumpusLocation(new Point(0, 0));
+//			Game game = new Game(worldMap);
+//			game.setWumpusLocation(0,0);
+			Game game = gameBuilder.build();
 			Point playerPosition = game.getPlayerPosition();
 			if (playerPosition.x == 2) {
 				thirdCellCount++;
@@ -189,8 +194,11 @@ public class GameTest {
 
 		
 		for(int i = 0; i <100; i++) {
-			Game game = new Game(worldMap);
-			game.setWumpusLocation(2, 2);
+			GameBuilder gameBuilder = new Game.GameBuilder();
+			gameBuilder.setWorldMap(worldMap);
+			gameBuilder.setWumpusLocation(new Point(2, 2));
+			Game game = gameBuilder.build();
+//			game.setWumpusLocation(2, 2);
 			Point playerPosition = game.getPlayerPosition();
 			if(playerPosition.equals(aboveWumpus)) {
 				aboveCount++;
@@ -287,7 +295,7 @@ public class GameTest {
 		worldMap.addCavern(1, 0);
 		worldMap.addCavern(1, 1);
 		Game game = new Game(worldMap);
-		game.setPlayerLocation();
+//		game.setPlayerLocation();
 		game.setWumpusPosition();
 		Point wumpusPosition = game.retrieveWumpusPosition();
 		assertTrue(wumpusPosition.x > -1 && wumpusPosition.x < 2);
@@ -306,7 +314,7 @@ public class GameTest {
 		
 		for (int i=0; i < 100; i++) {
 			Game game = new Game(worldMap);
-			game.setPlayerLocation();
+//			game.setPlayerLocation();
 			game.setWumpusPosition();
 			Point wumpusPosition = game.retrieveWumpusPosition();
 			if (wumpusPosition.x == 0) {
@@ -411,6 +419,50 @@ public class GameTest {
 		expected.add(Direction.EAST);
 		
 		assertEquals(expected, game.getAvailableDirections());
+	}
+	
+	@Test
+	public void testPlayerStartsWith5Arrows() {
+		Map worldMap = new Map(3, 3);
+		
+		worldMap.addCavern(0, 0);
+		worldMap.addCavern(1, 0);
+		worldMap.addCavern(2, 0);
+		worldMap.addCavern(0, 1);
+		worldMap.addCavern(1, 1);
+		worldMap.addCavern(2, 1);
+		worldMap.addCavern(0, 2);
+		worldMap.addCavern(1, 2);
+		worldMap.addCavern(2, 2);
+		
+		Game game = new Game(worldMap);
+		game.setPlayerPosition(new Point(1, 0));
+		
+		assertEquals(5, game.getNumberOfArrows());
+	}
+	
+	@Test
+	public void testShootingRemovesArrows() {
+		Map worldMap = new Map(3, 3);
+		
+		worldMap.addCavern(0, 0);
+		worldMap.addCavern(1, 0);
+		worldMap.addCavern(2, 0);
+		worldMap.addCavern(0, 1);
+		worldMap.addCavern(1, 1);
+		worldMap.addCavern(2, 1);
+		worldMap.addCavern(0, 2);
+		worldMap.addCavern(1, 2);
+		worldMap.addCavern(2, 2);
+		
+		Game game = new Game(worldMap);
+		game.setPlayerPosition(new Point(1, 0));
+		
+		game.shootArrow(Direction.NORTH);
+		assertEquals(4, game.getNumberOfArrows());
+		
+		game.shootArrow(Direction.NORTH);
+		assertEquals(3, game.getNumberOfArrows());
 	}
 
 }

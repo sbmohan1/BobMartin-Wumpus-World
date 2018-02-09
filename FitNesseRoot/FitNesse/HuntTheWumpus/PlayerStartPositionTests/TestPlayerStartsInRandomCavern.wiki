@@ -1,11 +1,4 @@
-!define TEST_SYSTEM {slim}
-
-!path bin
-
-|import|
-|wumpusworld.test.fitnesse|
-
-!|script|PlayerStartsInRandomCavern|
+!include <FitNesse.HuntTheWumpus.CommonSetup
 
 Make sure the player starts in a random cavern
 
@@ -13,6 +6,10 @@ Use 2 caverns
 !|PlayerStartsInRandomCavern|
 |width|height|
 |2|1|
+
+!|script|PlayerStartsInRandomCavern|
+|cavern|0||0|
+|cavern|1||0|
 
 !|script|PlayerStartsInRandomCavern|
 |run|100|

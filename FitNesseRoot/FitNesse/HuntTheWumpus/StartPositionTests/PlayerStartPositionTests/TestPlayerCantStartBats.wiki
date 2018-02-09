@@ -1,9 +1,4 @@
-!define TEST_SYSTEM {slim}
-
-!path bin
-
-|import|
-|wumpusworld.test.fitnesse|
+!include <FitNesse.HuntTheWumpus.CommonSetup
 
 !|script|PlayerCantStartInCaveWithBats|
 
