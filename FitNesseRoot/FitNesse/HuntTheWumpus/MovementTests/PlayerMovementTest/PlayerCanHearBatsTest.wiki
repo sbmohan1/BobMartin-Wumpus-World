@@ -1,11 +1,4 @@
-!define TEST_SYSTEM {slim}
-
-!path bin
-!path lib
-
-|import|
-|wumpusworld.test.fitnesse|
-|org.apache.commons.io|
+!include <FitNesse.HuntTheWumpus.CommonSetup
 
 Test that player can hear bats
 
@@ -30,7 +23,7 @@ Create 3x3 grid
 |cavern|0||1|
 |cavern|0||2|
 |cavern|1||0|
-|cavern|1||1|
+|bats|1||1|
 |cavern|1||2|
 |cavern|2||0|
 |cavern|2||1|
@@ -40,9 +33,9 @@ Create 3x3 grid
 
 !|script|PlayerCanHearBats|
 |setPlayerPosition|0||0|
-|setBatsPosition|1||1|
 
 !|PlayerCanHearBats|
-|check|message|Available Directions are S,E.|was printed|true|
-|enter command|E|
-|check|message|*Chirping* There are bats nearby.|was printed|true|
+|move|checkOutput?|
+||Available Directions are S, E.|
+|E|*Chirping* There are bats nearby.|
+||Available Directions are W, S, E.|
