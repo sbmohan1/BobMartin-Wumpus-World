@@ -8,7 +8,8 @@ public class Game {
 	
 	public enum Event {
 		TRANSPORTED_BY_BATS,
-		MOVED
+		MOVED,
+		FALL_INTO_PIT
 	}
 	
 	private Map worldMap;
@@ -91,6 +92,11 @@ public class Game {
 	public List<Event> move(Direction d) throws NoDoorException {
 		List<Event> events = new ArrayList<>();
 		Point newPos = new Point(playerPosition.x + d.x, playerPosition.y + d.y);
+		if(worldMap.contains(newPos) && worldMap.isPit(newPos.x, newPos.y)) {
+			playerPosition = new PlayerPositionStrategy().getPoint(this);
+			events.add(Event.FALL_INTO_PIT);
+			return events;
+		}
 		if (worldMap.contains(newPos) && worldMap.isBats(newPos.x, newPos.y)) {
 			playerPosition = new PlayerPositionStrategy().getPoint(this);
 			events.add(Event.TRANSPORTED_BY_BATS);

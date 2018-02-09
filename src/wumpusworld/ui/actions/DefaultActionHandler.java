@@ -38,6 +38,8 @@ public class DefaultActionHandler implements ActionHandler {
 					switch(e) {
 					case TRANSPORTED_BY_BATS:
 						out.print("You were transported by Bats!\n");
+					case FALL_INTO_PIT:
+						out.print("You fell to your death.\nGame over.\n");
 					default:
 						printAvailableDirections(out, game);
 					}
