@@ -1,15 +1,14 @@
+|FitNesse.HuntTheWumpus.GameOverTests||10:44:36 Fri, Feb 09, 2018|
 |FitNesse.HuntTheWumpus.FireArrowTests||10:22:31 Fri, Feb 09, 2018|
 |FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest.PlayerCanHearBatsTest||10:21:24 Fri, Feb 09, 2018|
 |FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest.BatsTransportTest||10:08:24 Fri, Feb 09, 2018|
 <<<<<<< HEAD
 |FitNesse.HuntTheWumpus.GameOverTests.ArrowCavernWumpusTest||09:58:32 Fri, Feb 09, 2018|
-|FitNesse.HuntTheWumpus.GameOverTests||09:27:24 Fri, Feb 09, 2018|
 |FitNesse.HuntTheWumpus||09:25:21 Fri, Feb 09, 2018|
 |FitNesse.HuntTheWumpus.PlayerKillsWumpusArrow||09:22:41 Fri, Feb 09, 2018|
 =======
 |FitNesse.HuntTheWumpus.GameOverTests.PlayerShootsWallAndDiesTest||09:29:12 Fri, Feb 09, 2018|
 <<<<<<< HEAD
-|FitNesse.HuntTheWumpus.GameOverTests||09:14:28 Fri, Feb 09, 2018|
 =======
 >>>>>>> ccdaeff65122e75975cd013ba42074ef9df8554b
 <<<<<<< HEAD
