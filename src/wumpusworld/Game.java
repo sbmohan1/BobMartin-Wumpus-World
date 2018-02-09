@@ -9,7 +9,8 @@ public class Game {
 	public enum Event {
 		BATS_NEARBY,
 		TRANSPORTED_BY_BATS,
-		MOVED
+		MOVED,
+		EATEN_BY_WUMPUS
 	}
 	
 	private Map worldMap;
@@ -93,6 +94,10 @@ public class Game {
 		List<Event> events = new ArrayList<>();
 		Point newPos = new Point(playerPosition.x + d.x, playerPosition.y + d.y);
 		
+		if (checkIfEatenByWumpus(newPos, events)) {
+			return events;
+		}
+		
 		checkIfBatsAreNearby(newPos, events);
 		
 		if (worldMap.contains(newPos) && worldMap.isBats(newPos.x, newPos.y)) {
@@ -108,6 +113,14 @@ public class Game {
 		return events;
 	}
 	
+	private boolean checkIfEatenByWumpus(Point newPos, List<Event> events) {
+		if (wumpusLocation.equals(newPos)) {
+			events.add(Event.EATEN_BY_WUMPUS);
+			return true;
+		}
+		return false;
+	}
+
 	private void checkIfBatsAreNearby(Point pos, List<Event> events) {
 		boolean found = false;
 		for (Direction d : Direction.values()) {

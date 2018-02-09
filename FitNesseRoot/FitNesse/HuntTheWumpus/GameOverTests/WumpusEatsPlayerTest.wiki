@@ -1,3 +1,5 @@
+!include <FitNesse.HuntTheWumpus.CommonSetup
+
 If the player enters a cavern that contains the wumpus, then the player dies and the game is over.
 
 Create 3x3 grid
@@ -18,7 +20,7 @@ Create 3x3 grid
 * Use 9 caverns
 !|script|PlayerEaten|
 |cavern|0||0|
-|cavern|1||0|
+|cavernWithWumpus|1||0|
 |cavern|2||0|
 |cavern|0||1|
 |cavern|1||1|
@@ -27,10 +29,11 @@ Create 3x3 grid
 |cavern|1||2|
 |cavern|2||2|
 
-!|script|
-|put|player|in cavern|1|1|
-|put|wumpus|in cavern|1|0|
-|enter command|S|
-|check|message|You were eaten by the wumpus.|was printed|true|
-|check|message|Game over.|was printed|true|
-|check|game terminated|true|
+!|script|PlayerEaten|
+|setPlayerPosition|1||1|
+
+!|PlayerEaten|
+|move|checkOutput?|
+||Available Directions are N, W, S, E.|
+|N|You were eaten by the wumpus.|
+||Game over.|

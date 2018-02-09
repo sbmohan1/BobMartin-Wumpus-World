@@ -36,6 +36,11 @@ public class DefaultActionHandler implements ActionHandler {
 				List<Event> events = game.move(d);
 				for (Event e : events) {
 					switch(e) {
+					case EATEN_BY_WUMPUS:
+						out.print("You were eaten by the wumpus.\n");
+						out.print("Game over.\n");
+						out.close();
+						return this;
 					case BATS_NEARBY:
 						out.print("*Chirping* There are bats nearby.\n");
 						printAvailableDirections(out, game);

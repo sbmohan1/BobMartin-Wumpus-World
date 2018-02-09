@@ -573,4 +573,30 @@ public class GameTest {
 		
 		assertEquals(expected, events);
 	}
+	
+	@Test
+	public void testIfPlayerMovesToWumpus_ReturnsEvent() {
+		Map worldMap = new Map(3, 3);
+		
+		worldMap.addCavern(0, 0);
+		worldMap.addCavern(1, 0);
+		worldMap.addCavern(1, 1);
+		worldMap.addCavern(0, 1);
+		worldMap.addCavern(2, 1);
+		worldMap.addCavern(0, 2);
+		worldMap.addCavern(1, 2);
+		worldMap.addCavern(2, 2);
+		
+		
+		Game game = new Game(worldMap);
+		game.setPlayerPosition(new Point(0, 0));
+		game.setWumpusLocation(1, 0);
+		
+		List<Game.Event> expected = new ArrayList<>();
+		expected.add(Game.Event.EATEN_BY_WUMPUS);		
+		
+		List<Game.Event> events = game.move(Direction.EAST);
+		
+		assertEquals(expected, events);
+	}
 }
