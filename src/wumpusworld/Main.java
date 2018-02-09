@@ -11,7 +11,7 @@ public class Main {
 		Map worldMap = new Map(2, 2);
 		
 		worldMap.addCavern(0, 0);
-		worldMap.addCavern(0, 1);
+		worldMap.addBats(0, 1);
 		worldMap.addCavern(1, 0);
 		worldMap.addCavern(1, 1);
 		

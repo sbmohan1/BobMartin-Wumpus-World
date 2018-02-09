@@ -20,7 +20,7 @@ public class ArcherActionHandler extends DefaultActionHandler {
 	@Override
 	public void printAvailableDirections(PrintStream out, Game game) {
 		if (game.getNumberOfArrows() < 1) {
-			out.print("You have no arrows.");
+			out.print("You have no arrows.\n");
 			return;
 		}
 		List<Direction> directions = game.getAvailableDirections();
