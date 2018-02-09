@@ -263,4 +263,30 @@ public class ConsoleUITest {
 		
 		assertEquals("Available Directions are N, W, S, E.\nPlayer rested.\n", baos.toString());
 	}
+	
+	@Test
+	public void whenPlayerMovesIntoBats_IsTransported() {
+Map worldMap = new Map(3, 3);
+		
+		worldMap.addCavern(0, 0);
+		worldMap.addBats(0, 1);
+		worldMap.addCavern(0, 2);
+		worldMap.addCavern(1, 0);
+		worldMap.addCavern(1, 1);
+		worldMap.addCavern(1, 2);
+		worldMap.addCavern(2, 0);
+		worldMap.addCavern(2, 1);
+		worldMap.addCavern(2, 2);
+		
+		Game game = new Game(worldMap);
+		game.setPlayerPosition(new Point(1, 1));
+		
+		ConsoleUI console = new ConsoleUI(printStream, game);
+		console.run();
+		
+		console.parseInput("W");
+		
+		assertEquals("Available Directions are N, W, S, E.", baos.toString().split("\n")[0]);
+		assertEquals("You were transported by Bats!", baos.toString().split("\n")[1]);
+	}
 }

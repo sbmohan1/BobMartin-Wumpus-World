@@ -16,7 +16,6 @@ public class Main {
 		worldMap.addCavern(1, 1);
 		
 		Game game = new Game(worldMap);
-//		game.getPlayerPosition();
 		
 		printUsage();
 		

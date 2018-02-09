@@ -6,6 +6,11 @@ import java.util.List;
 
 public class Game {
 	
+	public enum Event {
+		TRANSPORTED_BY_BATS,
+		MOVED
+	}
+	
 	private Map worldMap;
 	private Point wumpusLocation;
 	private Point playerPosition;
@@ -75,7 +80,7 @@ public class Game {
 		List<Direction> directions = new ArrayList<>();
 		for (Direction d : Direction.values()) {
 			Point p = d.getPoint(playerPosition);
-			if (worldMap.contains(p) && worldMap.isCavern(p.x, p.y)) {
+			if (worldMap.contains(p) && (worldMap.isCavern(p.x, p.y) || worldMap.isBats(p.x, p.y))) {
 				directions.add(d);
 			}
 		}
@@ -83,13 +88,17 @@ public class Game {
 	}
 
 
-	public void move(Direction d) throws NoDoorException {
+	public Event move(Direction d) throws NoDoorException {
 		Point newPos = new Point(playerPosition.x + d.x, playerPosition.y + d.y);
+		if (worldMap.contains(newPos) && worldMap.isBats(newPos.x, newPos.y)) {
+			playerPosition = new PlayerPositionStrategy().getPoint(this);
+			return Event.TRANSPORTED_BY_BATS;
+		}
 		if (!worldMap.contains(newPos) || !worldMap.isCavern(newPos.x, newPos.y)) {
 			throw new NoDoorException();
 		}
 		playerPosition = newPos;
-
+		return Event.MOVED;
 	}
 
 	public void shootArrow(Direction north) {

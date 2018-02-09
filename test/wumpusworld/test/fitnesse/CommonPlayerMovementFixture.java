@@ -15,6 +15,7 @@ public class CommonPlayerMovementFixture extends CommonFixture {
 	public static InputStream inputStream;
 	public static ByteArrayOutputStream baos;
 	public static int lineNumber;
+	protected static Point wumpusPos;
 	
 	public void resetStatic() {
 		super.resetStatic();
@@ -24,6 +25,7 @@ public class CommonPlayerMovementFixture extends CommonFixture {
 		inputStream = null;
 		baos = null;
 		lineNumber = 0;
+		wumpusPos = null;
 	}
 	
 	public void setPlayerPosition(int x, int y) {
@@ -34,6 +36,9 @@ public class CommonPlayerMovementFixture extends CommonFixture {
 			consoleUI = new ConsoleUI(printStream, game);
 		}
 		game.setPlayerPosition(new Point(x, y));
+		if (wumpusPos != null) {
+			game.setWumpusLocation(wumpusPos.x, wumpusPos.y);
+		}
 		consoleUI.run();
 	}
 	
@@ -48,5 +53,10 @@ public class CommonPlayerMovementFixture extends CommonFixture {
 		baos.toString();
 		String[] lines = baos.toString().split("\n");
 		return lines[lineNumber++];
+	}
+	
+	public void cavernWithWumpus(int x, int y) {
+		wumpusPos = new Point(x, y);
+		cavern(x,y);
 	}
 }

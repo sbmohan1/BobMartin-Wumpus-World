@@ -422,6 +422,33 @@ public class GameTest {
 	}
 	
 	@Test
+	public void testGetAvailableDirections_NWSE_WithBats() {
+		Map worldMap = new Map(3, 3);
+		
+		worldMap.addCavern(0, 0);
+		worldMap.addBats(1, 0);
+		worldMap.addCavern(2, 0);
+		worldMap.addCavern(0, 1);
+		worldMap.addCavern(1, 1);
+		worldMap.addCavern(2, 1);
+		worldMap.addCavern(0, 2);
+		worldMap.addCavern(1, 2);
+		worldMap.addCavern(2, 2);
+		
+		Game game = new Game(worldMap);
+		game.setWumpusLocation(1,0);
+		game.setPlayerPosition(new Point(1, 1));
+		
+		List<Direction> expected = new ArrayList<>();
+		expected.add(Direction.NORTH);
+		expected.add(Direction.WEST);
+		expected.add(Direction.SOUTH);
+		expected.add(Direction.EAST);
+		
+		assertEquals(expected, game.getAvailableDirections());
+	}
+	
+	@Test
 	public void testPlayerStartsWith5Arrows() {
 		Map worldMap = new Map(3, 3);
 		
@@ -464,5 +491,51 @@ public class GameTest {
 		game.shootArrow(Direction.NORTH);
 		assertEquals(3, game.getNumberOfArrows());
 	}
-
+	
+	@Test
+	public void testIfPlayerMovedToCavern_ReturnsEvent() {
+		Map worldMap = new Map(3, 3);
+		
+		worldMap.addCavern(0, 0);
+		worldMap.addCavern(1, 0);
+		worldMap.addCavern(2, 0);
+		worldMap.addCavern(0, 1);
+		worldMap.addCavern(1, 1);
+		worldMap.addCavern(2, 1);
+		worldMap.addCavern(0, 2);
+		worldMap.addCavern(1, 2);
+		worldMap.addCavern(2, 2);
+		
+		
+		Game game = new Game(worldMap);
+		game.setPlayerPosition(new Point(1, 0));
+		
+		Game.Event event = game.move(Direction.EAST);
+		
+		assertEquals(new Point(2,  0), game.getPlayerPosition());
+		assertEquals(Game.Event.MOVED, event);
+	}
+	
+	@Test
+	public void testIfPlayerMovedToBats_ReturnsEvent() {
+		Map worldMap = new Map(3, 3);
+		
+		worldMap.addCavern(0, 0);
+		worldMap.addCavern(1, 0);
+		worldMap.addBats(2, 0);
+		worldMap.addCavern(0, 1);
+		worldMap.addCavern(1, 1);
+		worldMap.addCavern(2, 1);
+		worldMap.addCavern(0, 2);
+		worldMap.addCavern(1, 2);
+		worldMap.addCavern(2, 2);
+		
+		
+		Game game = new Game(worldMap);
+		game.setPlayerPosition(new Point(1, 0));
+		
+		Game.Event event = game.move(Direction.EAST);
+		
+		assertEquals(Game.Event.TRANSPORTED_BY_BATS, event);
+	}
 }

@@ -37,4 +37,11 @@ public class CommonFixture {
 		}
 		worldMap.addBats(x, y);
 	}
+	
+	public void pit(int x, int y) {
+		if (worldMap == null) {
+			worldMap = new Map(width, height);
+		}
+		worldMap.addPit(x, y);
+	}
 }

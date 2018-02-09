@@ -5,6 +5,7 @@ import java.util.List;
 
 import wumpusworld.Direction;
 import wumpusworld.Game;
+import wumpusworld.Game.Event;
 import wumpusworld.NoDoorException;
 import wumpusworld.ui.DirectionLabel;
 
@@ -32,8 +33,13 @@ public class DefaultActionHandler implements ActionHandler {
 				return this;
 			}
 			try {
-				game.move(d);
-				printAvailableDirections(out, game);
+				Event event = game.move(d);
+				switch(event) {
+				case TRANSPORTED_BY_BATS:
+					out.println("You were transported by Bats!");
+				default:
+					printAvailableDirections(out, game);
+				}
 			}
 			catch (NoDoorException ndex) {
 				out.print("Sorry there is no Door there.\n");
