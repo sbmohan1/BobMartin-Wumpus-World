@@ -5,3 +5,5 @@
 [[Player closes game Test][.FitNesse.HuntTheWumpus.GameOverTests.PlayerClosesGameTest]]
 
 [[Player Rests and Wumpus eats them Test][.FitNesse.HuntTheWumpus.GameOverTests.PlayerRestingEatenTest]]
+
+[[Player shoots wall and dies Test][.FitNesse.HuntTheWumpus.GameOverTests.PlayerShootsWallAndDiesTest]]
