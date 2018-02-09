@@ -1,3 +1,4 @@
+|FitNesse.HuntTheWumpus.FireArrowTests||10:22:31 Fri, Feb 09, 2018|
 |FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest.PlayerCanHearBatsTest||10:21:24 Fri, Feb 09, 2018|
 |FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest.BatsTransportTest||10:08:24 Fri, Feb 09, 2018|
 <<<<<<< HEAD
@@ -32,7 +33,6 @@
 |FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest.PlayerCantMoveIntoWallTest||19:10:09 Thu, Feb 08, 2018|
 |FitNesse.HuntTheWumpus.MovementTests.PlayerMovementTest||16:27:50 Thu, Feb 08, 2018|
 >>>>>>> af412c9f8ce00c4f9b5b635ef19e654141b4c3b3
-|FitNesse.HuntTheWumpus.FireArrowTests||16:05:10 Thu, Feb 08, 2018|
 <<<<<<< HEAD
 <<<<<<< HEAD
 |FitNesse.HuntTheWumpus.FireArrowTests.ZeroArrowsTest||15:21:57 Thu, Feb 08, 2018|
